@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Baskervville-Regular";
+  src: url("../assets/fonts/Baskervville-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantGaramond-Regular";
+  src: url("../assets/fonts/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LibreFranklin-Medium";
+  src: url("../assets/fonts/LibreFranklin-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LibreFranklin-SemiBold";
+  src: url("../assets/fonts/LibreFranklin-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LibreFranklin-Regular";
+  src: url("../assets/fonts/LibreFranklin-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --background: #e7e8e8;
+
+  --primary: #555c3b;
+  --secondary: #0f1f15;
+  --accent: #c4c9b3;
+  --base: #2c3119;
+
+  --text-white: #ffffff;
+  --text-content: #0c0c0c;
+  --text-heading: #2c3119;
+  --text-subtitle: #0f1f15;
+  --text-primary: #555c3b;
+  --text-accent: #c4c9b3;
+
+  --border-dark-white: #ffffff33;
+}
+
+@theme {
+  /* colors */
+  --color-background: var(--background);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-base: var(--base);
+
+  --text-color-white: var(--text-white);
+  --text-color-content: var(--text-content);
+  --text-color-heading: var(--text-heading);
+  --text-color-subtitle: var(--text-subtitle);
+  --text-color-primary: var(--text-primary);
+  --text-color-accent: var(--text-accent);
+
+  --border-color-dark-white: var(--border-dark-white);
+
+  --text-link-r-font: "Baskervville-Regular";
+  --text-link-t-font: "LibreFranklin-Regular";
+  --text-button-m-font: "LibreFranklin-Medium";
+  --text-button-s-font: "LibreFranklin-SemiBold";
+  --text-heading-1-font: "CormorantGaramond-Regular";
+  --text-heading-2-font: "CormorantGaramond-Regular";
+  --text-heading-4-font: "CormorantGaramond-Regular";
+  --text-heading-5-font: "CormorantGaramond-Regular";
+  --text-heading-6-font: "CormorantGaramond-Regular";
+  --text-display-l-font: "Baskervville-Regular";
+  --text-display-xl-font: "Baskervville-Regular";
+  --text-display-xxl-font: "Baskervville-Regular";
+  --text-subtitle-r-font: "LibreFranklin-SemiBold";
+  --text-badge-t-font: "Baskervville-Regular";
+
+  --text-link-r-size: 22px;
+  --text-link-t-size: 12px;
+  --text-button-m-size: 16px;
+  --text-button-s-size: 14px;
+  --text-heading-1-size: 72px;
+  --text-heading-2-size: 52px;
+  --text-heading-4-size: 36px;
+  --text-heading-5-size: 28px;
+  --text-heading-6-size: 22px;
+  --text-display-l-size: 22px;
+  --text-display-xl-size: 24px;
+  --text-display-xxl-size: 36px;
+  --text-subtitle-r-size: 16px;
+  --text-badge-t-size: 12px;
+
+  --text-link-r-weight: 400;
+  --text-link-t-weight: 400;
+  --text-button-m-weight: 500;
+  --text-button-s-weight: 600;
+  --text-heading-1-weight: 400;
+  --text-heading-2-weight: 400;
+  --text-heading-4-weight: 400;
+  --text-heading-5-weight: 400;
+  --text-heading-6-weight: 400;
+  --text-display-l-weight: 400;
+  --text-display-xl-weight: 400;
+  --text-display-xxl-weight: 400;
+  --text-subtitle-r-weight: 600;
+  --text-badge-t-weight: 400;
+
+  --text-link-r-spacing: 0%;
+  --text-link-t-spacing: 0%;
+  --text-button-m-spacing: 0%;
+  --text-button-s-spacing: 0%;
+  --text-heading-1-spacing: -1%;
+  --text-heading-2-spacing: -1%;
+  --text-heading-4-spacing: -1%;
+  --text-heading-5-spacing: -1%;
+  --text-heading-6-spacing: -1%;
+  --text-display-l-spacing: 0%;
+  --text-display-xl-spacing: 0%;
+  --text-display-xxl-spacing: 0%;
+  --text-subtitle-r-spacing: 0%;
+  --text-badge-t-spacing: 0%;
+
+  --text-link-r-line-height: 150%;
+  --text-link-t-line-height: 150%;
+  --text-button-m-line-height: 150%;
+  --text-button-s-line-height: 150%;
+  --text-heading-1-line-height: 120%;
+  --text-heading-2-line-height: 120%;
+  --text-heading-4-line-height: 130%;
+  --text-heading-5-line-height: 140%;
+  --text-heading-6-line-height: 140%;
+  --text-display-l-line-height: 150%;
+  --text-display-xl-line-height: 150%;
+  --text-display-xxl-line-height: 150%;
+  --text-subtitle-r-line-height: 150%;
+  --text-badge-t-line-height: 150%;
+
+  --text-link-r-style: normal;
+  --text-link-t-style: normal;
+  --text-button-m-style: normal;
+  --text-button-s-style: normal;
+  --text-heading-1-style: normal;
+  --text-heading-2-style: normal;
+  --text-heading-4-style: normal;
+  --text-heading-5-style: normal;
+  --text-heading-6-style: normal;
+  --text-display-l-style: normal;
+  --text-display-xl-style: normal;
+  --text-display-xxl-style: normal;
+  --text-subtitle-r-style: normal;
+  --text-badge-t-style: normal;
+
+  --container-1440: 1440px;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@layer utilities {
+  .text-link-r {
+    font-family: var(--text-link-r-font);
+    font-size: var(--text-link-r-size);
+    font-weight: var(--text-link-r-weight);
+    font-style: var(--text-link-r-style);
+    line-height: var(--text-link-r-line-height);
+    letter-spacing: var(--text-link-r-spacing);
+  }
+
+  .text-link-t {
+    font-family: var(--text-link-t-font);
+    font-size: var(--text-link-t-size);
+    font-weight: var(--text-link-t-weight);
+    font-style: var(--text-link-t-style);
+    line-height: var(--text-link-t-line-height);
+    letter-spacing: var(--text-link-t-spacing);
+  }
+
+  .text-button-m {
+    font-family: var(--text-button-m-font);
+    font-size: var(--text-button-m-size);
+    font-weight: var(--text-button-m-weight);
+    font-style: var(--text-button-m-style);
+    line-height: var(--text-button-m-line-height);
+    letter-spacing: var(--text-button-m-spacing);
+  }
+
+  .text-heading-1 {
+    font-family: var(--text-heading-1-font);
+    font-size: var(--text-heading-1-size);
+    font-weight: var(--text-heading-1-weight);
+    font-style: var(--text-heading-1-style);
+    line-height: var(--text-heading-1-line-height);
+    letter-spacing: var(--text-heading-1-spacing);
+  }
+
+  .text-heading-6 {
+    font-family: var(--text-heading-6-font);
+    font-size: var(--text-heading-6-size);
+    font-weight: var(--text-heading-6-weight);
+    font-style: var(--text-heading-6-style);
+    line-height: var(--text-heading-6-line-height);
+    letter-spacing: var(--text-heading-6-spacing);
+  }
+
+  .text-display-r {
+    font-family: var(--text-display-l-font);
+    font-size: var(--text-display-l-size);
+    font-weight: var(--text-display-l-weight);
+    font-style: var(--text-display-l-style);
+    line-height: var(--text-display-l-line-height);
+    letter-spacing: var(--text-display-l-spacing);
+  }
+
+  .text-subtitle-r {
+    font-family: var(--text-subtitle-r-font);
+    font-size: var(--text-subtitle-r-size);
+    font-weight: var(--text-subtitle-r-weight);
+    font-style: var(--text-subtitle-r-style);
+    line-height: var(--text-subtitle-r-line-height);
+    letter-spacing: var(--text-subtitle-r-spacing);
+  }
+
+  .text-badge-t {
+    font-family: var(--text-badge-t-font);
+    font-size: var(--text-badge-t-size);
+    font-weight: var(--text-badge-t-weight);
+    font-style: var(--text-badge-t-style);
+    line-height: var(--text-badge-t-line-height);
+    letter-spacing: var(--text-badge-t-spacing);
+  }
+
+  .text-display-xl {
+    font-family: var(--text-display-xl-font);
+    font-size: var(--text-display-xl-size);
+    font-weight: var(--text-display-xl-weight);
+    font-style: var(--text-display-xl-style);
+    line-height: var(--text-display-xl-line-height);
+    letter-spacing: var(--text-display-xl-spacing);
+  }
+
+  .text-display-xxl {
+    font-family: var(--text-display-xxl-font);
+    font-size: var(--text-display-xxl-size);
+    font-weight: var(--text-display-xxl-weight);
+    font-style: var(--text-display-xxl-style);
+    line-height: var(--text-display-xxl-line-height);
+    letter-spacing: var(--text-display-xxl-spacing);
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--text-color-content);
+}
