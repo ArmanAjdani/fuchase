@@ -208,6 +208,15 @@
     letter-spacing: var(--text-heading-1-spacing);
   }
 
+  .text-heading-2 {
+    font-family: var(--text-heading-2-font);
+    font-size: var(--text-heading-2-size);
+    font-weight: var(--text-heading-2-weight);
+    font-style: var(--text-heading-2-style);
+    line-height: var(--text-heading-2-line-height);
+    letter-spacing: var(--text-heading-2-spacing);
+  }
+
   .text-heading-6 {
     font-family: var(--text-heading-6-font);
     font-size: var(--text-heading-6-size);
@@ -266,4 +275,19 @@
 body {
   background: var(--color-background);
   color: var(--text-color-content);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-20.1%);
+  }
+}
+
+.animate-marquee {
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  will-change: transform;
 }
