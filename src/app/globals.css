@@ -42,7 +42,7 @@
   --secondary: #0f1f15;
   --accent: #c4c9b3;
   --base: #2c3119;
-
+  --base-shadow: #2c311999;
   --text-white: #ffffff;
   --text-content: #0c0c0c;
   --text-heading: #2c3119;
@@ -51,6 +51,8 @@
   --text-accent: #c4c9b3;
 
   --border-dark-white: #ffffff33;
+  --border-light-white: #0c0c0c4c;
+  --border-dark-button: #2c3119;
 }
 
 @theme {
@@ -61,6 +63,7 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-base: var(--base);
+  --color-base-shadow: var(--base-shadow);
 
   --text-color-white: var(--text-white);
   --text-color-content: var(--text-content);
@@ -70,6 +73,8 @@
   --text-color-accent: var(--text-accent);
 
   --border-color-dark-white: var(--border-dark-white);
+  --border-color-light-white: var(--border-light-white);
+  --border-color-dark-button: var(--border-dark-button);
 
   --text-link-r-font: "Baskervville-Regular";
   --text-link-t-font: "LibreFranklin-Regular";
@@ -77,9 +82,11 @@
   --text-button-s-font: "LibreFranklin-SemiBold";
   --text-heading-1-font: "CormorantGaramond-Regular";
   --text-heading-2-font: "CormorantGaramond-Regular";
+  --text-heading-3-font: "CormorantGaramond-Regular";
   --text-heading-4-font: "CormorantGaramond-Regular";
   --text-heading-5-font: "CormorantGaramond-Regular";
   --text-heading-6-font: "CormorantGaramond-Regular";
+  --text-display-r-font: "Baskervville-Regular";
   --text-display-l-font: "Baskervville-Regular";
   --text-display-xl-font: "Baskervville-Regular";
   --text-display-xxl-font: "Baskervville-Regular";
@@ -92,9 +99,11 @@
   --text-button-s-size: 14px;
   --text-heading-1-size: 72px;
   --text-heading-2-size: 52px;
+  --text-heading-3-size: 44px;
   --text-heading-4-size: 36px;
   --text-heading-5-size: 28px;
   --text-heading-6-size: 22px;
+  --text-display-r-size: 16px;
   --text-display-l-size: 22px;
   --text-display-xl-size: 24px;
   --text-display-xxl-size: 36px;
@@ -107,9 +116,11 @@
   --text-button-s-weight: 600;
   --text-heading-1-weight: 400;
   --text-heading-2-weight: 400;
+  --text-heading-3-weight: 400;
   --text-heading-4-weight: 400;
   --text-heading-5-weight: 400;
   --text-heading-6-weight: 400;
+  --text-display-r-weight: 400;
   --text-display-l-weight: 400;
   --text-display-xl-weight: 400;
   --text-display-xxl-weight: 400;
@@ -122,9 +133,11 @@
   --text-button-s-spacing: 0%;
   --text-heading-1-spacing: -1%;
   --text-heading-2-spacing: -1%;
+  --text-heading-3-spacing: -1%;
   --text-heading-4-spacing: -1%;
   --text-heading-5-spacing: -1%;
   --text-heading-6-spacing: -1%;
+  --text-display-r-spacing: 0%;
   --text-display-l-spacing: 0%;
   --text-display-xl-spacing: 0%;
   --text-display-xxl-spacing: 0%;
@@ -137,9 +150,11 @@
   --text-button-s-line-height: 150%;
   --text-heading-1-line-height: 120%;
   --text-heading-2-line-height: 120%;
+  --text-heading-3-line-height: 120%;
   --text-heading-4-line-height: 130%;
   --text-heading-5-line-height: 140%;
   --text-heading-6-line-height: 140%;
+  --text-display-r-line-height: 150%;
   --text-display-l-line-height: 150%;
   --text-display-xl-line-height: 150%;
   --text-display-xxl-line-height: 150%;
@@ -152,9 +167,11 @@
   --text-button-s-style: normal;
   --text-heading-1-style: normal;
   --text-heading-2-style: normal;
+  --text-heading-3-style: normal;
   --text-heading-4-style: normal;
   --text-heading-5-style: normal;
   --text-heading-6-style: normal;
+  --text-display-r-style: normal;
   --text-display-l-style: normal;
   --text-display-xl-style: normal;
   --text-display-xxl-style: normal;
@@ -163,13 +180,6 @@
 
   --container-1440: 1440px;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 @layer utilities {
   .text-link-r {
@@ -217,6 +227,33 @@
     letter-spacing: var(--text-heading-2-spacing);
   }
 
+  .text-heading-3 {
+    font-family: var(--text-heading-3-font);
+    font-size: var(--text-heading-3-size);
+    font-weight: var(--text-heading-3-weight);
+    font-style: var(--text-heading-3-style);
+    line-height: var(--text-heading-3-line-height);
+    letter-spacing: var(--text-heading-3-spacing);
+  }
+
+  .text-heading-4 {
+    font-family: var(--text-heading-4-font);
+    font-size: var(--text-heading-4-size);
+    font-weight: var(--text-heading-4-weight);
+    font-style: var(--text-heading-4-style);
+    line-height: var(--text-heading-4-line-height);
+    letter-spacing: var(--text-heading-4-spacing);
+  }
+
+  .text-heading-5 {
+    font-family: var(--text-heading-5-font);
+    font-size: var(--text-heading-5-size);
+    font-weight: var(--text-heading-5-weight);
+    font-style: var(--text-heading-5-style);
+    line-height: var(--text-heading-5-line-height);
+    letter-spacing: var(--text-heading-5-spacing);
+  }
+
   .text-heading-6 {
     font-family: var(--text-heading-6-font);
     font-size: var(--text-heading-6-size);
@@ -224,15 +261,6 @@
     font-style: var(--text-heading-6-style);
     line-height: var(--text-heading-6-line-height);
     letter-spacing: var(--text-heading-6-spacing);
-  }
-
-  .text-display-r {
-    font-family: var(--text-display-l-font);
-    font-size: var(--text-display-l-size);
-    font-weight: var(--text-display-l-weight);
-    font-style: var(--text-display-l-style);
-    line-height: var(--text-display-l-line-height);
-    letter-spacing: var(--text-display-l-spacing);
   }
 
   .text-subtitle-r {
@@ -251,6 +279,24 @@
     font-style: var(--text-badge-t-style);
     line-height: var(--text-badge-t-line-height);
     letter-spacing: var(--text-badge-t-spacing);
+  }
+
+  .text-display-r {
+    font-family: var(--text-display-r-font);
+    font-size: var(--text-display-r-size);
+    font-weight: var(--text-display-r-weight);
+    font-style: var(--text-display-r-style);
+    line-height: var(--text-display-r-line-height);
+    letter-spacing: var(--text-display-r-spacing);
+  }
+
+  .text-display-l {
+    font-family: var(--text-display-l-font);
+    font-size: var(--text-display-l-size);
+    font-weight: var(--text-display-l-weight);
+    font-style: var(--text-display-l-style);
+    line-height: var(--text-display-l-line-height);
+    letter-spacing: var(--text-display-l-spacing);
   }
 
   .text-display-xl {
