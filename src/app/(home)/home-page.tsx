@@ -15,10 +15,10 @@ export default function HomePage() {
       <Partners />
       <div className="max-w-1440 mx-auto">
         {/* who we are */}
-        <div className="flex flex-row flex-wrap justify-between">
+        <div className="flex flex-row flex-wrap justify-between items-center px-10 py-7">
           <Image src={Section1} alt="who we are image" className="w-1/2" />
           <div className="pt-10 pl-16 pr-4 w-1/2">
-            <h2 className="text-heading-2 text-heading mb-16 capitalize">
+            <h2 className="text-heading-3 text-heading mb-14 capitalize text-center">
               Who We are
             </h2>
             <div className="relative py-2">
@@ -50,7 +50,7 @@ export default function HomePage() {
                 alt="ornament"
                 className="absolute bottom-0 right-0 rotate-180"
               />
-              <p className="text-display-r text-content m-20 text-justify">
+              <p className="text-display-l text-content mx-16 my-6 text-justify">
                 Fuchase is a next-generation financial marketplace that connects
                 the key players of global capital markets. We provide an
                 environment where banks, brokers, fintechs, institutional
@@ -64,20 +64,20 @@ export default function HomePage() {
         </div>
         {/* solutions */}
         <div className="px-16 py-28">
-          <h1 className="capitalize text-heading-1 text-heading text-center">
+          <h2 className="capitalize text-heading-1 text-heading text-center">
             Solutions
-          </h1>
-          <div className="flex flex-row flex-wrap justify-center gap-24 mt-16">
+          </h2>
+          <div className="flex flex-row flex-wrap justify-center gap-16 mt-16">
             {Array.from(Array(10)).map((i) => (
-              <Solution key={i} />
+              <Solution key={i} index={i} />
             ))}
           </div>
         </div>
         {/* who we serve */}
-        <div className="flex flex-row flex-wrap justify-between">
+        <div className="flex flex-row flex-wrap justify-between items-center px-10 py-7">
           <Image src={Section2} alt="who we are image" className="w-1/2" />
           <div className="pt-10 pl-16 pr-4 w-1/2">
-            <h2 className="text-heading-2 text-heading mb-16 capitalize">
+            <h2 className="text-heading-3 text-heading mb-16 capitalize text-center">
               Who We serve
             </h2>
             <div className="relative py-2">
@@ -109,7 +109,7 @@ export default function HomePage() {
                 alt="ornament"
                 className="absolute bottom-0 right-0 rotate-180"
               />
-              <p className="text-display-r text-content m-20 text-justify">
+              <p className="text-display-l text-content mx-16 my-6 text-justify">
                 Fuchase is a next-generation financial marketplace that connects
                 the key players of global capital markets. We provide an
                 environment where banks, brokers, fintechs, institutional

@@ -5,17 +5,14 @@ import Ornament from "../../../assets/imgs/ornament.png";
 export type HeadingPropsType = {
   name?: string;
   title: string;
+  subtitle?: string;
 };
 
-export default function Heading({
-  name,
-  title,
-}: {
-  name?: string;
-  title: string;
-}) {
+export default function Heading({ name, title, subtitle }: HeadingPropsType) {
   return (
-    <div className="mt-48 pb-32 pt-28 text-center px-20 relative">
+    <div
+      className={`mt-36 pt-20 text-center px-20 relative ${subtitle ? "pb-14" : "pb-24"}`}
+    >
       <Image
         src={Ornament}
         width={50}
@@ -30,10 +27,17 @@ export default function Heading({
         alt="ornament"
         className="absolute top-6 right-20 rotate-90"
       />
-      <span className="text-primary text-heading-6">{name}</span>
-      <h1 className="text-heading text-heading-1 pt-16 max-w-[1000px] mx-auto">
+      {name && (
+        <span className="block text-primary text-heading-6 my-4">{name}</span>
+      )}
+      <h1 className={`text-heading text-heading-1 max-w-[1200px] mx-auto`}>
         {title}
       </h1>
+      {subtitle && (
+        <p className="text-display-xl text-base text-center mt-10 mx-10">
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 }

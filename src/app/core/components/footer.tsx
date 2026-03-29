@@ -1,33 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import MailIcon from "../../../assets/icons/mail.svg";
-import PhoneIcon from "../../../assets/icons/phone.svg";
+import MailDarkIcon from "../../../assets/icons/mail-dark.svg";
+import PhoneDarkIcon from "../../../assets/icons/phone-dark.svg";
 import Linkedin from "../../../assets/icons/linkedin.svg";
 import Logo2 from "../../../assets/imgs/logo2.svg";
 
 export default function Footer() {
   return (
     <footer>
-      <div className="py-10 px-16 bg-primary">
+      <div className="py-4 px-16 bg-accent">
         <div className="flex flex-row flex-wrap items-center justify-between max-w-1440 mx-auto">
-          <span className="text-display-xxl text-accent">Get in touch</span>
-          <div className="flex flex-col gap-6 justify-center items-center">
-            <Image src={MailIcon} width={34} height={27} alt="mail icon" />
-            <a href="mailto:" className="text-accent underline text-button-m">
+          <span className="text-display-xl text-primary">Get in touch</span>
+          <div className="flex flex-row gap-6 justify-center items-center">
+            <Image src={MailDarkIcon} width={25} height={20} alt="mail icon" />
+            <a
+              href="mailto:"
+              className="text-primary underline text-subtitle-r"
+            >
               hello@fuchase.com
             </a>
           </div>
-          <div className="flex flex-col gap-6 justify-center items-center">
-            <Image src={PhoneIcon} width={30} height={30} alt="mail icon" />
-            <a href="tel:+" className="text-accent underline text-button-m">
+          <div className="flex flex-row gap-6 justify-center items-center">
+            <Image src={PhoneDarkIcon} width={23} height={23} alt="mail icon" />
+            <a href="tel:+" className="text-primary underline text-subtitle-r">
               +1 (555) 000-0000
             </a>
           </div>
         </div>
       </div>
 
-      <div className="px-16 pb-20 bg-secondary">
+      <div className="px-16 pb-2.5 bg-secondary">
         <div className="py-14 flex flex-row flex-wrap justify-between max-w-1440 mx-auto">
           <div className="flex flex-col flex-wrap items-center gap-7">
             <Image src={Logo2} width={196} height={123} alt="logo2" />
@@ -141,10 +144,10 @@ export default function Footer() {
         <hr className="border border-dark-white" />
 
         <div className="py-2.5 flex flex-row flex-wrap justify-between items-center">
-          <span className="block text-accent text-display-l">
+          <span className="block text-accent text-display-r">
             @2026 Fuchase
           </span>
-          <p className="max-w-[741px] text-accent text-display-l">
+          <p className="max-w-[741px] text-accent text-display-r">
             We connect elite financial institutions and visionary investors with
             transformative opportunities, exclusive partnerships, and
             next-generation financial infrastructure designed for those who

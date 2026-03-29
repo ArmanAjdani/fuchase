@@ -1,9 +1,16 @@
+import { Metadata } from "next";
 import Image from "next/image";
 
 import Heading from "../core/components/heading";
 import AboutUsImage from "../../assets/imgs/about-us.png";
 import Ornament from "../../assets/imgs/ornament.png";
 import AboutUsFootageImage from "../../assets/imgs/about-us-footage.png";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "bla bla bla",
+  keywords: ["first", "second", "third"],
+};
 
 export default function AboutUsPage() {
   return (
@@ -19,38 +26,25 @@ export default function AboutUsPage() {
         className="w-full"
         width={1440}
         height={772}
+        priority
       />
       {/* content */}
-      <div className="my-28 py-28 mx-20 relative">
+      <div className="my-14 py-12 mx-20 relative">
         <Image
           src={Ornament}
           width={50}
           height={50}
           alt="ornament"
-          className="absolute top-6 left-20 rotate-0"
+          className="absolute top-0 left-20 rotate-0"
         />
         <Image
           src={Ornament}
           width={50}
           height={50}
           alt="ornament"
-          className="absolute top-6 right-20 rotate-90"
+          className="absolute top-0 right-20 rotate-90"
         />
-        <Image
-          src={Ornament}
-          width={50}
-          height={50}
-          alt="ornament"
-          className="absolute bottom-0 left-20 rotate-270"
-        />
-        <Image
-          src={Ornament}
-          width={50}
-          height={50}
-          alt="ornament"
-          className="absolute bottom-0 right-20 rotate-180"
-        />
-        <article className="pt-10 pl-10">
+        <article className="pl-10">
           <section className="px-56">
             <p className="text-base text-display-xl">
               Established in 1672 at the Sign of the Golden Bottle and owned
@@ -103,8 +97,8 @@ export default function AboutUsPage() {
         </article>
       </div>
       {/* footage */}
-      <div className="flex flex-row flex-wrap justify-between items-center max-w-1440 mx-auto mb-28 px-28">
-        <div className="pt-10 pr-24 w-1/2">
+      <div className="flex flex-row flex-wrap justify-between items-center max-w-1440 mx-auto mb-6 px-28">
+        <div className="pt-10 px-24 w-1/2">
           <div className="relative py-2">
             <Image
               src={Ornament}
@@ -134,7 +128,7 @@ export default function AboutUsPage() {
               alt="ornament"
               className="absolute bottom-0 right-0 rotate-180"
             />
-            <p className="text-display-r text-content my-28 text-center">
+            <p className="text-display-l text-content my-14 mx-2 text-center">
               &quot;Close, confidential relationships allow us to anticipate our
               customers’ needs and our values inform our decisions at every
               level of the business.&quot;

@@ -1,15 +1,37 @@
+import { Metadata } from "next";
+
 import Heading from "../core/components/heading";
-import Post from "./components/post";
+import JsonLd from "../core/components/json-ld";
+import Posts from "./components/posts";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "bla bla bla",
+  keywords: ["first", "second", "third"],
+};
 
 export default function BlogPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Blog",
+    hasPart: {
+      "@type": "ItemList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          url: "https://example.com/blog/post-1",
+        },
+      ],
+    },
+  };
+
   return (
     <>
-      <Heading name="blog" title="Recent Blog Posts" />
-      <div className="flex flex-row flex-wrap justify-center gap-12 max-w-1440 mx-auto mb-28">
-        {Array.from(Array(6)).map((i) => (
-          <Post key={i} />
-        ))}
-      </div>
+      <Heading title="Recent Blog Posts" />
+      <Posts />
+      <JsonLd data={schema} />
     </>
   );
 }

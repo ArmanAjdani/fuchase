@@ -86,11 +86,13 @@
   --text-heading-4-font: "CormorantGaramond-Regular";
   --text-heading-5-font: "CormorantGaramond-Regular";
   --text-heading-6-font: "CormorantGaramond-Regular";
+  --text-display-s-font: "Baskervville-Regular";
   --text-display-r-font: "Baskervville-Regular";
   --text-display-l-font: "Baskervville-Regular";
   --text-display-xl-font: "Baskervville-Regular";
   --text-display-xxl-font: "Baskervville-Regular";
-  --text-subtitle-r-font: "LibreFranklin-SemiBold";
+  --text-subtitle-r-font: "LibreFranklin-Regular";
+  --text-subtitle-sb-font: "LibreFranklin-SemiBold";
   --text-badge-t-font: "Baskervville-Regular";
 
   --text-link-r-size: 22px;
@@ -103,11 +105,13 @@
   --text-heading-4-size: 36px;
   --text-heading-5-size: 28px;
   --text-heading-6-size: 22px;
+  --text-display-s-size: 12px;
   --text-display-r-size: 16px;
   --text-display-l-size: 22px;
   --text-display-xl-size: 24px;
   --text-display-xxl-size: 36px;
   --text-subtitle-r-size: 16px;
+  --text-subtitle-sb-size: 16px;
   --text-badge-t-size: 12px;
 
   --text-link-r-weight: 400;
@@ -120,11 +124,13 @@
   --text-heading-4-weight: 400;
   --text-heading-5-weight: 400;
   --text-heading-6-weight: 400;
+  --text-display-s-weight: 400;
   --text-display-r-weight: 400;
   --text-display-l-weight: 400;
   --text-display-xl-weight: 400;
   --text-display-xxl-weight: 400;
-  --text-subtitle-r-weight: 600;
+  --text-subtitle-r-weight: 400;
+  --text-subtitle-sb-weight: 600;
   --text-badge-t-weight: 400;
 
   --text-link-r-spacing: 0%;
@@ -137,11 +143,13 @@
   --text-heading-4-spacing: -1%;
   --text-heading-5-spacing: -1%;
   --text-heading-6-spacing: -1%;
+  --text-display-s-spacing: 0%;
   --text-display-r-spacing: 0%;
   --text-display-l-spacing: 0%;
   --text-display-xl-spacing: 0%;
   --text-display-xxl-spacing: 0%;
   --text-subtitle-r-spacing: 0%;
+  --text-subtitle-sb-spacing: 0%;
   --text-badge-t-spacing: 0%;
 
   --text-link-r-line-height: 150%;
@@ -154,11 +162,13 @@
   --text-heading-4-line-height: 130%;
   --text-heading-5-line-height: 140%;
   --text-heading-6-line-height: 140%;
+  --text-display-s-line-height: 150%;
   --text-display-r-line-height: 150%;
   --text-display-l-line-height: 150%;
   --text-display-xl-line-height: 150%;
   --text-display-xxl-line-height: 150%;
   --text-subtitle-r-line-height: 150%;
+  --text-subtitle-sb-line-height: 150%;
   --text-badge-t-line-height: 150%;
 
   --text-link-r-style: normal;
@@ -171,14 +181,18 @@
   --text-heading-4-style: normal;
   --text-heading-5-style: normal;
   --text-heading-6-style: normal;
+  --text-display-s-style: normal;
   --text-display-r-style: normal;
   --text-display-l-style: normal;
   --text-display-xl-style: normal;
   --text-display-xxl-style: normal;
   --text-subtitle-r-style: normal;
+  --text-subtitle-sb-style: normal;
   --text-badge-t-style: normal;
 
   --container-1440: 1440px;
+
+  --background-image-contact-us: url("../assets/imgs/contact-us-bg.png");
 }
 
 @layer utilities {
@@ -263,13 +277,13 @@
     letter-spacing: var(--text-heading-6-spacing);
   }
 
-  .text-subtitle-r {
-    font-family: var(--text-subtitle-r-font);
-    font-size: var(--text-subtitle-r-size);
-    font-weight: var(--text-subtitle-r-weight);
-    font-style: var(--text-subtitle-r-style);
-    line-height: var(--text-subtitle-r-line-height);
-    letter-spacing: var(--text-subtitle-r-spacing);
+  .text-subtitle-sb {
+    font-family: var(--text-subtitle-sb-font);
+    font-size: var(--text-subtitle-sb-size);
+    font-weight: var(--text-subtitle-sb-weight);
+    font-style: var(--text-subtitle-sb-style);
+    line-height: var(--text-subtitle-sb-line-height);
+    letter-spacing: var(--text-subtitle-sb-spacing);
   }
 
   .text-badge-t {
@@ -279,6 +293,15 @@
     font-style: var(--text-badge-t-style);
     line-height: var(--text-badge-t-line-height);
     letter-spacing: var(--text-badge-t-spacing);
+  }
+
+  .text-display-s {
+    font-family: var(--text-display-s-font);
+    font-size: var(--text-display-s-size);
+    font-weight: var(--text-display-s-weight);
+    font-style: var(--text-display-s-style);
+    line-height: var(--text-display-s-line-height);
+    letter-spacing: var(--text-display-s-spacing);
   }
 
   .text-display-r {

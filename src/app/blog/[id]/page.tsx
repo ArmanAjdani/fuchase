@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Image from "next/image";
 
 import Heading from "../../core/components/heading";
@@ -7,8 +8,40 @@ import ChevronIcon from "../../../assets/icons/chevron.svg";
 import InstagramIcon from "../../../assets/icons/instagram.svg";
 import XIcon from "../../../assets/icons/x.svg";
 import LinkedinIcon from "../../../assets/icons/linkedin.svg";
+import JsonLd from "../../core/components/json-ld";
+
+export const metadata: Metadata = {
+  title: "Exploring Generative AI in Content Creation",
+  description: "bla bla bla",
+  keywords: ["first", "second", "third"],
+  authors: [{ name: "Your Name", url: "https://yourdomain.com" }],
+  creator: "Your Name",
+  publisher: "Your Company",
+  category: "technology",
+};
 
 export default function BlogDetail() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "My Blog Title",
+    description: "Short description",
+    image: "https://example.com/image.jpg",
+    author: {
+      "@type": "Person",
+      name: "Author Name",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Your Company",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://example.com/logo.png",
+      },
+    },
+    datePublished: "2026-03-27",
+    dateModified: "2026-03-27",
+  };
   return (
     <>
       <Heading title="Exploring Generative AI in Content Creation" />
@@ -34,9 +67,9 @@ export default function BlogDetail() {
           <br />
           <br />
           <section>
-            <h4 className="text-heading text-heading-4">
+            <h2 className="text-heading text-heading-4">
               Why Should You Invest?
-            </h4>
+            </h2>
             <br />
             <br />
             <p className="text-heading text-display-r">
@@ -52,9 +85,9 @@ export default function BlogDetail() {
           <br />
           <br />
           <section>
-            <h4 className="text-heading text-heading-4">
+            <h2 className="text-heading text-heading-4">
               Start with the Basics: What Is Investing?
-            </h4>
+            </h2>
             <br />
             <br />
             <p className="text-heading text-display-r">
@@ -69,9 +102,9 @@ export default function BlogDetail() {
           <br />
           <br />
           <section>
-            <h4 className="text-heading text-heading-4">
+            <h2 className="text-heading text-heading-4">
               How Much Money Do You Need to Start?
-            </h4>
+            </h2>
             <br />
             <br />
             <p className="text-heading text-display-r">
@@ -89,7 +122,7 @@ export default function BlogDetail() {
           <br />
         </div>
         <div className="w-[400px] pl-12 pr-3 shrink-0">
-          <h5 className="mb-10 text-base text-heading-5">In this article</h5>
+          <h3 className="mb-10 text-base text-heading-5">In this article</h3>
           <div className="mb-10">
             <div className="flex flex-row flex-wrap items-center mb-5">
               <Image
@@ -162,6 +195,7 @@ export default function BlogDetail() {
           </div>
         </div>
       </div>
+      <JsonLd data={schema} />
     </>
   );
 }
