@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Metadata } from "next";
 
 import Heading from "../core/components/heading";
@@ -30,7 +31,9 @@ export default function BlogPage() {
   return (
     <>
       <Heading title="Recent Blog Posts" />
-      <Posts />
+      <Suspense>
+        <Posts />
+      </Suspense>
       <JsonLd data={schema} />
     </>
   );

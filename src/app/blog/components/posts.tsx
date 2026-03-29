@@ -43,7 +43,7 @@ export default function Posts() {
         )}
       </div>
       <div className="flex flex-row flex-wrap justify-center gap-12 max-w-1440 mx-auto mb-28">
-        {Array.from(Array(6)).map((i) => (
+        {Array.from({ length: 6 }).map((_, i) => (
           <Post key={i} selectCategory={setCategory} />
         ))}
       </div>
