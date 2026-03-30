@@ -30,7 +30,7 @@ export default function Faq() {
     <>
       <Heading title="We Have Answers" />
       <div className="px-24 pb-16 max-w-1440 mx-auto">
-        {Array.from(Array(12)).map((i) => (
+        {Array.from(Array(12)).map((_, i) => (
           <Qa key={i} />
         ))}
       </div>

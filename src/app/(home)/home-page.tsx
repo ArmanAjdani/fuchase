@@ -1,12 +1,8 @@
-import Image from "next/image";
-
 import Hero from "./components/hero";
 import Partners from "./components/partners";
 import Solution from "./components/solution";
-
-import Section1 from "../../assets/imgs/section1.png";
-import Section2 from "../../assets/imgs/section2.png";
-import Ornament from "../../assets/imgs/ornament.png";
+import WhoWeAre from "./components/who-we-are";
+import WhoWeServe from "./components/who-we-serve";
 
 export default function HomePage() {
   return (
@@ -14,113 +10,18 @@ export default function HomePage() {
       <Hero />
       <Partners />
       <div className="max-w-1440 mx-auto">
-        {/* who we are */}
-        <div className="flex flex-row flex-wrap justify-between items-center px-10 py-7">
-          <Image src={Section1} alt="who we are image" className="w-1/2" />
-          <div className="pt-10 pl-16 pr-4 w-1/2">
-            <h2 className="text-heading-3 text-heading mb-14 capitalize text-center">
-              Who We are
-            </h2>
-            <div className="relative py-2">
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute top-0 left-0 rotate-0"
-              />
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute top-0 right-0 rotate-90"
-              />
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute bottom-0 left-0 rotate-270"
-              />
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute bottom-0 right-0 rotate-180"
-              />
-              <p className="text-display-l text-content mx-16 my-6 text-justify">
-                Fuchase is a next-generation financial marketplace that connects
-                the key players of global capital markets. We provide an
-                environment where banks, brokers, fintechs, institutional
-                investors, and innovators can collaborate, trade, and innovate.
-                By combining cutting-edge technology, deep industry expertise,
-                and a global network, we serve as the strategic bridge between
-                liquidity, technology, and capital.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* solutions */}
+        <WhoWeAre />
         <div className="px-16 py-28">
-          <h2 className="capitalize text-heading-1 text-heading text-center">
+          <h2 className="capitalize text-heading-3 text-heading text-center">
             Solutions
           </h2>
           <div className="flex flex-row flex-wrap justify-center gap-16 mt-16">
-            {Array.from(Array(10)).map((i) => (
+            {Array.from(Array(10)).map((_, i) => (
               <Solution key={i} index={i} />
             ))}
           </div>
         </div>
-        {/* who we serve */}
-        <div className="flex flex-row flex-wrap justify-between items-center px-10 py-7">
-          <Image src={Section2} alt="who we are image" className="w-1/2" />
-          <div className="pt-10 pl-16 pr-4 w-1/2">
-            <h2 className="text-heading-3 text-heading mb-16 capitalize text-center">
-              Who We serve
-            </h2>
-            <div className="relative py-2">
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute top-0 left-0 rotate-0"
-              />
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute top-0 right-0 rotate-90"
-              />
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute bottom-0 left-0 rotate-270"
-              />
-              <Image
-                src={Ornament}
-                width={50}
-                height={50}
-                alt="ornament"
-                className="absolute bottom-0 right-0 rotate-180"
-              />
-              <p className="text-display-l text-content mx-16 my-6 text-justify">
-                Fuchase is a next-generation financial marketplace that connects
-                the key players of global capital markets. We provide an
-                environment where banks, brokers, fintechs, institutional
-                investors, and innovators can collaborate, trade, and innovate.
-                By combining cutting-edge technology, deep industry expertise,
-                and a global network, we serve as the strategic bridge between
-                liquidity, technology, and capital.
-              </p>
-            </div>
-          </div>
-        </div>
+        <WhoWeServe />
       </div>
     </>
   );
