@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "../../../../public/logo.svg";
-import CloseLightIcon from "../../../assets/icons/close-light.svg";
+import Logo from "@public/logo.svg";
+import CloseLightIcon from "@icons/close-light.svg";
 
 export type NavbarPropsType = {
   open: boolean;

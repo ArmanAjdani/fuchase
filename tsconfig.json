@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./*", "./src/*"]
+      "@/*": ["./*", "./src/*"],
+      "@public/*": ["./public/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@icons/*": ["./src/assets/icons/*"],
+      "@core/*": ["./src/app/core/*"]
     }
   },
   "include": [

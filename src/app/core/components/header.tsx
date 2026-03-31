@@ -6,11 +6,11 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-import Navbar from "./navbar";
+import Logo from "@public/logo.svg";
+import MenuIcon from "@icons/menu.svg";
+import MenuDarkIcon from "@icons/menu-dark.svg";
 
-import Logo from "../../../../public/logo.svg";
-import MenuIcon from "../../../assets/icons/menu.svg";
-import MenuDarkIcon from "../../../assets/icons/menu-dark.svg";
+import Navbar from "./navbar";
 
 export default function Header() {
   const pathname = usePathname();

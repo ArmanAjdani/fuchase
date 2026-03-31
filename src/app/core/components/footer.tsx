@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import MailDarkIcon from "../../../assets/icons/mail-dark.svg";
-import PhoneDarkIcon from "../../../assets/icons/phone-dark.svg";
-import Linkedin from "../../../assets/icons/linkedin.svg";
-import Logo2 from "../../../assets/imgs/logo2.svg";
+import MailDarkIcon from "@icons/mail-dark.svg";
+import PhoneDarkIcon from "@icons/phone-dark.svg";
+import Linkedin from "@icons/linkedin.svg";
+import Logo2 from "@assets/imgs/logo2.svg";
 
 export default function Footer() {
   return (

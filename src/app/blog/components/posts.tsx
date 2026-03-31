@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 
-import Post from "./post";
+import CloseDarkIcon from "@icons/close-dark.svg";
 
-import CloseDarkIcon from "../../../assets/icons/close-dark.svg";
+import Post from "./post";
 
 export default function Posts() {
   const router = useRouter();

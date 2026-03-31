@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 
-import Heading from "../core/components/heading";
+import Heading from "@core/components/heading";
+import JsonLd from "@core/components/json-ld";
+
 import Qa from "./components/qa";
-import JsonLd from "../core/components/json-ld";
 
 export const metadata: Metadata = {
   title: "FAQ",

@@ -4,8 +4,8 @@ import { useCallback, useState } from "react";
 
 import Image from "next/image";
 
-import HambergerDarkIcon from "../../../assets/icons/hamberger-dark.svg";
-import CloseDarkIcon from "../../../assets/icons/close-dark.svg";
+import HambergerDarkIcon from "@icons/hamberger-dark.svg";
+import CloseDarkIcon from "@icons/close-dark.svg";
 
 export default function Qa() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
 
-import Heading from "../core/components/heading";
-import JsonLd from "../core/components/json-ld";
+import Heading from "@core/components/heading";
+import JsonLd from "@core/components/json-ld";
+
 import Posts from "./components/posts";
 
 export const metadata: Metadata = {

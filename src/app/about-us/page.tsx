@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import Heading from "../core/components/heading";
-import AboutUsImage from "../../assets/imgs/about-us.png";
-import Ornament from "../../assets/imgs/ornament.png";
-import AboutUsFootageImage from "../../assets/imgs/about-us-footage.png";
+import AboutUsImage from "@assets/imgs/about-us.png";
+import Ornament from "@assets/imgs/ornament.png";
+import AboutUsFootageImage from "@assets/imgs/about-us-footage.png";
+
+import Heading from "@core/components/heading";
 
 export const metadata: Metadata = {
   title: "About Us",

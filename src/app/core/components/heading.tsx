@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Ornament from "../../../assets/imgs/ornament.png";
+import Ornament from "@assets/imgs/ornament.png";
 
 export type HeadingPropsType = {
   name?: string;

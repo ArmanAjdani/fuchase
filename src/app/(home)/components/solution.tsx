@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
 import Image from "next/image";
 
-import GoldmanSachs from "../../../assets/imgs/goldmansachs.png";
-import Location from "../../../assets/icons/location.svg";
+import GoldmanSachs from "@assets/imgs/goldmansachs.png";
+import Location from "@icons/location.svg";
 
 export default function Solution({ index = 0 }) {
   const ref = useRef<HTMLDivElement | null>(null);

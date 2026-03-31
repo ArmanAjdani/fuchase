@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import Heading from "../../core/components/heading";
+import BlogDetailImage from "@assets/imgs/blog-detail.png";
+import ChevronIcon from "@icons/chevron.svg";
+import InstagramIcon from "@icons/instagram.svg";
+import XIcon from "@icons/x.svg";
+import LinkedinIcon from "@icons/linkedin.svg";
 
-import BlogDetailImage from "../../../assets/imgs/blog-detail.png";
-import ChevronIcon from "../../../assets/icons/chevron.svg";
-import InstagramIcon from "../../../assets/icons/instagram.svg";
-import XIcon from "../../../assets/icons/x.svg";
-import LinkedinIcon from "../../../assets/icons/linkedin.svg";
-import JsonLd from "../../core/components/json-ld";
+import Heading from "@core/components/heading";
+import JsonLd from "@core/components/json-ld";
 
 export const metadata: Metadata = {
   title: "Exploring Generative AI in Content Creation",

@@ -1,8 +1,8 @@
 import Image from "next/image";
-
-import Section2 from "../../../assets/imgs/section2.png";
-import ArrowIcon from "../../../assets/icons/arrow.svg";
 import Link from "next/link";
+
+import Section2 from "@assets/imgs/section2.png";
+import ArrowIcon from "@icons/arrow.svg";
 
 const categories = ["Finance", "AI", "Broker"];
 

@@ -1,11 +1,10 @@
 "use client";
 
 import { useCallback, useState } from "react";
-
 import Image from "next/image";
 
-import ProfileIcon from "../../../assets/icons/profile.svg";
-import AtSignIcon from "../../../assets/icons/atsign.svg";
+import ProfileIcon from "@icons/profile.svg";
+import AtSignIcon from "@icons/atsign.svg";
 
 export type ContactForm = {
   name: string;

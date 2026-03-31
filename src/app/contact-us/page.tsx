@@ -1,16 +1,17 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import Heading from "../core/components/heading";
-import ContactForm from "./components/contact-form";
-import JsonLd from "../core/components/json-ld";
+import PhoneIcon from "@icons/phone.svg";
+import MailIcon from "@icons/mail.svg";
+import LocationIcon from "@icons/location.svg";
+import InstagramIcon from "@icons/instagram.svg";
+import XIcon from "@icons/x.svg";
+import LinkedinIcon from "@icons/linkedin.svg";
 
-import PhoneIcon from "../../assets/icons/phone.svg";
-import MailIcon from "../../assets/icons/mail.svg";
-import LocationIcon from "../../assets/icons/location.svg";
-import InstagramIcon from "../../assets/icons/instagram.svg";
-import XIcon from "../../assets/icons/x.svg";
-import LinkedinIcon from "../../assets/icons/linkedin.svg";
+import Heading from "@core/components/heading";
+import JsonLd from "@core/components/json-ld";
+
+import ContactForm from "./components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact Us",
