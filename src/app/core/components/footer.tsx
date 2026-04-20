@@ -28,9 +28,9 @@ export default function Footer() {
 	return (
 		<footer className="mt-8">
 			<div className="bg-accent px-6 py-6 sm:px-10 lg:px-16">
-				<div className="mx-auto flex max-w-1440 flex-col gap-6 lg:flex-row lg:items-center lg:justify-start lg:gap-16">
+				<div className="mx-auto flex max-w-1440 flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
 					<span className="text-heading-5 text-primary sm:text-heading-4">Get in touch</span>
-					<div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-start sm:gap-8 lg:gap-10">
+					<div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-start sm:gap-8 lg:ml-auto lg:justify-end lg:gap-10">
 						<div className="flex flex-row items-center gap-4">
 							<Image src={MailDarkIcon} width={25} height={20} alt="mail icon" />
 							<a
@@ -51,14 +51,14 @@ export default function Footer() {
 			</div>
 
 			<div className="bg-secondary px-6 pb-4 sm:px-10 lg:px-16">
-				<div className="mx-auto grid max-w-1440 gap-12 py-14 lg:grid-cols-[minmax(240px,0.78fr)_minmax(0,1.22fr)] lg:items-start">
-					<div className="flex flex-col items-start gap-7">
+				<div className="mx-auto grid max-w-1440 gap-12 py-14 lg:grid-cols-[minmax(240px,0.78fr)_minmax(0,1.22fr)]">
+					<div className="flex h-full flex-col items-center gap-7 self-stretch text-center">
 						<Image src={Logo2} width={196} height={123} alt="Fuchase logo mark" />
-						<p className="max-w-[320px] text-display-r text-accent">
+						<p className="max-w-[320px] text-center text-display-r text-accent">
 							Fuchase connects financial infrastructure, strategic capital, and market
 							access through a single integrated ecosystem.
 						</p>
-						<div className="flex w-full max-w-[320px] justify-center">
+						<div className="mt-auto flex w-full max-w-[320px] justify-center">
 							<a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
 								<Image
 									src={Linkedin}

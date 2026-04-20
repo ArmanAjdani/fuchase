@@ -50,7 +50,7 @@ export default function Solution({
 		<div
 			ref={ref}
 			style={{ transitionDelay: `${index * 100}ms` }}
-			className={`h-full w-full max-w-[300px] rounded-[28px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
+			className={`mx-auto h-full w-full max-w-[300px] rounded-[28px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
 			<div className="flex h-full flex-col gap-6">
@@ -65,9 +65,9 @@ export default function Solution({
 						className={`h-auto max-h-[172px] w-auto max-w-full object-contain ${logoClassName}`}
 					/>
 				</div>
-				<div className="space-y-3">
+				<div className="flex flex-1 flex-col space-y-3">
 					<h3 className="text-heading-6 text-heading text-center">{name}</h3>
-					<p className="text-center text-display-r leading-[1.7] text-content opacity-80">
+					<p className="flex-1 text-center text-display-r leading-[1.7] text-content opacity-80">
 						{description}
 					</p>
 				</div>
