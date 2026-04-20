@@ -7,6 +7,7 @@ import Location from '@icons/location.svg';
 
 export type SolutionPropsType = {
 	name: string;
+	description: string;
 	logo: StaticImageData;
 	location: string;
 	index: number;
@@ -16,6 +17,7 @@ export type SolutionPropsType = {
 
 export default function Solution({
 	name,
+	description,
 	logo,
 	location,
 	index = 0,
@@ -48,7 +50,7 @@ export default function Solution({
 		<div
 			ref={ref}
 			style={{ transitionDelay: `${index * 100}ms` }}
-			className={`h-full w-[280px] rounded-[28px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
+			className={`h-full w-full max-w-[300px] rounded-[28px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
 			<div className="flex h-full flex-col gap-6">
@@ -65,8 +67,8 @@ export default function Solution({
 				</div>
 				<div className="space-y-3">
 					<h3 className="text-heading-6 text-heading text-center">{name}</h3>
-					<p className="text-center text-display-r text-content opacity-80">
-						Specialized entity within the Fuchase ecosystem.
+					<p className="text-center text-display-r leading-[1.7] text-content opacity-80">
+						{description}
 					</p>
 				</div>
 				<div className="mt-auto flex flex-row flex-wrap items-center justify-center gap-3">

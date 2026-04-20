@@ -17,15 +17,20 @@ const footerLinks = {
 		{ label: 'Blog', href: '/blog' },
 		{ label: 'FAQ', href: '/faq' },
 	],
+	legal: [
+		{ label: 'Privacy Policy', href: '/privacy' },
+		{ label: 'Cookie Policy', href: '/cookies' },
+		{ label: 'Terms of Use', href: '/terms' },
+	],
 };
 
 export default function Footer() {
 	return (
 		<footer className="mt-8">
 			<div className="bg-accent px-6 py-6 sm:px-10 lg:px-16">
-				<div className="mx-auto flex max-w-1440 flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-					<span className="text-display-xxl text-primary">Get in touch</span>
-					<div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-8 lg:justify-end">
+				<div className="mx-auto flex max-w-1440 flex-col gap-6 lg:flex-row lg:items-center lg:justify-start lg:gap-16">
+					<span className="text-heading-5 text-primary sm:text-heading-4">Get in touch</span>
+					<div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-start sm:gap-8 lg:gap-10">
 						<div className="flex flex-row items-center gap-4">
 							<Image src={MailDarkIcon} width={25} height={20} alt="mail icon" />
 							<a
@@ -46,27 +51,29 @@ export default function Footer() {
 			</div>
 
 			<div className="bg-secondary px-6 pb-4 sm:px-10 lg:px-16">
-				<div className="mx-auto grid max-w-1440 gap-12 py-14 lg:grid-cols-[minmax(240px,0.85fr)_minmax(0,1.15fr)] lg:items-start">
+				<div className="mx-auto grid max-w-1440 gap-12 py-14 lg:grid-cols-[minmax(240px,0.78fr)_minmax(0,1.22fr)] lg:items-start">
 					<div className="flex flex-col items-start gap-7">
 						<Image src={Logo2} width={196} height={123} alt="Fuchase logo mark" />
-						<p className="max-w-[280px] text-display-r text-accent">
+						<p className="max-w-[320px] text-display-r text-accent">
 							Fuchase connects financial infrastructure, strategic capital, and market
 							access through a single integrated ecosystem.
 						</p>
-						<a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-							<Image
-								src={Linkedin}
-								width={30}
-								height={30}
-								alt="linkedin icon"
-								className="cursor-pointer"
-							/>
-						</a>
+						<div className="flex w-full max-w-[320px] justify-center">
+							<a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+								<Image
+									src={Linkedin}
+									width={30}
+									height={30}
+									alt="linkedin icon"
+									className="cursor-pointer"
+								/>
+							</a>
+						</div>
 					</div>
 
-					<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+					<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 						<ul className="space-y-3">
-							<li className="pb-1 text-display-xl text-accent">Company</li>
+							<li className="pb-1 text-display-l text-accent">Company</li>
 							{footerLinks.company.map(({ href, label }) => (
 								<li key={label}>
 									<Link href={href} className="text-display-r text-accent">
@@ -76,7 +83,7 @@ export default function Footer() {
 							))}
 						</ul>
 						<ul className="space-y-3">
-							<li className="pb-1 text-display-xl text-accent">Explore</li>
+							<li className="pb-1 text-display-l text-accent">Explore</li>
 							{footerLinks.explore.map(({ href, label }) => (
 								<li key={label}>
 									<Link href={href} className="text-display-r text-accent">
@@ -86,7 +93,17 @@ export default function Footer() {
 							))}
 						</ul>
 						<ul className="space-y-3">
-							<li className="pb-1 text-display-xl text-accent">Connect</li>
+							<li className="pb-1 text-display-l text-accent">Legal</li>
+							{footerLinks.legal.map(({ href, label }) => (
+								<li key={label}>
+									<Link href={href} className="text-display-r text-accent">
+										{label}
+									</Link>
+								</li>
+							))}
+						</ul>
+						<ul className="space-y-3">
+							<li className="pb-1 text-display-l text-accent">Connect</li>
 							<li>
 								<a href="mailto:hello@fuchase.com" className="text-display-r text-accent">
 									hello@fuchase.com
