@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 
 import ChevronIcon from '@icons/chevron.svg';
 import InstagramIcon from '@icons/instagram.svg';
@@ -91,7 +92,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 			<RevealOnView from="up">
 				<Heading
 					title={post.title}
-					mobileTitleClassName="max-md:text-[20px] max-md:leading-[1.32]"
+					mobileTitleClassName="max-md:!text-[18px] max-md:!leading-[1.35]"
 				/>
 			</RevealOnView>
 			<RevealOnView from="up">
@@ -149,12 +150,13 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 					</div>
 					<div className="mb-10 flex flex-row flex-wrap items-center justify-center gap-4">
 						{post.tags.map((tag) => (
-							<div
+							<Link
 								key={`${post.id}-${tag}`}
-								className="rounded-sm border border-light-white px-2.5 py-1 text-heading-6 text-[15px] leading-[1.25] text-heading"
+								href={`/blog?category=${encodeURIComponent(tag)}`}
+								className="rounded-sm border border-[rgba(44,49,25,0.72)] bg-secondary px-2 py-1 text-heading-6 text-[13px] leading-[1.2] text-accent transition duration-200 hover:opacity-85"
 							>
 								{tag}
-							</div>
+							</Link>
 						))}
 					</div>
 					<div className="flex flex-row flex-wrap justify-center items-center gap-8">

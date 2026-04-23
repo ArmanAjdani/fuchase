@@ -42,7 +42,7 @@ export default function Heading({
 			)}
 			<h1
 				className={`mx-auto max-w-[1200px] text-heading text-heading-1 ${
-					mobileTitleClassName ?? 'max-md:text-[44px] max-md:leading-[1.1]'
+					mobileTitleClassName ?? 'max-md:!text-[32px] max-md:!leading-[1.14]'
 				} ${titleClassName ?? ''}`}
 			>
 				{title}

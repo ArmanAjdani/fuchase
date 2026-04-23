@@ -52,7 +52,7 @@ export default function AboutUsPage() {
 							priority
 						/>
 					</RevealOnView>
-					<RevealOnView from="right" className="relative overflow-hidden rounded-[10px] bg-white/36 px-4 py-8 sm:px-8 sm:py-10">
+					<RevealOnView from="right" className="relative overflow-hidden rounded-[10px] px-4 py-8 sm:px-8 sm:py-10">
 						<Image
 							src={Ornament}
 							width={50}

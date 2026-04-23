@@ -15,12 +15,15 @@ export const metadata: Metadata = {
 export default function WhoWeArePage() {
 	return (
 		<>
-			<Heading title="Who We Are" />
-			<div className="h-[320px] w-full sm:h-[520px] lg:h-[900px]">
+			<Heading
+				title="Who We Are"
+				mobileTitleClassName="max-md:!text-[18px] max-md:!leading-[1.35]"
+			/>
+			<div className="relative h-[30vh] min-h-[220px] w-full overflow-hidden sm:h-[36vh] lg:h-[44vh]">
 				<Image
 					src={WhoWeAreImage}
 					alt="who we are image"
-					className="h-full w-full object-cover"
+					className="h-full w-full object-cover object-center"
 					priority
 				/>
 			</div>
@@ -42,14 +45,14 @@ export default function WhoWeArePage() {
 				/>
 				<article className="pl-0 lg:pl-10">
 					<section className="mb-6 px-0 sm:px-8 lg:px-56">
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							Fuchase is not a single company— it is a financial core and an evolving
 							financial ecosystem, designed to structure, connect, and orchestrate a
 							new generation of financial systems.
 						</p>
 					</section>
 					<section className="mb-6 px-0 sm:px-8 lg:px-56">
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							This architecture brings together a portfolio of specialized entities
 							across multiple verticals, with a strong focus on the financial
 							industry. Each entity is established with a distinct mandate—ranging
@@ -58,48 +61,48 @@ export default function WhoWeArePage() {
 						</p>
 					</section>
 					<section className="mb-6 px-0 sm:px-8 lg:px-56">
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							Fuchase is not a static structure. It is a progressively expanding
 							financial ecosystem, where each component is introduced with precision
 							and aligned to a broader strategic architecture.
 						</p>
 					</section>
 					<section className="mb-6 px-0 sm:px-8 lg:px-56">
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							At the center of this framework, Fuchase operates as a unifying
 							integration layer—a point where capital, infrastructure, technology, and
 							market access converge into a cohesive financial environment.
 						</p>
 					</section>
 					<section className="mb-6 px-0 sm:px-8 lg:px-56">
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							The defining strength of this structure lies in its engineering:
 						</p>
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							The entities within Fuchase are neither fully independent nor
 							traditionally dependent.
 						</p>
 					</section>
 					<section className="mb-6 px-0 sm:px-8 lg:px-56">
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							Instead, they are designed to:
 						</p>
 						<ul className="list-disc list-inside">
-							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+							<li className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 								Operate independently as standalone entities
 							</li>
-							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+							<li className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 								Function within an integrated network, interacting seamlessly with
 								one another
 							</li>
-							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+							<li className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 								And through this connection, provide services, support, and
 								strategic value across the financial ecosystem
 							</li>
 						</ul>
 					</section>
 					<section className="px-0 sm:px-8 lg:px-56">
-						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+						<p className="text-base text-display-xl max-md:text-[17px] max-md:leading-[1.55]">
 							What is being built is not merely a collection of companies, but a
 							modular, interconnected financial ecosystem architecture— engineered for
 							scalability, synergy, and long-term value creation.

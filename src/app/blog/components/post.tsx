@@ -37,7 +37,7 @@ export default function Post({ post, selectCategory }: PostPropsType) {
 					{post.tags.map((tag) => (
 						<div
 							key={`${post.id}-${tag}`}
-							className="cursor-pointer rounded-sm border border-light-white px-2.5 py-1 text-heading-6 text-[15px] leading-[1.25] text-heading"
+							className="cursor-pointer rounded-sm border border-[rgba(44,49,25,0.72)] bg-secondary px-2 py-1 text-heading-6 text-[13px] leading-[1.2] text-accent transition duration-200 hover:opacity-85"
 							onClick={() => selectCategory(tag)}
 						>
 							{tag}

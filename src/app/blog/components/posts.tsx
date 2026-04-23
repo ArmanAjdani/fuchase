@@ -38,7 +38,7 @@ export default function Posts() {
 		<>
 			<div className="max-w-1440 mx-auto flex flex-row flex-wrap gap-4 justify-center items-center mb-8">
 				{selectedCategory && (
-					<div className="flex flex-row flex-wrap items-center gap-3 rounded-sm border border-light-white px-2.5 py-1 text-heading-6 text-[15px] leading-[1.25] text-heading">
+					<div className="flex flex-row flex-wrap items-center gap-3 rounded-sm border border-[rgba(44,49,25,0.72)] bg-secondary px-2 py-1 text-heading-6 text-[13px] leading-[1.2] text-accent">
 						<span>{selectedCategory}</span>
 						<Image
 							src={CloseDarkIcon}
