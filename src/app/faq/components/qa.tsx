@@ -21,13 +21,15 @@ export default function Qa({ question, answer }: QaPropsType) {
 
 	return (
 		<div className="mb-14" onClick={handleOpen}>
-			<div className="flex flex-row flex-wrap justify-start cursor-pointer">
-				{isOpen ? (
-					<Image src={CloseDarkIcon} width={22} height={22} alt="close icon" />
-				) : (
-					<Image src={HambergerDarkIcon} width={30} height={23} alt="hamberger icon" />
-				)}
-				<p className="ml-5 text-base text-display-xl max-md:text-[20px] max-md:leading-[1.3]">
+			<div className="flex cursor-pointer items-start gap-4">
+				<span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center">
+					{isOpen ? (
+						<Image src={CloseDarkIcon} width={18} height={18} alt="close icon" />
+					) : (
+						<Image src={HambergerDarkIcon} width={20} height={15} alt="hamberger icon" />
+					)}
+				</span>
+				<p className="flex-1 text-base text-display-xl max-md:text-[20px] max-md:leading-[1.3]">
 					{question}
 				</p>
 			</div>

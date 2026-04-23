@@ -38,29 +38,31 @@ export default function Hero() {
 					sizes="100vw"
 					quality={50}
 					priority
-					className={`pointer-events-none object-cover object-center opacity-18 blur-[24px] saturate-[0.88] transition-all duration-700 ease-out
+					className={`pointer-events-none object-cover object-center opacity-30 blur-[20px] saturate-[0.94] transition-all duration-700 ease-out
 					${isVisible ? 'scale-100' : 'scale-[1.04]'}`}
 				/>
 				<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(8,18,12,0.02)_0%,rgba(8,18,12,0.12)_48%,rgba(8,18,12,0.34)_100%)]" />
 			</div>
 			<div className="absolute inset-0">
-				<Image
-					src={HeroImage}
-					alt="Fuchase hero banner"
-					fill
-					sizes="100vw"
-					quality={82}
-					priority
-					className={`pointer-events-none object-contain object-center transition-all duration-700 ease-out
-					${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.985]'}`}
-				/>
+				<div className="absolute inset-x-0 top-0 h-[38svh] sm:h-[42svh] lg:inset-0 lg:h-auto">
+					<Image
+						src={HeroImage}
+						alt="Fuchase hero banner"
+						fill
+						sizes="100vw"
+						quality={82}
+						priority
+						className={`pointer-events-none object-contain object-top lg:object-center transition-all duration-700 ease-out
+						${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.985]'}`}
+					/>
+				</div>
 			</div>
 			<div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(8,18,12,0.38)_0%,rgba(8,18,12,0.1)_56%,transparent_100%)]" />
 			<div className="absolute inset-y-0 left-0 hidden w-[32vw] min-w-[260px] max-w-[430px] bg-[linear-gradient(90deg,rgba(8,18,12,0.72)_0%,rgba(8,18,12,0.36)_54%,transparent_100%)] lg:block" />
 			<div className="absolute inset-y-0 right-0 hidden w-[32vw] min-w-[280px] max-w-[460px] bg-[linear-gradient(270deg,rgba(8,18,12,0.72)_0%,rgba(8,18,12,0.38)_56%,transparent_100%)] lg:block" />
 			<div className="absolute inset-0">
-				<div className="mx-auto h-full max-w-1440 px-6 pt-28 sm:px-10 sm:pt-32 lg:px-16">
-					<div className="flex h-full flex-col justify-end pb-14 sm:pb-16 lg:hidden">
+				<div className="mx-auto h-full max-w-1440 px-6 pt-20 sm:px-10 sm:pt-24 lg:px-16 lg:pt-32">
+					<div className="flex h-full flex-col justify-start pt-[35svh] pb-10 sm:pt-[38svh] sm:pb-12 lg:hidden">
 						<h1
 							className={`max-w-[320px] text-left text-heading-2 text-accent uppercase transition-all duration-700 ease-out sm:max-w-[400px]
 							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-x-10'}`}

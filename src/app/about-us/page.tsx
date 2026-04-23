@@ -67,7 +67,7 @@ export default function AboutUsPage() {
 							alt="ornament icon"
 							className="pointer-events-none absolute -top-2 right-0 hidden rotate-90 sm:block"
 						/>
-						<div className="space-y-5 border-t border-[rgba(15,31,21,0.18)] pt-6 sm:pt-8">
+						<div className="space-y-5 pt-4 sm:pt-6">
 							<p className="text-display-r leading-[1.75] text-content">
 								FuChase was structured to unify specialized financial entities under one
 								governance logic while preserving each entity&apos;s strategic autonomy.
@@ -97,7 +97,7 @@ export default function AboutUsPage() {
 					</RevealOnView>
 					<div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-stretch lg:gap-10">
 						<RevealOnView from="left">
-							<div className="space-y-5 border-t border-[rgba(15,31,21,0.18)] pt-6">
+							<div className="space-y-5 pt-2">
 								{founderStory.map((paragraph) => (
 									<p key={paragraph} className="text-display-r leading-[1.75] text-content">
 										{paragraph}

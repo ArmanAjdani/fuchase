@@ -89,7 +89,10 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 	return (
 		<>
 			<RevealOnView from="up">
-				<Heading title={post.title} />
+				<Heading
+					title={post.title}
+					mobileTitleClassName="max-md:text-[30px] max-md:leading-[1.18]"
+				/>
 			</RevealOnView>
 			<RevealOnView from="up">
 				<div className="relative mb-10 h-[30vh] min-h-[220px] w-full overflow-hidden sm:mb-16 sm:h-[36vh] lg:mb-24 lg:h-[44vh]">

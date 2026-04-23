@@ -42,7 +42,7 @@ export default function LegalPage({
 						alt="ornament"
 						className="absolute top-0 right-0 rotate-90"
 					/>
-					<div className="space-y-10 border-t border-[rgba(15,31,21,0.18)] px-2 pt-8 sm:px-8 lg:px-14">
+					<div className="space-y-10 px-2 pt-8 sm:px-8 lg:px-14">
 						<p className="text-link-t uppercase tracking-[0.22em] text-primary">
 							Last updated {updatedOn}
 						</p>

@@ -6,9 +6,17 @@ export type HeadingPropsType = {
 	name?: string;
 	title: string;
 	subtitle?: string;
+	titleClassName?: string;
+	mobileTitleClassName?: string;
 };
 
-export default function Heading({ name, title, subtitle }: HeadingPropsType) {
+export default function Heading({
+	name,
+	title,
+	subtitle,
+	titleClassName,
+	mobileTitleClassName,
+}: HeadingPropsType) {
 	return (
 		<div
 			className={`relative mt-36 px-20 pt-20 text-center max-md:mt-[96px] max-md:px-6 max-md:pt-10 ${subtitle ? 'pb-14 max-md:pb-10' : 'pb-24 max-md:pb-14'}`}
@@ -32,7 +40,11 @@ export default function Heading({ name, title, subtitle }: HeadingPropsType) {
 					{name}
 				</span>
 			)}
-			<h1 className="mx-auto max-w-[1200px] text-heading text-heading-1 max-md:text-[44px] max-md:leading-[1.1]">
+			<h1
+				className={`mx-auto max-w-[1200px] text-heading text-heading-1 ${
+					mobileTitleClassName ?? 'max-md:text-[44px] max-md:leading-[1.1]'
+				} ${titleClassName ?? ''}`}
+			>
 				{title}
 			</h1>
 			{subtitle && (

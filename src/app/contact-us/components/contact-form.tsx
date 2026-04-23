@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useCallback, useState, type FormEvent } from 'react';
 import Image from 'next/image';
 
 import ProfileIcon from '@icons/profile.svg';
@@ -19,15 +19,19 @@ export default function ContactForm() {
 		message: '',
 	});
 
-	const submit = useCallback(() => {
+	const submit = useCallback((e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 		console.log('form', form);
 	}, [form]);
 
 	return (
-		<div className="flex max-w-[630px] flex-1 flex-col flex-wrap items-center justify-around gap-8 rounded-[10px] bg-white px-12 py-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] max-md:w-full max-md:gap-6 max-md:px-5 max-md:py-5">
-			<input type="text" name="honeypot" style={{ display: 'none' }} />
+		<form
+			className="flex max-w-[630px] flex-1 flex-col gap-6 rounded-[14px] border border-[rgba(44,49,25,0.16)] bg-white/95 px-8 py-8 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] max-md:w-full max-md:gap-5 max-md:px-5 max-md:py-6"
+			onSubmit={submit}
+		>
+			<input type="text" name="honeypot" style={{ display: 'none' }} autoComplete="off" />
 			<label className="w-full relative">
-				<span className="mb-2.5 block text-base text-display-xl max-md:text-[16px]">
+				<span className="mb-2 block text-base text-display-xl max-md:text-[16px]">
 					Name
 				</span>
 				<input
@@ -35,7 +39,7 @@ export default function ContactForm() {
 					name="name"
 					placeholder="Name"
 					value={form.name}
-					className="w-full h-9 py-2 pr-3 pl-12 border border-color-light-white rounded-md"
+					className="h-12 w-full rounded-md border border-color-light-white bg-white px-12 pr-4 text-display-r text-content placeholder:text-content/50 outline-none transition duration-200 focus:border-primary focus:shadow-[0_0_0_2px_rgba(85,92,59,0.16)]"
 					onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
 				/>
 				<Image
@@ -43,11 +47,11 @@ export default function ContactForm() {
 					width={16}
 					height={20}
 					alt="profile icon"
-					className="absolute top-[54px] left-4"
+					className="pointer-events-none absolute top-[50px] left-4"
 				/>
 			</label>
 			<label className="w-full relative">
-				<span className="mb-2.5 block text-base text-display-xl max-md:text-[16px]">
+				<span className="mb-2 block text-base text-display-xl max-md:text-[16px]">
 					Email
 				</span>
 				<input
@@ -55,7 +59,7 @@ export default function ContactForm() {
 					name="email"
 					placeholder="Email"
 					value={form.email}
-					className="w-full h-9 py-2 pr-3 pl-12 border border-color-light-white rounded-md"
+					className="h-12 w-full rounded-md border border-color-light-white bg-white px-12 pr-4 text-display-r text-content placeholder:text-content/50 outline-none transition duration-200 focus:border-primary focus:shadow-[0_0_0_2px_rgba(85,92,59,0.16)]"
 					onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
 				/>
 				<Image
@@ -63,29 +67,29 @@ export default function ContactForm() {
 					width={20}
 					height={20}
 					alt="atsign icon"
-					className="absolute top-[54px] left-4"
+					className="pointer-events-none absolute top-[50px] left-4"
 				/>
 			</label>
 			<label className="w-full">
-				<span className="mb-2.5 block text-base text-display-xl max-md:text-[16px]">
+				<span className="mb-2 block text-base text-display-xl max-md:text-[16px]">
 					Message
 				</span>
 				<textarea
 					id="message"
 					name="message"
-					placeholder="Message"
+					placeholder="Tell us about your objective"
 					rows={6}
 					value={form.message}
-					className="w-full py-2 px-3 border border-color-light-white rounded-md"
+					className="min-h-[180px] w-full resize-y rounded-md border border-color-light-white bg-white px-4 py-3 text-display-r text-content placeholder:text-content/50 outline-none transition duration-200 focus:border-primary focus:shadow-[0_0_0_2px_rgba(85,92,59,0.16)]"
 					onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
 				/>
 			</label>
 			<button
-				className="mx-auto mb-[10px] w-48 cursor-pointer bg-linear-to-b from-white/0 to-accent px-6 py-2.5 text-button-m text-primary max-md:w-full"
-				onClick={submit}
+				type="submit"
+				className="mx-auto mt-1 w-48 cursor-pointer border border-[rgba(85,92,59,0.36)] bg-linear-to-b from-white to-accent/80 px-6 py-2.5 text-button-m text-primary transition duration-200 hover:opacity-90 max-md:w-full"
 			>
 				Submit
 			</button>
-		</div>
+		</form>
 	);
 }
