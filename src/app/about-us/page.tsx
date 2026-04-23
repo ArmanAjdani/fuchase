@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 import LinkedinIcon from '@icons/linkedin.svg';
-import AboutUsImage from '@assets/imgs/about-us.png';
+import AboutUsImage from '@assets/imgs/about-us-office.jpg';
 import FounderImage from '@assets/imgs/about-us-footage.jpg';
 import Ornament from '@assets/imgs/ornament.png';
 
@@ -24,10 +24,12 @@ const operatingPrinciples = [
 ];
 
 const founderStory = [
-	'Niki Saki built FuChase from a systems perspective: capital, infrastructure, and operations must be designed to work as one architecture.',
-	'That approach extends into a family-and-business model where long-term stewardship sits alongside institutional execution standards.',
-	'Each platform is structured as a strategic unit that performs independently while creating stronger value as part of one integrated network.',
-	'The result is a framework for families, principals, and institutions that require durability, precision, and scalable cross-border operations.',
+	'Niki Saki is a financial systems architect, entrepreneur, and Founder and CEO of FuChase, with over a decade of experience operating at the intersection of financial markets, infrastructure, and institutional strategy.',
+	'Her career began within the financial markets, where she developed a deep, practical understanding of both trading environments and the structural mechanics behind them. This foundation evolved into a broader specialization in the design, development, and execution of financial systems across multiple sectors.',
+	'Over the years, she has been directly involved in the architecture, launch, and management of complex financial infrastructures, including brokerage systems, asset management structures, and institutional-grade financial platforms. Her expertise lies not only in building these systems, but in structuring them for scalability, operational efficiency, and long-term sustainability.',
+	'As a strategist, she approaches financial markets not from a transactional perspective, but from a systems-level viewpoint, focusing on how capital, technology, and operational frameworks integrate to create enduring financial ecosystems.',
+	'Through FuChase, Niki Saki is leading the development of a modular and interconnected financial ecosystem, designed to unify different layers of the market into a cohesive, scalable, and strategically aligned structure.',
+	'Her work reflects a consistent focus on precision, structure, and execution, positioning her as a builder of financial systems rather than a participant within them.',
 ];
 
 export default function AboutUsPage() {
@@ -93,7 +95,7 @@ export default function AboutUsPage() {
 					<RevealOnView from="up">
 						<h2 className="text-center text-heading-4 text-heading">Founder Perspective</h2>
 					</RevealOnView>
-					<div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
+					<div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-stretch">
 						<RevealOnView from="left" className="space-y-5">
 							{founderStory.map((paragraph) => (
 								<p key={paragraph} className="text-display-r leading-[1.75] text-content">
@@ -113,11 +115,16 @@ export default function AboutUsPage() {
 								</a>
 							</div>
 						</RevealOnView>
-						<RevealOnView from="right" className="overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)]">
+						<RevealOnView
+							from="right"
+							className="relative h-full min-h-[520px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)]"
+						>
 							<Image
 								src={FounderImage}
 								alt="Founder portrait"
-								className="h-auto w-full object-cover"
+								fill
+								sizes="(min-width: 1024px) 38vw, 100vw"
+								className="object-cover object-center"
 							/>
 						</RevealOnView>
 					</div>
@@ -126,4 +133,3 @@ export default function AboutUsPage() {
 		</>
 	);
 }
-
