@@ -17,6 +17,12 @@ type BlogDetailPageProps = {
 };
 
 const getPost = (id: string) => solutionPosts.find((post) => post.id === id);
+const toSectionId = (heading: string, index: number) =>
+	`section-${index + 1}-${heading
+		.toLowerCase()
+		.replace(/[^\w\s-]/g, '')
+		.trim()
+		.replace(/\s+/g, '-')}`;
 
 export async function generateMetadata({ params }: BlogDetailPageProps): Promise<Metadata> {
 	const { id } = await params;
@@ -51,6 +57,10 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 	const postUrl = `https://yourdomain.com/blog/${post.id}`;
 	const encodedPostUrl = encodeURIComponent(postUrl);
 	const encodedTitle = encodeURIComponent(post.title);
+	const sectionLinks = post.sections.map(({ heading }, index) => ({
+		heading,
+		id: toSectionId(heading, index),
+	}));
 
 	const schema = {
 		'@context': 'https://schema.org',
@@ -82,24 +92,29 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 				<Heading title={post.title} />
 			</RevealOnView>
 			<RevealOnView from="up">
-				<Image
-					src={post.banner}
-					alt={`${post.name} article banner`}
-					className="mb-10 w-full sm:mb-16 lg:mb-24"
-					width={1600}
-					height={900}
-				/>
+				<div className="relative mb-10 h-[30vh] min-h-[220px] w-full overflow-hidden sm:mb-16 sm:h-[36vh] lg:mb-24 lg:h-[44vh]">
+					<Image
+						src={post.banner}
+						alt={`${post.name} article banner`}
+						fill
+						sizes="100vw"
+						className="object-cover object-center"
+					/>
+				</div>
 			</RevealOnView>
 			<div className="mx-auto flex max-w-1440 flex-row flex-wrap justify-between gap-8 px-4 pb-12 sm:gap-10 sm:px-10 lg:gap-12 lg:px-20 lg:pb-14">
-				<RevealOnView from="left" className="flex-1">
+				<RevealOnView
+					from="left"
+					className="order-2 flex-1 max-md:w-full md:order-1"
+				>
 					<div className="mb-8 text-sm text-content opacity-75">
 						<span>{post.location}</span>
 						<span className="mx-3">|</span>
 						<span>{post.publishedAt}</span>
 					</div>
 					<p className="text-heading text-display-r">{post.intro}</p>
-					{post.sections.map(({ content, heading }) => (
-						<section key={heading} className="mt-12">
+					{post.sections.map(({ content, heading }, index) => (
+						<section key={heading} id={sectionLinks[index].id} className="mt-12 scroll-mt-28">
 							<h2 className="text-heading text-heading-4 max-md:text-[30px]">{heading}</h2>
 							<p className="text-heading text-display-r mt-5">{content}</p>
 						</section>
@@ -107,11 +122,11 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 				</RevealOnView>
 				<RevealOnView
 					from="right"
-					className="w-full shrink-0 pl-0 pr-0 md:w-[400px] md:pl-12 md:pr-3"
+					className="order-1 w-full shrink-0 pl-0 pr-0 md:order-2 md:w-[400px] md:pl-12 md:pr-3"
 				>
 					<h3 className="mb-10 text-base text-heading-5">In this article</h3>
 					<div className="mb-10">
-						{post.sections.map(({ heading }) => (
+						{sectionLinks.map(({ heading, id }) => (
 							<div key={heading} className="flex flex-row flex-wrap items-center mb-5">
 								<Image
 									src={ChevronIcon}
@@ -120,7 +135,12 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 									alt="chevron icon"
 									className="shrink-0"
 								/>
-								<span className="ml-5 text-heading-6 text-base flex-1">{heading}</span>
+								<a
+									href={`#${id}`}
+									className="ml-5 flex-1 text-base text-heading-6 transition-opacity duration-200 hover:opacity-70"
+								>
+									{heading}
+								</a>
 							</div>
 						))}
 					</div>
