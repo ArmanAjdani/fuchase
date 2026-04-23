@@ -59,7 +59,7 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 							<li key={name}>
 								<Link
 									href={url}
-									className="text-accent text-[30px] leading-[1.08] md:text-display-r md:leading-normal"
+									className="text-display-r text-accent max-md:text-[30px] max-md:leading-[1.08]"
 									onClick={() => setIsOpen(false)}
 								>
 									{name}
