@@ -92,7 +92,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 			<RevealOnView from="up">
 				<Heading
 					title={post.title}
-					mobileTitleClassName="max-md:!text-[22px] max-md:!leading-[1.28]"
+					mobileTitleClassName="max-md:!text-[32px] max-md:!leading-[1.18] max-md:!font-bold"
 				/>
 			</RevealOnView>
 			<RevealOnView from="up">
@@ -153,7 +153,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 							<Link
 								key={`${post.id}-${tag}`}
 								href={`/blog?category=${encodeURIComponent(tag)}`}
-								className="rounded-sm border border-[rgba(44,49,25,0.72)] bg-secondary px-2 py-1 text-heading-6 text-[12px] leading-[1.2] text-accent transition duration-200 hover:opacity-85"
+								className="rounded-sm border border-[rgba(44,49,25,0.72)] bg-secondary px-2 py-1 text-heading-6 text-[8px] leading-[1.1] text-accent transition duration-200 hover:opacity-85"
 							>
 								{tag}
 							</Link>
