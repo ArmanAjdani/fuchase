@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 
 import Heading from '@core/components/heading';
 import JsonLd from '@core/components/json-ld';
+import RevealOnView from '@core/components/reveal-on-view';
 import { solutionPosts } from '@core/data/solutions';
 
 import Posts from './components/posts';
@@ -32,7 +33,9 @@ export default function BlogPage() {
 
 	return (
 		<>
-			<Heading title="Recent Blog Posts" />
+			<RevealOnView from="up">
+				<Heading title="Recent Blog Posts" />
+			</RevealOnView>
 			<Suspense>
 				<Posts />
 			</Suspense>

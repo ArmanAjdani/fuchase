@@ -106,6 +106,7 @@ export default function WhoWeServe() {
 						alt="who we serve image"
 						fill
 						sizes="(min-width: 1024px) 42vw, 100vw"
+						quality={82}
 						className="object-cover object-center"
 					/>
 				</div>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import CloseDarkIcon from '@icons/close-dark.svg';
+import RevealOnView from '@core/components/reveal-on-view';
 import { solutionPosts } from '@core/data/solutions';
 
 import Post from './post';
@@ -51,8 +52,10 @@ export default function Posts() {
 				)}
 			</div>
 			<div className="flex flex-row flex-wrap justify-center gap-12 max-w-1440 mx-auto mb-28">
-				{filteredPosts.map((post) => (
-					<Post key={post.id} post={post} selectCategory={setCategory} />
+				{filteredPosts.map((post, index) => (
+					<RevealOnView key={post.id} from="up" delayMs={index * 90}>
+						<Post post={post} selectCategory={setCategory} />
+					</RevealOnView>
 				))}
 				{filteredPosts.length === 0 && (
 					<p className="text-display-r text-base text-heading px-6 text-center">

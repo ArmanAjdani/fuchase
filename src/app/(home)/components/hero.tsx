@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-import HeroImage from '../../../assets/imgs/h-large.jpg';
+import HeroImage from '../../../assets/imgs/h-hero.webp';
 
 export default function Hero() {
 	const ref = useRef<HTMLDivElement | null>(null);
@@ -36,7 +36,7 @@ export default function Hero() {
 					alt="Fuchase hero banner"
 					fill
 					sizes="100vw"
-					quality={35}
+					quality={50}
 					priority
 					className={`pointer-events-none object-cover object-center opacity-18 blur-[24px] saturate-[0.88] transition-all duration-700 ease-out
 					${isVisible ? 'scale-100' : 'scale-[1.04]'}`}
@@ -49,7 +49,7 @@ export default function Hero() {
 					alt="Fuchase hero banner"
 					fill
 					sizes="100vw"
-					unoptimized
+					quality={82}
 					priority
 					className={`pointer-events-none object-contain object-center transition-all duration-700 ease-out
 					${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.985]'}`}

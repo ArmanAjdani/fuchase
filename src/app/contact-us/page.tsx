@@ -10,13 +10,14 @@ import LinkedinIcon from '@icons/linkedin.svg';
 
 import Heading from '@core/components/heading';
 import JsonLd from '@core/components/json-ld';
+import RevealOnView from '@core/components/reveal-on-view';
 
 import ContactForm from './components/contact-form';
 
 export const metadata: Metadata = {
 	title: 'Contact Us',
-	description: 'bla bla bla',
-	keywords: ['first', 'second', 'third'],
+	description: 'Connect with FuChase to discuss institutional partnerships, capital strategy, and ecosystem collaboration.',
+	keywords: ['contact fuchase', 'financial ecosystem inquiry', 'institutional partnerships'],
 };
 
 export default function ContactUs() {
@@ -37,19 +38,21 @@ export default function ContactUs() {
 
 	return (
 		<>
-			<Heading
-				title="Contact Us"
-				subtitle="Fuchase is a next-generation financial marketplace that connects the
-          key players of global capital markets. We provide an environment where
-          banks, brokers, fintechs, institutional investors, and innovators can
-          collaborate, trade, and innovate. By combining cutting-edge
-          technology, deep industry expertise, and a global network, we serve as
-          the strategic bridge between liquidity, technology, and capital."
-			/>
+			<RevealOnView from="up">
+				<Heading
+					title="Contact Us"
+					subtitle="Reach the FuChase team for strategic collaborations, solution onboarding, and institutional support across our financial ecosystem. Share your objective and operating region, and we will connect you with the right platform lead."
+				/>
+			</RevealOnView>
 			<div className="mx-auto bg-contact-us px-10 py-12">
 				<div className="flex flex-row flex-wrap justify-center items-center gap-20">
-					<ContactForm />
-					<div className="bg-white px-12 py-24 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] rounded-[10px] flex flex-col flex-wrap items-center justify-around gap-12 max-w-[630px] flex-1">
+					<RevealOnView from="left">
+						<ContactForm />
+					</RevealOnView>
+					<RevealOnView
+						from="right"
+						className="bg-white px-12 py-24 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] rounded-[10px] flex flex-col flex-wrap items-center justify-around gap-12 max-w-[630px] flex-1"
+					>
 						<h2 className="text-heading-3 text-base">Talk to Us</h2>
 						<div className="flex flex-row flex-wrap justify-start items-center w-full">
 							<Image src={PhoneIcon} alt="phone icon" width={18} height={18} />
@@ -93,7 +96,7 @@ export default function ContactUs() {
 								<Image src={XIcon} width={30} height={27} alt="x icon" />
 							</a>
 						</div>
-					</div>
+					</RevealOnView>
 				</div>
 			</div>
 			<JsonLd data={schema} />

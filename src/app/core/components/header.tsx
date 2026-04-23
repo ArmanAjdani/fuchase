@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Logo from '@public/logo.svg';
+import LogoLight from '@public/logo.svg';
 import MenuIcon from '@icons/menu.svg';
 import MenuDarkIcon from '@icons/menu-dark.svg';
 
@@ -25,20 +25,21 @@ export default function Header() {
 			<div className="flex flex-row flex-wrap justify-between items-center mx-10">
 				<Link href="/">
 					<Image
-						src={Logo}
+						src={LogoLight}
 						width={120}
 						height={70}
 						alt="furchase logo"
-						className="w-full cursor-pointer"
+						className={`h-auto w-[120px] cursor-pointer ${isDark ? 'brightness-0' : ''}`}
 						priority
 					/>
 				</Link>
 				<div className="flex flex-row flex-wrap items-center">
-					<button
+					<Link
+						href="/contact-us"
 						className={`text-display-s p-2 border mr-6 cursor-pointer ${isDark ? 'text-base border-dark-button' : 'text-accent border-dark-white'}`}
 					>
 						Private Inquiry
-					</button>
+					</Link>
 					<div className="p-4 cursor-pointer" onClick={() => setIsNavbarOpen(true)}>
 						{isDark ? (
 							<Image

@@ -15,6 +15,7 @@ export type SolutionPropsType = {
 	index: number;
 	logoSurfaceClassName: string;
 	logoClassName?: string;
+	className?: string;
 };
 
 export default function Solution({
@@ -24,8 +25,9 @@ export default function Solution({
 	logo,
 	location,
 	index = 0,
-	logoSurfaceClassName,
+	logoSurfaceClassName: _logoSurfaceClassName,
 	logoClassName = '',
+	className = '',
 }: SolutionPropsType) {
 	const ref = useRef<HTMLDivElement | null>(null);
 	const [isVisible, setIsVisible] = useState(false);
@@ -53,19 +55,18 @@ export default function Solution({
 		<div
 			ref={ref}
 			style={{ transitionDelay: `${index * 100}ms` }}
-			className={`mx-auto h-full w-full max-w-[300px] rounded-[28px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
+			className={`mx-auto h-full w-full max-w-[320px] rounded-[28px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
+				${className}
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
 			<Link href={`/blog/${id}`} className="group flex h-full flex-col gap-6">
-				<div
-					className={`flex h-[220px] items-center justify-center rounded-[24px] p-6 ${logoSurfaceClassName}`}
-				>
+				<div data-logo-surface={_logoSurfaceClassName} className="flex h-[220px] items-center justify-center p-2">
 					<Image
 						src={logo}
 						alt={`${name} logo`}
 						width={240}
 						height={180}
-						className={`h-auto max-h-[172px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${logoClassName}`}
+						className={`h-auto max-h-[178px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${logoClassName}`}
 					/>
 				</div>
 				<div className="flex flex-1 flex-col space-y-3">

@@ -15,9 +15,12 @@ export default function HomePage() {
 				<WhoWeAreSection />
 				<div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
 					<h2 className="text-center text-heading-3 text-heading">Solutions</h2>
-					<div className="mt-12 grid auto-rows-fr gap-8 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 lg:mt-16 lg:gap-12">
+					<div className="mt-12 grid auto-rows-fr gap-8 md:grid-cols-2 xl:grid-cols-4 lg:mt-16 lg:gap-12">
 						{solutionPosts.map(
-							({ id, description, location, logo, logoClassName, logoSurfaceClassName, name }, i) => (
+							(
+								{ id, description, location, logo, logoClassName, logoSurfaceClassName, name },
+								i,
+							) => (
 								<Solution
 									key={name}
 									id={id}
@@ -28,6 +31,11 @@ export default function HomePage() {
 									logoClassName={logoClassName}
 									logoSurfaceClassName={logoSurfaceClassName}
 									index={i}
+									className={
+										solutionPosts.length % 4 === 2 && i === solutionPosts.length - 2
+											? 'xl:col-start-2'
+											: ''
+									}
 								/>
 							),
 						)}

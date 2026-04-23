@@ -59,6 +59,7 @@ export default function WhoWeAre() {
 						alt="who we are image"
 						fill
 						sizes="(min-width: 1024px) 42vw, 100vw"
+						quality={82}
 						className="object-cover object-center"
 					/>
 				</div>

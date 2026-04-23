@@ -9,6 +9,7 @@ import LinkedinIcon from '@icons/linkedin.svg';
 
 import Heading from '@core/components/heading';
 import JsonLd from '@core/components/json-ld';
+import RevealOnView from '@core/components/reveal-on-view';
 import { solutionPosts } from '@core/data/solutions';
 
 type BlogDetailPageProps = {
@@ -77,16 +78,20 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 
 	return (
 		<>
-			<Heading title={post.title} />
-			<Image
-				src={post.banner}
-				alt={`${post.name} article banner`}
-				className="w-full mb-24"
-				width={1600}
-				height={900}
-			/>
+			<RevealOnView from="up">
+				<Heading title={post.title} />
+			</RevealOnView>
+			<RevealOnView from="up">
+				<Image
+					src={post.banner}
+					alt={`${post.name} article banner`}
+					className="w-full mb-24"
+					width={1600}
+					height={900}
+				/>
+			</RevealOnView>
 			<div className="max-w-1440 mx-auto flex flex-row flex-wrap justify-between gap-12 px-20 pb-14">
-				<div className="flex-1">
+				<RevealOnView from="left" className="flex-1">
 					<div className="mb-8 text-sm text-content opacity-75">
 						<span>{post.location}</span>
 						<span className="mx-3">|</span>
@@ -99,8 +104,8 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 							<p className="text-heading text-display-r mt-5">{content}</p>
 						</section>
 					))}
-				</div>
-				<div className="w-[400px] pl-12 pr-3 shrink-0">
+				</RevealOnView>
+				<RevealOnView from="right" className="w-[400px] pl-12 pr-3 shrink-0">
 					<h3 className="mb-10 text-base text-heading-5">In this article</h3>
 					<div className="mb-10">
 						{post.sections.map(({ heading }) => (
@@ -147,7 +152,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 							<Image src={LinkedinIcon} width={18} height={18} alt="linkedin icon" />
 						</a>
 					</div>
-				</div>
+				</RevealOnView>
 			</div>
 			<JsonLd data={schema} />
 		</>
