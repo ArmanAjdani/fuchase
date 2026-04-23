@@ -38,12 +38,10 @@ export default function Hero() {
 					sizes="100vw"
 					quality={35}
 					priority
-					className={`pointer-events-none object-cover object-center opacity-32 blur-[18px] saturate-[0.82] transition-all duration-700 ease-out
+					className={`pointer-events-none object-cover object-center opacity-18 blur-[24px] saturate-[0.88] transition-all duration-700 ease-out
 					${isVisible ? 'scale-100' : 'scale-[1.04]'}`}
 				/>
-				<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(8,18,12,0.04)_0%,rgba(8,18,12,0.16)_42%,rgba(8,18,12,0.64)_100%)]" />
-				<div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,18,12,0.72)_0%,rgba(8,18,12,0.26)_16%,rgba(8,18,12,0.05)_34%,rgba(8,18,12,0.05)_66%,rgba(8,18,12,0.46)_84%,rgba(8,18,12,0.76)_100%)]" />
-				<div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,18,12,0.32)_0%,rgba(8,18,12,0.08)_18%,rgba(8,18,12,0.04)_74%,rgba(8,18,12,0.42)_100%)]" />
+				<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(8,18,12,0.02)_0%,rgba(8,18,12,0.12)_48%,rgba(8,18,12,0.34)_100%)]" />
 			</div>
 			<div className="absolute inset-0">
 				<Image
@@ -51,27 +49,45 @@ export default function Hero() {
 					alt="Fuchase hero banner"
 					fill
 					sizes="100vw"
-					quality={95}
+					unoptimized
 					priority
 					className={`pointer-events-none object-contain object-center transition-all duration-700 ease-out
 					${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.985]'}`}
 				/>
 			</div>
+			<div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(8,18,12,0.38)_0%,rgba(8,18,12,0.1)_56%,transparent_100%)]" />
+			<div className="absolute inset-y-0 left-0 hidden w-[32vw] min-w-[260px] max-w-[430px] bg-[linear-gradient(90deg,rgba(8,18,12,0.72)_0%,rgba(8,18,12,0.36)_54%,transparent_100%)] lg:block" />
+			<div className="absolute inset-y-0 right-0 hidden w-[32vw] min-w-[280px] max-w-[460px] bg-[linear-gradient(270deg,rgba(8,18,12,0.72)_0%,rgba(8,18,12,0.38)_56%,transparent_100%)] lg:block" />
 			<div className="absolute inset-0">
-				<div className="mx-auto flex h-full max-w-1440 items-end px-6 pb-14 pt-28 sm:px-10 sm:pb-16 sm:pt-32 lg:px-16 lg:pb-20">
-					<div className="grid w-full gap-8 lg:grid-cols-[minmax(280px,0.85fr)_minmax(340px,0.75fr)] lg:items-end lg:gap-12">
+				<div className="mx-auto h-full max-w-1440 px-6 pt-28 sm:px-10 sm:pt-32 lg:px-16">
+					<div className="flex h-full flex-col justify-end pb-14 sm:pb-16 lg:hidden">
 						<h1
-							className={`max-w-[360px] text-left text-heading-2 text-accent uppercase transition-all duration-700 ease-out sm:max-w-[400px] lg:max-w-[460px] lg:text-heading-1
+							className={`max-w-[320px] text-left text-heading-2 text-accent uppercase transition-all duration-700 ease-out sm:max-w-[400px]
 							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-x-10'}`}
 						>
 							financial ecosystem
 						</h1>
 						<p
-							className={`max-w-[360px] text-left text-display-l text-accent transition-all duration-700 ease-out sm:max-w-[430px] lg:justify-self-end lg:text-right
+							className={`mt-6 max-w-[360px] text-left text-display-l text-accent transition-all duration-700 ease-out sm:max-w-[430px]
 							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-10'}`}
 						>
-						Fuchase is a next-generation financial ecosystem designed to connect and
-						empower key players across global markets.
+							Fuchase is a next-generation financial ecosystem designed to connect and
+							empower key players across global markets.
+						</p>
+					</div>
+					<div className="relative hidden h-full lg:block">
+						<h1
+							className={`absolute bottom-20 left-0 max-w-[460px] text-left text-heading-1 text-accent uppercase transition-all duration-700 ease-out xl:max-w-[520px]
+							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-x-10'}`}
+						>
+							financial ecosystem
+						</h1>
+						<p
+							className={`absolute right-0 bottom-20 max-w-[430px] text-right text-display-l text-accent transition-all duration-700 ease-out xl:max-w-[470px]
+							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-10'}`}
+						>
+							Fuchase is a next-generation financial ecosystem designed to connect and
+							empower key players across global markets.
 						</p>
 					</div>
 				</div>

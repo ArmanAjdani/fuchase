@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
+import { solutionPosts } from '@core/data/solutions';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	return [
+	const staticRoutes: MetadataRoute.Sitemap = [
 		{
 			url: 'https://yourdomain.com',
 			lastModified: new Date(),
@@ -63,4 +64,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.7,
 		},
 	];
+
+	const blogRoutes: MetadataRoute.Sitemap = solutionPosts.map(({ id, publishedAt }) => ({
+		url: `https://yourdomain.com/blog/${id}`,
+		lastModified: new Date(publishedAt),
+		changeFrequency: 'monthly',
+		priority: 0.8,
+	}));
+
+	return [...staticRoutes, ...blogRoutes];
 }

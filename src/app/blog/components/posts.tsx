@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 import CloseDarkIcon from '@icons/close-dark.svg';
+import { solutionPosts } from '@core/data/solutions';
 
 import Post from './post';
 
@@ -25,12 +26,19 @@ export default function Posts() {
 		router.push(`?${params.toString()}`);
 	};
 
+	const selectedCategory = searchParams.get('category');
+	const filteredPosts = selectedCategory
+		? solutionPosts.filter(({ tags }) =>
+				tags.some((tag) => tag.toLowerCase() === selectedCategory.toLowerCase()),
+			)
+		: solutionPosts;
+
 	return (
 		<>
 			<div className="max-w-1440 mx-auto flex flex-row flex-wrap gap-4 justify-center items-center mb-8">
-				{searchParams.get('category') && (
+				{selectedCategory && (
 					<div className="flex flex-row flex-wrap items-center gap-3 px-2.5 py-1 border border-light-white rounded-sm">
-						<span>{searchParams.get('category')}</span>
+						<span>{selectedCategory}</span>
 						<Image
 							src={CloseDarkIcon}
 							alt="close icon"
@@ -43,9 +51,14 @@ export default function Posts() {
 				)}
 			</div>
 			<div className="flex flex-row flex-wrap justify-center gap-12 max-w-1440 mx-auto mb-28">
-				{Array.from({ length: 6 }).map((_, i) => (
-					<Post key={i} selectCategory={setCategory} />
+				{filteredPosts.map((post) => (
+					<Post key={post.id} post={post} selectCategory={setCategory} />
 				))}
+				{filteredPosts.length === 0 && (
+					<p className="text-display-r text-base text-heading px-6 text-center">
+						No blog posts found for this tag.
+					</p>
+				)}
 			</div>
 		</>
 	);
