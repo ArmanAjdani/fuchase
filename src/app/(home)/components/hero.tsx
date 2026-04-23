@@ -52,14 +52,14 @@ export default function Hero() {
 						sizes="100vw"
 						quality={82}
 						priority
-						className={`pointer-events-none object-contain object-top lg:object-center transition-all duration-700 ease-out
+						className={`pointer-events-none object-contain object-top lg:object-center lg:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] transition-all duration-700 ease-out
 						${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.985]'}`}
 					/>
 				</div>
+				<div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[22vw] bg-[linear-gradient(90deg,rgba(68,75,62,0.65)_0%,rgba(68,75,62,0.28)_48%,transparent_100%)] lg:block" />
+				<div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[22vw] bg-[linear-gradient(270deg,rgba(108,98,86,0.6)_0%,rgba(108,98,86,0.24)_48%,transparent_100%)] lg:block" />
 			</div>
 			<div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(8,18,12,0.38)_0%,rgba(8,18,12,0.1)_56%,transparent_100%)]" />
-			<div className="absolute inset-y-0 left-0 hidden w-[32vw] min-w-[260px] max-w-[430px] bg-[linear-gradient(90deg,rgba(8,18,12,0.72)_0%,rgba(8,18,12,0.36)_54%,transparent_100%)] lg:block" />
-			<div className="absolute inset-y-0 right-0 hidden w-[32vw] min-w-[280px] max-w-[460px] bg-[linear-gradient(270deg,rgba(8,18,12,0.72)_0%,rgba(8,18,12,0.38)_56%,transparent_100%)] lg:block" />
 			<div className="absolute inset-0">
 				<div className="mx-auto h-full max-w-1440 px-6 pt-20 sm:px-10 sm:pt-24 lg:px-16 lg:pt-32">
 					<div className="flex h-full flex-col justify-start pt-[35svh] pb-10 sm:pt-[38svh] sm:pb-12 lg:hidden">

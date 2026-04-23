@@ -91,7 +91,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 			<RevealOnView from="up">
 				<Heading
 					title={post.title}
-					mobileTitleClassName="max-md:text-[30px] max-md:leading-[1.18]"
+					mobileTitleClassName="max-md:text-[20px] max-md:leading-[1.32]"
 				/>
 			</RevealOnView>
 			<RevealOnView from="up">
@@ -147,9 +147,12 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 							</div>
 						))}
 					</div>
-					<div className="flex flex-row flex-wrap justify-center items-center gap-5 mb-10">
+					<div className="mb-10 flex flex-row flex-wrap items-center justify-center gap-4">
 						{post.tags.map((tag) => (
-							<div key={`${post.id}-${tag}`} className="px-2.5 py-1 border border-light-white rounded-sm">
+							<div
+								key={`${post.id}-${tag}`}
+								className="rounded-sm border border-light-white px-2.5 py-1 text-heading-6 text-[15px] leading-[1.25] text-heading"
+							>
 								{tag}
 							</div>
 						))}

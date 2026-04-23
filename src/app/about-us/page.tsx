@@ -52,22 +52,22 @@ export default function AboutUsPage() {
 							priority
 						/>
 					</RevealOnView>
-					<RevealOnView from="right" className="relative py-4">
+					<RevealOnView from="right" className="relative overflow-hidden rounded-[10px] bg-white/36 px-4 py-8 sm:px-8 sm:py-10">
 						<Image
 							src={Ornament}
 							width={50}
 							height={50}
 							alt="ornament icon"
-							className="pointer-events-none absolute -top-2 left-0 hidden rotate-0 sm:block"
+							className="pointer-events-none absolute top-2 left-2 hidden rotate-0 sm:block"
 						/>
 						<Image
 							src={Ornament}
 							width={50}
 							height={50}
 							alt="ornament icon"
-							className="pointer-events-none absolute -top-2 right-0 hidden rotate-90 sm:block"
+							className="pointer-events-none absolute top-2 right-2 hidden rotate-90 sm:block"
 						/>
-						<div className="space-y-5 pt-4 sm:pt-6">
+						<div className="space-y-5 pt-2 sm:pt-6">
 							<p className="text-display-r leading-[1.75] text-content">
 								FuChase was structured to unify specialized financial entities under one
 								governance logic while preserving each entity&apos;s strategic autonomy.
@@ -104,16 +104,15 @@ export default function AboutUsPage() {
 									</p>
 								))}
 							</div>
-							<div className="pt-2">
+							<div className="flex justify-center pt-4">
 								<a
 									href="https://www.linkedin.com/company/fuchase/"
 									target="_blank"
 									rel="noreferrer"
 									aria-label="FuChase on LinkedIn"
-									className="inline-flex items-center gap-3 border border-light-white px-4 py-2 text-display-r text-base"
+									className="inline-flex items-center justify-center transition duration-200 hover:opacity-80"
 								>
-									<Image src={LinkedinIcon} width={20} height={20} alt="linkedin icon" />
-									LinkedIn
+									<Image src={LinkedinIcon} width={24} height={24} alt="linkedin icon" />
 								</a>
 							</div>
 						</RevealOnView>

@@ -12,13 +12,15 @@ export type PostPropsType = {
 export default function Post({ post, selectCategory }: PostPropsType) {
 	return (
 		<div className="w-full max-w-[635px] text-center">
-			<Image
-				src={post.banner}
-				width={635}
-				height={300}
-				alt={`${post.name} banner`}
-				className="h-[220px] w-full rounded-[10px] object-cover sm:h-[300px]"
-			/>
+			<Link href={`/blog/${post.id}`} aria-label={`${post.name} article`}>
+				<Image
+					src={post.banner}
+					width={635}
+					height={300}
+					alt={`${post.name} banner`}
+					className="h-[220px] w-full rounded-[10px] object-cover sm:h-[300px]"
+				/>
+			</Link>
 			<div className="px-4 pt-6 sm:px-10 sm:pt-8 lg:px-16 lg:pt-10">
 				<h2 className="text-base text-heading-2 max-md:text-[34px] max-md:leading-[1.08]">
 					{post.title}
@@ -35,7 +37,7 @@ export default function Post({ post, selectCategory }: PostPropsType) {
 					{post.tags.map((tag) => (
 						<div
 							key={`${post.id}-${tag}`}
-							className="px-2.5 py-1 border border-light-white rounded-sm cursor-pointer"
+							className="cursor-pointer rounded-sm border border-light-white px-2.5 py-1 text-heading-6 text-[15px] leading-[1.25] text-heading"
 							onClick={() => selectCategory(tag)}
 						>
 							{tag}
