@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 import Location from '@icons/location.svg';
 
 export type SolutionPropsType = {
+	id: string;
 	name: string;
 	description: string;
 	logo: StaticImageData;
@@ -16,6 +18,7 @@ export type SolutionPropsType = {
 };
 
 export default function Solution({
+	id,
 	name,
 	description,
 	logo,
@@ -53,7 +56,7 @@ export default function Solution({
 			className={`mx-auto h-full w-full max-w-[300px] rounded-[28px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
-			<div className="flex h-full flex-col gap-6">
+			<Link href={`/blog/${id}`} className="group flex h-full flex-col gap-6">
 				<div
 					className={`flex h-[220px] items-center justify-center rounded-[24px] p-6 ${logoSurfaceClassName}`}
 				>
@@ -62,7 +65,7 @@ export default function Solution({
 						alt={`${name} logo`}
 						width={240}
 						height={180}
-						className={`h-auto max-h-[172px] w-auto max-w-full object-contain ${logoClassName}`}
+						className={`h-auto max-h-[172px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${logoClassName}`}
 					/>
 				</div>
 				<div className="flex flex-1 flex-col space-y-3">
@@ -75,7 +78,7 @@ export default function Solution({
 					<Image src={Location} alt="location logo" width={16} height={20} />
 					<span className="capitalize text-subtitle text-badge-t">{location}</span>
 				</div>
-			</div>
+			</Link>
 		</div>
 	);
 }

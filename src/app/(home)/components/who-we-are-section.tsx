@@ -51,7 +51,7 @@ export default function WhoWeAre() {
 				ref={ref}
 			>
 				<div
-					className={`relative min-h-[360px] overflow-hidden rounded-[32px] shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out lg:min-h-[540px]
+					className={`relative min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out lg:min-h-[540px]
             			${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-x-10'}`}
 				>
 					<Image

@@ -6,13 +6,21 @@ import FlowChaseLogo from '@assets/imgs/6003346381608783175.jpg';
 import MarketChaseLogo from '@assets/imgs/6003346381608783176.jpg';
 import CCXLogo from '@assets/imgs/6003346381608783177.jpg';
 import CIOLogo from '@assets/imgs/6003346381608783178.jpg';
+import PrivateChaseLogo from '@assets/imgs/private-chase-logo.jpg';
+import ChaseEstateLogo from '@assets/imgs/chase-estate-logo.jpg';
+import ChasePriveLogo from '@assets/imgs/chase-prive-logo-transparent.webp';
+import XChaseLogo from '@assets/imgs/x-chase-logo.jpg';
 
-import VentureChaseBanner from '@assets/imgs/blog-venture-chase-banner.svg';
-import ChasePrimeBanner from '@assets/imgs/blog-chase-prime-banner.svg';
-import FlowChaseBanner from '@assets/imgs/blog-flow-chase-banner.svg';
-import CCXBanner from '@assets/imgs/blog-ccx-banner.svg';
-import MarketChaseBanner from '@assets/imgs/blog-market-chase-banner.svg';
-import CIOBanner from '@assets/imgs/blog-cio-banner.svg';
+import BlogImage3939 from '@assets/imgs/blog/IMG_3939.jpg';
+import BlogImage3940 from '@assets/imgs/blog/IMG_3940.jpg';
+import BlogImage3941 from '@assets/imgs/blog/IMG_3941.jpg';
+import BlogImage3942 from '@assets/imgs/blog/IMG_3942.jpg';
+import BlogImage3943 from '@assets/imgs/blog/IMG_3943.jpg';
+import BlogImage3944 from '@assets/imgs/blog/IMG_3944.jpg';
+import BlogImage3945 from '@assets/imgs/blog/IMG_3945.jpg';
+import BlogImage3946 from '@assets/imgs/blog/IMG_3946.jpg';
+import BlogImage3947 from '@assets/imgs/blog/IMG_3947.jpg';
+import BlogImage3948 from '@assets/imgs/blog/IMG_3948.png';
 
 export type SolutionArticleSection = {
 	heading: string;
@@ -43,12 +51,11 @@ export const solutionPosts: SolutionPost[] = [
 		title: 'Venture Chase: A Structured Bridge Between Capital and Opportunity',
 		summary:
 			'How Venture Chase aligns investors with vetted projects through a curated and professionally managed deal environment.',
-		description:
-			'Venture Chase connects investors with startups, entrepreneurs, and established ventures through curated, high-potential opportunities in a controlled environment.',
+		description: 'Curated capital meets opportunity',
 		location: 'USA',
 		logo: VentureChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: VentureChaseBanner,
+		banner: BlogImage3946,
 		publishedAt: '2026-04-04',
 		tags: ['Venture Capital', 'Startup Pipeline', 'Investor Network', 'USA'],
 		intro:
@@ -77,13 +84,12 @@ export const solutionPosts: SolutionPost[] = [
 		title: 'Chase Prime: Institutional Education for Financial System Builders',
 		summary:
 			'Why practical, system-level training is essential for professionals launching and operating financial institutions.',
-		description:
-			'Chase Prime is a specialized academy delivering institutional-level education on financial systems, risk frameworks, and the operational design of financial organizations.',
+		description: 'Institutional finance systems academy',
 		location: 'UAE',
 		logo: ChasePrimeLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: ChasePrimeBanner,
-		publishedAt: '2026-04-07',
+		banner: BlogImage3941,
+		publishedAt: '2026-04-06',
 		tags: ['Financial Education', 'Institutional Design', 'Risk Management', 'UAE'],
 		intro:
 			'Chase Prime addresses a major gap in financial education: most programs teach markets, but very few explain how financial institutions are actually designed and operated. The academy is focused on real operating architecture and practical execution.',
@@ -111,13 +117,12 @@ export const solutionPosts: SolutionPost[] = [
 		title: 'Flow Chase: Efficient Asset Mobility for HNWIs and UHNWIs',
 		summary:
 			'How Flow Chase streamlines compliant asset transition into GCC markets for sophisticated private capital.',
-		description:
-			'Flow Chase enables seamless movement of assets into GCC countries through structured, compliant channels for HNWIs and UHNWIs.',
+		description: 'Seamless GCC capital mobility',
 		location: 'UAE',
 		logo: FlowChaseLogo,
 		logoSurfaceClassName: 'bg-[#a1b2a1]',
-		banner: FlowChaseBanner,
-		publishedAt: '2026-04-10',
+		banner: BlogImage3944,
+		publishedAt: '2026-04-08',
 		tags: ['HNWIs', 'Cross-Border Capital', 'GCC', 'UAE'],
 		intro:
 			'Cross-border wealth movement often breaks down at the operational level, even when demand is clear. Flow Chase is designed to make the transition of capital into GCC ecosystems cleaner, faster, and more transparent for high-net-worth investors.',
@@ -145,13 +150,12 @@ export const solutionPosts: SolutionPost[] = [
 		title: 'CCX: Clearing, Netting, and Liquidity Infrastructure for Institutions',
 		summary:
 			'How CCX reduces counterparty risk and improves transaction efficiency for brokers, funds, and asset managers.',
-		description:
-			'CCX operates as a clearing house, aggregator, and liquidity provider that enables institutional participants to clear and manage trades in a controlled environment.',
+		description: 'Institutional clearing and liquidity',
 		location: 'Cyprus (CySEC) - Cayman Islands (CIMA) - Abu Dhabi (ADGM)',
 		logo: CCXLogo,
 		logoSurfaceClassName: 'bg-[#dddddd]',
-		banner: CCXBanner,
-		publishedAt: '2026-04-13',
+		banner: BlogImage3947,
+		publishedAt: '2026-04-10',
 		tags: ['Clearing Infrastructure', 'Liquidity', 'Counterparty Risk', 'Prime Services'],
 		intro:
 			'Chase Clearing Exchange (CCX) is designed for market participants that need institutional-grade post-trade infrastructure. It combines clearing, aggregation, and liquidity access to support efficient settlement and stronger risk control across counterparties.',
@@ -179,13 +183,12 @@ export const solutionPosts: SolutionPost[] = [
 		title: 'Market Chase: A Unified Marketplace for Financial Industry Collaboration',
 		summary:
 			'How Market Chase connects institutions, service providers, and intelligence to solve operational needs in one ecosystem.',
-		description:
-			'Market Chase is a curated marketplace connecting financial institutions and service providers so they can discover solutions, form partnerships, and access industry intelligence.',
+		description: 'Financial ecosystem partnership marketplace',
 		location: 'USA',
 		logo: MarketChaseLogo,
 		logoSurfaceClassName: 'bg-[#e2e2e2]',
-		banner: MarketChaseBanner,
-		publishedAt: '2026-04-16',
+		banner: BlogImage3945,
+		publishedAt: '2026-04-12',
 		tags: ['Financial Marketplace', 'Partnerships', 'Media Intelligence', 'USA'],
 		intro:
 			'Market Chase addresses fragmentation inside the financial services supply chain. Instead of isolated vendor discovery and disconnected relationships, it provides a centralized environment where institutions can identify the right counterparties for infrastructure, technology, compliance, and operations.',
@@ -213,13 +216,12 @@ export const solutionPosts: SolutionPost[] = [
 		title: 'CIO: Precision Investment Intelligence for Sophisticated Capital',
 		summary:
 			'How CIO maps where and when high-potential opportunities emerge across regions and industries.',
-		description:
-			'CIO is a specialized data provider for institutional clients, HNWIs, and UHNWIs, delivering structured investment intelligence by country, region, and sector.',
+		description: 'Precision global investment intelligence',
 		location: 'USA',
 		logo: CIOLogo,
 		logoSurfaceClassName: 'bg-[#dddddd]',
-		banner: CIOBanner,
-		publishedAt: '2026-04-19',
+		banner: BlogImage3939,
+		publishedAt: '2026-04-14',
 		tags: ['Investment Intelligence', 'Opportunity Mapping', 'Data Strategy', 'USA'],
 		intro:
 			'Chase Investment Office (CIO) is designed for investors who need more than high-level commentary. It focuses on clear, actionable intelligence around opportunity timing, geographic concentration, and sector-specific potential.',
@@ -241,4 +243,138 @@ export const solutionPosts: SolutionPost[] = [
 			},
 		],
 	},
+	{
+		id: 'private-chase',
+		name: 'Private Chase',
+		title: 'Private Chase: Structured Forex Access and Tailored Asset Management',
+		summary:
+			'How Private Chase combines private brokerage execution with customized capital management for sophisticated clients.',
+		description: 'Private brokerage asset management',
+		location: 'Seychelles - UAE',
+		logo: PrivateChaseLogo,
+		logoSurfaceClassName: 'bg-[#050505]',
+		banner: BlogImage3942,
+		publishedAt: '2026-04-16',
+		tags: ['Private Brokerage', 'Forex', 'Asset Management', 'HNWIs'],
+		intro:
+			'Private Chase is designed as a private brokerage and asset management platform for clients who require controlled execution, strategic positioning, and discretionary capital support. The model combines market access with an institutional operating discipline.',
+		sections: [
+			{
+				heading: 'Private Market Access by Design',
+				content:
+					'The brokerage layer is built for structured access, not mass-market flow. Clients operate through curated channels with tighter process controls, clearer execution handling, and a focus on consistency over volume.',
+			},
+			{
+				heading: 'Tailored Capital Management',
+				content:
+					'Portfolio handling is designed around individual risk profiles and strategic objectives. Instead of generic allocation templates, Private Chase supports bespoke capital management frameworks aligned to each investor mandate.',
+			},
+			{
+				heading: 'Controlled Strategic Environment',
+				content:
+					'By integrating brokerage operations with asset management logic, Private Chase creates a coordinated environment where execution, oversight, and strategy are kept in sync across the full investment cycle.',
+			},
+		],
+	},
+	{
+		id: 'chase-estate',
+		name: 'Chase Estate',
+		title: 'Chase Estate: AI-Powered Real Estate Intelligence for Strategic Portfolios',
+		summary:
+			'How Chase Estate applies AI and big data to real estate allocation and portfolio development at institutional scale.',
+		description: 'AI real estate intelligence',
+		location: 'UAE - USA',
+		logo: ChaseEstateLogo,
+		logoSurfaceClassName: 'bg-[#111c74]',
+		banner: BlogImage3940,
+		publishedAt: '2026-04-18',
+		tags: ['Real Estate', 'AI Analytics', 'Portfolio Strategy', 'Institutional'],
+		intro:
+			'Chase Estate is built for investors and institutions that require deeper intelligence before allocating capital into real assets. The platform combines AI processing with big data analysis to improve portfolio design, timing, and exposure decisions.',
+		sections: [
+			{
+				heading: 'AI-Driven Market Interpretation',
+				content:
+					'The platform processes large market datasets to identify trends, imbalances, and location-level opportunity signals. This improves decision quality for acquisitions, exits, and strategic portfolio weighting.',
+			},
+			{
+				heading: 'Institutional Portfolio Structuring',
+				content:
+					'Chase Estate supports structured portfolio development for institutions, HNWIs, and UHNWIs that need stronger governance across asset selection and diversification logic.',
+			},
+			{
+				heading: 'Data-Led Capital Deployment',
+				content:
+					'By blending analytics with operational workflows, the platform helps clients move from research to execution faster while preserving control and consistency in long-term real estate strategy.',
+			},
+		],
+	},
+	{
+		id: 'chase-prive',
+		name: 'Chase Prive',
+		title: 'Chase Prive: A Unified Super App for Elite Financial and Lifestyle Access',
+		summary:
+			'How Chase Prive integrates financial, strategic, and lifestyle services into one controlled operating environment.',
+		description: 'Integrated elite wealth superapp',
+		location: 'Monaco - UAE',
+		logo: ChasePriveLogo,
+		logoSurfaceClassName: 'bg-[#ddd7ca]',
+		logoClassName: 'max-h-[194px]',
+		banner: BlogImage3943,
+		publishedAt: '2026-04-20',
+		tags: ['Super App', 'UHNWIs', 'Private Services', 'Lifestyle Finance'],
+		intro:
+			'Chase Prive is designed for clients who need a single trusted interface across financial and non-financial priorities. It merges strategic capital services with premium lifestyle access, reducing fragmentation for high-complexity client needs.',
+		sections: [
+			{
+				heading: 'One Access Point Across Services',
+				content:
+					'Chase Prive centralizes multiple service layers into a unified app environment. Clients can coordinate financial planning, strategic requests, and premium lifestyle operations without switching disconnected providers.',
+			},
+			{
+				heading: 'Built for HNWI and UHNWI Complexity',
+				content:
+					'The platform is structured around the demands of affluent client profiles where privacy, precision, and rapid execution are critical. Service orchestration is built to support that complexity at scale.',
+			},
+			{
+				heading: 'Controlled and Integrated Operations',
+				content:
+					'Chase Prive operates in a controlled environment where service quality and response logic are standardized. This provides a dependable framework for long-term client relationships across multiple domains.',
+			},
+		],
+	},
+	{
+		id: 'x-chase',
+		name: 'X-Chase',
+		title: 'X-Chase: Financial Infrastructure Design, Build, and Operational Scaling',
+		summary:
+			'How X-Chase delivers end-to-end system architecture for launching and scaling financial infrastructures.',
+		description: 'Financial infrastructure design partner',
+		location: 'New York - USA',
+		logo: XChaseLogo,
+		logoSurfaceClassName: 'bg-[#050505]',
+		banner: BlogImage3948,
+		publishedAt: '2026-04-22',
+		tags: ['System Architecture', 'Financial Infrastructure', 'Operations', 'USA'],
+		intro:
+			'X-Chase focuses on designing, building, and operating financial systems for organizations that need robust infrastructure from day one. It combines architecture expertise with practical implementation to support both launch and scale phases.',
+		sections: [
+			{
+				heading: 'System Design for Financial Operations',
+				content:
+					'X-Chase develops structural blueprints across front-office, middle-office, and back-office layers, ensuring that critical workflows are connected and governed from the start.',
+			},
+			{
+				heading: 'Execution-Focused Infrastructure Buildout',
+				content:
+					'The build phase emphasizes deployable infrastructure rather than conceptual architecture. Teams can move from design to operation with aligned controls, process discipline, and measurable performance baselines.',
+			},
+			{
+				heading: 'Scaling with Controlled Complexity',
+				content:
+					'As organizations expand, X-Chase helps preserve structural integrity by scaling systems in a modular way. This reduces operational breakdown risk and supports sustainable long-term growth.',
+			},
+		],
+	},
 ];
+
