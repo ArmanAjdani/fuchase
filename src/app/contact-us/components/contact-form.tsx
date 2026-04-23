@@ -24,10 +24,12 @@ export default function ContactForm() {
 	}, [form]);
 
 	return (
-		<div className="bg-white px-12 py-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] rounded-[10px] flex flex-col flex-wrap items-center justify-around gap-8 max-w-[630px] flex-1">
+		<div className="flex max-w-[630px] flex-1 flex-col flex-wrap items-center justify-around gap-8 rounded-[10px] bg-white px-12 py-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] max-md:w-full max-md:gap-6 max-md:px-5 max-md:py-5">
 			<input type="text" name="honeypot" style={{ display: 'none' }} />
 			<label className="w-full relative">
-				<span className="block text-display-xl text-base mb-2.5">Name</span>
+				<span className="mb-2.5 block text-base text-display-xl max-md:text-[16px]">
+					Name
+				</span>
 				<input
 					id="name"
 					name="name"
@@ -45,7 +47,9 @@ export default function ContactForm() {
 				/>
 			</label>
 			<label className="w-full relative">
-				<span className="block text-display-xl text-base mb-2.5">Email</span>
+				<span className="mb-2.5 block text-base text-display-xl max-md:text-[16px]">
+					Email
+				</span>
 				<input
 					id="email"
 					name="email"
@@ -63,7 +67,9 @@ export default function ContactForm() {
 				/>
 			</label>
 			<label className="w-full">
-				<span className="block text-display-xl text-base mb-2.5">Message</span>
+				<span className="mb-2.5 block text-base text-display-xl max-md:text-[16px]">
+					Message
+				</span>
 				<textarea
 					id="message"
 					name="message"
@@ -75,7 +81,7 @@ export default function ContactForm() {
 				/>
 			</label>
 			<button
-				className="text-button-m text-primary py-2.5 px-6 bg-linear-to-b from-white/0 to-accent mx-auto cursor-pointer w-48 mb-[10px]"
+				className="mx-auto mb-[10px] w-48 cursor-pointer bg-linear-to-b from-white/0 to-accent px-6 py-2.5 text-button-m text-primary max-md:w-full"
 				onClick={submit}
 			>
 				Submit

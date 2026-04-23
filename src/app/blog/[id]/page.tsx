@@ -85,12 +85,12 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 				<Image
 					src={post.banner}
 					alt={`${post.name} article banner`}
-					className="w-full mb-24"
+					className="mb-10 w-full sm:mb-16 lg:mb-24"
 					width={1600}
 					height={900}
 				/>
 			</RevealOnView>
-			<div className="max-w-1440 mx-auto flex flex-row flex-wrap justify-between gap-12 px-20 pb-14">
+			<div className="mx-auto flex max-w-1440 flex-row flex-wrap justify-between gap-8 px-4 pb-12 sm:gap-10 sm:px-10 lg:gap-12 lg:px-20 lg:pb-14">
 				<RevealOnView from="left" className="flex-1">
 					<div className="mb-8 text-sm text-content opacity-75">
 						<span>{post.location}</span>
@@ -100,12 +100,15 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 					<p className="text-heading text-display-r">{post.intro}</p>
 					{post.sections.map(({ content, heading }) => (
 						<section key={heading} className="mt-12">
-							<h2 className="text-heading text-heading-4">{heading}</h2>
+							<h2 className="text-heading text-heading-4 max-md:text-[30px]">{heading}</h2>
 							<p className="text-heading text-display-r mt-5">{content}</p>
 						</section>
 					))}
 				</RevealOnView>
-				<RevealOnView from="right" className="w-[400px] pl-12 pr-3 shrink-0">
+				<RevealOnView
+					from="right"
+					className="w-full shrink-0 pl-0 pr-0 md:w-[400px] md:pl-12 md:pr-3"
+				>
 					<h3 className="mb-10 text-base text-heading-5">In this article</h3>
 					<div className="mb-10">
 						{post.sections.map(({ heading }) => (

@@ -27,7 +27,9 @@ export default function Qa({ question, answer }: QaPropsType) {
 				) : (
 					<Image src={HambergerDarkIcon} width={30} height={23} alt="hamberger icon" />
 				)}
-				<p className="text-display-xl text-base ml-5">{question}</p>
+				<p className="ml-5 text-base text-display-xl max-md:text-[20px] max-md:leading-[1.3]">
+					{question}
+				</p>
 			</div>
 			<div
 				className={`overflow-hidden transition-all duration-300 ease-in-out mx-0 sm:mx-12 lg:mx-24 ${isOpen ? 'max-h-96 opacity-100 mt-5' : 'max-h-0 opacity-0'}`}

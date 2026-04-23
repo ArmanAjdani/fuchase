@@ -95,7 +95,7 @@ export default function AboutUsPage() {
 					<RevealOnView from="up">
 						<h2 className="text-center text-heading-4 text-heading">Founder Perspective</h2>
 					</RevealOnView>
-					<div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-stretch">
+					<div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-stretch lg:gap-10">
 						<RevealOnView from="left" className="space-y-5">
 							{founderStory.map((paragraph) => (
 								<p key={paragraph} className="text-display-r leading-[1.75] text-content">
@@ -117,7 +117,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 						<RevealOnView
 							from="right"
-							className="relative h-full min-h-[520px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)]"
+							className="relative h-full min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:min-h-[520px]"
 						>
 							<Image
 								src={FounderImage}

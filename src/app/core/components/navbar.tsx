@@ -31,38 +31,45 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 
 	return (
 		<nav
-			className={`px-10 flex flex-wrap items-center justify-between bg-base-shadow backdrop-blur-md fixed left-0 right-0 top-0 transition-all duration-500 ease-in-out
+			className={`fixed inset-0 z-40 bg-base-shadow px-6 pt-5 pb-8 backdrop-blur-md transition-all duration-500 ease-in-out md:bottom-auto md:left-0 md:right-0 md:top-0 md:h-auto md:px-10 md:pt-0 md:pb-0
         ${
 			open
 				? 'translate-y-0 opacity-100 pointer-events-auto'
-				: '-translate-y-full opacity-0 pointer-events-none'
+				: 'max-md:-translate-y-4 md:-translate-y-full opacity-0 pointer-events-none'
 		}`}
 		>
-			<Link href="/" onClick={() => setIsOpen(false)}>
-				<Image
-					src={Logo}
-					width={120}
-					height={70}
-					alt="furchase logo"
-					className="w-full cursor-pointer shrink-0"
-				/>
-			</Link>
-			<div className="flex flex-row flex-wrap items-center justify-end flex-1">
-				<ul className="flex flex-row flex-wrap items-center justify-between pl-20 pr-28 flex-1 max-w-[1200px]">
-					{links.map(({ name, url }) => (
-						<li key={name}>
-							<Link
-								href={url}
-								className="text-display-r text-accent"
-								onClick={() => setIsOpen(false)}
-							>
-								{name}
-							</Link>
-						</li>
-					))}
-				</ul>
-				<div className="p-4 cursor-pointer shrink-0" onClick={() => setIsOpen(false)}>
-					<Image src={CloseLightIcon} width={13} height={13} alt="close icon" />
+			<div className="mx-auto flex h-full max-w-1440 flex-col max-md:h-full md:h-auto md:flex-row md:items-center md:justify-between">
+				<div className="flex items-center justify-between">
+					<Link href="/" onClick={() => setIsOpen(false)}>
+						<Image
+							src={Logo}
+							width={120}
+							height={70}
+							alt="furchase logo"
+							className="h-auto w-[100px] cursor-pointer shrink-0 sm:w-[120px]"
+						/>
+					</Link>
+					<div className="cursor-pointer p-2 md:hidden" onClick={() => setIsOpen(false)}>
+						<Image src={CloseLightIcon} width={16} height={16} alt="close icon" />
+					</div>
+				</div>
+				<div className="mt-8 flex flex-1 flex-col md:mt-0 md:flex-row md:items-center md:justify-end">
+					<ul className="flex flex-col gap-5 md:flex-row md:flex-wrap md:items-center md:justify-between md:pl-20 md:pr-28 md:flex-1 md:max-w-[1200px]">
+						{links.map(({ name, url }) => (
+							<li key={name}>
+								<Link
+									href={url}
+									className="text-accent text-[30px] leading-[1.08] md:text-display-r md:leading-normal"
+									onClick={() => setIsOpen(false)}
+								>
+									{name}
+								</Link>
+							</li>
+						))}
+					</ul>
+					<div className="hidden cursor-pointer shrink-0 p-4 md:block" onClick={() => setIsOpen(false)}>
+						<Image src={CloseLightIcon} width={13} height={13} alt="close icon" />
+					</div>
 				</div>
 			</div>
 		</nav>

@@ -22,25 +22,25 @@ export default function Header() {
 
 	return (
 		<header className="absolute top-0 left-0 right-0 z-10 bg-transparent">
-			<div className="flex flex-row flex-wrap justify-between items-center mx-10">
+			<div className="mx-4 flex flex-row flex-wrap items-center justify-between sm:mx-10">
 				<Link href="/">
 					<Image
 						src={LogoLight}
 						width={120}
 						height={70}
 						alt="furchase logo"
-						className={`h-auto w-[120px] cursor-pointer ${isDark ? 'brightness-0' : ''}`}
+						className={`h-auto w-[100px] cursor-pointer sm:w-[120px] ${isDark ? 'brightness-0' : ''}`}
 						priority
 					/>
 				</Link>
 				<div className="flex flex-row flex-wrap items-center">
 					<Link
 						href="/contact-us"
-						className={`text-display-s p-2 border mr-6 cursor-pointer ${isDark ? 'text-base border-dark-button' : 'text-accent border-dark-white'}`}
+						className={`mr-3 hidden cursor-pointer border p-2 text-display-s sm:mr-6 sm:block ${isDark ? 'text-base border-dark-button' : 'text-accent border-dark-white'}`}
 					>
 						Private Inquiry
 					</Link>
-					<div className="p-4 cursor-pointer" onClick={() => setIsNavbarOpen(true)}>
+					<div className="cursor-pointer p-3 sm:p-4" onClick={() => setIsNavbarOpen(true)}>
 						{isDark ? (
 							<Image
 								src={MenuDarkIcon}

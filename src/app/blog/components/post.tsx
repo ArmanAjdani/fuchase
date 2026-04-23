@@ -11,16 +11,18 @@ export type PostPropsType = {
 
 export default function Post({ post, selectCategory }: PostPropsType) {
 	return (
-		<div className="text-center max-w-[635px]">
+		<div className="w-full max-w-[635px] text-center">
 			<Image
 				src={post.banner}
 				width={635}
 				height={300}
 				alt={`${post.name} banner`}
-				className="h-[300px] object-cover rounded-[10px]"
+				className="h-[220px] w-full rounded-[10px] object-cover sm:h-[300px]"
 			/>
-			<div className="pt-10 px-16">
-				<h2 className="text-base text-heading-2">{post.title}</h2>
+			<div className="px-4 pt-6 sm:px-10 sm:pt-8 lg:px-16 lg:pt-10">
+				<h2 className="text-base text-heading-2 max-md:text-[34px] max-md:leading-[1.08]">
+					{post.title}
+				</h2>
 				<p className="text-left text-display-r text-base my-6">{post.summary}</p>
 				<Link
 					href={`/blog/${post.id}`}

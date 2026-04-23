@@ -16,7 +16,7 @@ export default function WhoWeServePage() {
 	return (
 		<>
 			<Heading title="Who We Serve" />
-			<div className="w-full h-[900px]">
+			<div className="h-[320px] w-full sm:h-[520px] lg:h-[900px]">
 				<Image
 					src={WhoWeServeImage}
 					alt="who we serve image"
@@ -24,67 +24,71 @@ export default function WhoWeServePage() {
 					priority
 				/>
 			</div>
-			<div className="my-14 py-12 mx-20 relative">
+			<div className="relative mx-4 my-10 py-8 sm:mx-10 lg:mx-20 lg:my-14 lg:py-12">
 				<Image
 					src={Ornament}
 					width={50}
 					height={50}
 					alt="ornament"
-					className="absolute top-0 left-20 rotate-0"
+					className="absolute top-0 left-20 hidden rotate-0 sm:block"
 				/>
 				<Image
 					src={Ornament}
 					width={50}
 					height={50}
 					alt="ornament"
-					className="absolute top-0 right-20 rotate-90"
+					className="absolute top-0 right-20 hidden rotate-90 sm:block"
 				/>
-				<article className="pl-10">
-					<section className="px-56 mb-6">
-						<p className="text-base text-display-xl">
+				<article className="pl-0 lg:pl-10">
+					<section className="mb-6 px-0 sm:px-8 lg:px-56">
+						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 							Fuchase is designed to serve the entire structure of financial
 							markets—from the highest levels of institutional participation to the
 							broader layers of market engagement..
 						</p>
 					</section>
 
-					<section className="px-56 mb-6">
-						<p className="text-base text-display-xl">The ecosystem is built for:</p>
+					<section className="mb-6 px-0 sm:px-8 lg:px-56">
+						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+							The ecosystem is built for:
+						</p>
 						<ul className="list-disc list-inside">
-							<li className="text-base text-display-xl">Institutional players</li>
-							<li className="text-base text-display-xl">
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
+								Institutional players
+							</li>
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 								Financial firms and infrastructure providers
 							</li>
-							<li className="text-base text-display-xl">
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 								Banks and brokerage systems
 							</li>
-							<li className="text-base text-display-xl">
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 								Hedge funds and asset managers
 							</li>
-							<li className="text-base text-display-xl">
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 								Family offices and capital allocators
 							</li>
-							<li className="text-base text-display-xl">
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 								High-net-worth (HNWIs) and ultra-high-net-worth individuals (UHNWIs)
 							</li>
-							<li className="text-base text-display-xl">
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 								Strategic partners and market operators
 							</li>
-							<li className="text-base text-display-xl">
+							<li className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 								And selectively, retail participants operating within structured
 								environments
 							</li>
 						</ul>
 					</section>
-					<section className="px-56">
-						<p className="text-base text-display-xl">
+					<section className="px-0 sm:px-8 lg:px-56">
+						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 							Fuchase does not serve a single segment. It operates across the full
 							spectrum of financial market participants, providing access to
 							infrastructure, strategic alignment, and integrated solutions.
 						</p>
 					</section>
-					<section className="px-56">
-						<p className="text-base text-display-xl">
+					<section className="px-0 sm:px-8 lg:px-56">
+						<p className="text-base text-display-xl max-md:text-[19px] max-md:leading-[1.5]">
 							Positioned as a unifying layer, Fuchase enables different actors within
 							the financial ecosystem to converge, interact, and scale through
 							structured systems.
