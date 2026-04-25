@@ -16,6 +16,18 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 			url: '/about-us',
 		},
 		{
+			name: 'Who We Are',
+			url: '/who-we-are',
+		},
+		{
+			name: 'Who We Serve',
+			url: '/who-we-serve',
+		},
+		{
+			name: 'Solutions',
+			url: '/#solutions',
+		},
+		{
 			name: 'Contact us',
 			url: '/contact-us',
 		},
@@ -54,12 +66,12 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 					</div>
 				</div>
 				<div className="mt-8 flex flex-1 flex-col md:mt-0 md:flex-row md:items-center md:justify-end">
-					<ul className="flex flex-col gap-5 md:flex-row md:flex-wrap md:items-center md:justify-between md:pl-20 md:pr-28 md:flex-1 md:max-w-[1200px]">
+					<ul className="flex flex-col gap-5 md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-x-5 md:gap-y-3 md:pl-8 md:pr-10 md:flex-1 md:max-w-[980px] lg:gap-x-7">
 						{links.map(({ name, url }) => (
 							<li key={name}>
 								<Link
 									href={url}
-									className="text-display-r text-accent max-md:text-[30px] max-md:leading-[1.08]"
+									className="text-display-r text-accent transition duration-200 hover:text-white max-md:text-[30px] max-md:leading-[1.08] md:whitespace-nowrap md:text-[15px] lg:text-[16px]"
 									onClick={() => setIsOpen(false)}
 								>
 									{name}

@@ -83,9 +83,9 @@ export default function ContactForm() {
 			</label>
 			<button
 				type="submit"
-				className="mt-1 w-full cursor-pointer border border-[rgba(85,92,59,0.42)] bg-linear-to-b from-white to-accent/65 px-6 py-3 text-button-m text-primary transition duration-200 hover:opacity-90"
+				className="mt-1 flex w-full cursor-pointer items-center justify-center border border-primary bg-primary px-6 py-4 text-button-m text-accent shadow-[0px_18px_34px_rgba(44,49,25,0.22)] transition duration-200 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-primary/35 focus:ring-offset-2 focus:ring-offset-white"
 			>
-				Submit
+				Submit Inquiry
 			</button>
 		</form>
 	);

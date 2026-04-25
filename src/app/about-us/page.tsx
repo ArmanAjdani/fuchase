@@ -1,10 +1,16 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
+import InstagramIcon from '@icons/instagram.svg';
 import LinkedinIcon from '@icons/linkedin.svg';
 import AboutUsImage from '@assets/imgs/about-us-office.jpg';
 import FounderImage from '@assets/imgs/about-us-footage.jpg';
 import Ornament from '@assets/imgs/ornament.png';
+import NikiImage from '@assets/imgs/ceo/5972092188063632481.jpg';
+import DanielImage from '@assets/imgs/team/Daniel.jpg';
+import HamedImage from '@assets/imgs/team/Hamed.jpg';
+import ManuelImage from '@assets/imgs/team/Manuel.jpg';
+import SamImage from '@assets/imgs/team/Sam.jpg';
 
 import Heading from '@core/components/heading';
 import RevealOnView from '@core/components/reveal-on-view';
@@ -30,6 +36,54 @@ const founderStory = [
 	'As a strategist, she approaches financial markets not from a transactional perspective, but from a systems-level viewpoint, focusing on how capital, technology, and operational frameworks integrate to create enduring financial ecosystems.',
 	'Through FuChase, Niki Saki is leading the development of a modular and interconnected financial ecosystem, designed to unify different layers of the market into a cohesive, scalable, and strategically aligned structure.',
 	'Her work reflects a consistent focus on precision, structure, and execution, positioning her as a builder of financial systems rather than a participant within them.',
+];
+
+const teamMembers = [
+	{
+		name: 'Niki Saki',
+		title: 'Founder, Chairman & Chief Executive Officer - FUCHASE',
+		image: NikiImage,
+		bio: [
+			'Niki Saki is a financial systems architect with over a decade of experience across trading, brokerage operations, and institutional financial structuring.',
+			'She leads FUCHASE with a clear vision of building a unified financial ecosystem where multiple entities operate as a single, integrated system designed for scalability, control, and long-term value creation.',
+		],
+	},
+	{
+		name: 'Daniel Baumgartner',
+		title: 'Chairman - Play Global Capital | Institutional Strategic Alliance',
+		image: DanielImage,
+		bio: [
+			'Daniel is a serial entrepreneur and Chairman of Play Global Capital, with extensive experience in launching, scaling, and structuring global businesses.',
+			'Through a strategic alliance with FUCHASE, he contributes to high-level leadership, investment alignment, and global expansion strategy.',
+		],
+	},
+	{
+		name: 'Manuel Neuwirth',
+		title: 'Vice Chairman - Play Global Capital | Institutional Strategic Alliance',
+		image: ManuelImage,
+		bio: [
+			'With a strong background in investment and financial structuring, Manuel plays a key role in capital strategy, partnership development, and institutional expansion.',
+			'Through the strategic alliance between Play Global Capital and FUCHASE, he supports the ecosystem’s growth and global positioning.',
+		],
+	},
+	{
+		name: 'Sam Hesam',
+		title: 'Co-Founder & Ecosystem Architect - FUCHASE',
+		image: SamImage,
+		bio: [
+			'Sam is responsible for the conceptual design and structural architecture of the FUCHASE ecosystem.',
+			'He leads the development of the system’s long-term vision, ensuring alignment, integration, and synergy across all sub-companies and financial structures within the ecosystem.',
+		],
+	},
+	{
+		name: 'Hamed Hayali',
+		title: 'Director of Forex Brokerage Division - X-Chase | Forex Brokerage Division - Private Chase',
+		image: HamedImage,
+		bio: [
+			'Hamed leads the Forex brokerage vertical across both X-Chase and Private Chase.',
+			'He is responsible for the design, development, and operational performance of brokerage systems, ensuring execution quality, risk management, and alignment with institutional standards.',
+		],
+	},
 ];
 
 export default function AboutUsPage() {
@@ -104,7 +158,7 @@ export default function AboutUsPage() {
 									</p>
 								))}
 							</div>
-							<div className="flex justify-center pt-4">
+							<div className="flex justify-center gap-5 pt-4">
 								<a
 									href="https://www.linkedin.com/company/fuchase/"
 									target="_blank"
@@ -113,6 +167,15 @@ export default function AboutUsPage() {
 									className="inline-flex items-center justify-center transition duration-200 hover:opacity-80"
 								>
 									<Image src={LinkedinIcon} width={24} height={24} alt="linkedin icon" />
+								</a>
+								<a
+									href="https://www.instagram.com/fuchase/"
+									target="_blank"
+									rel="noreferrer"
+									aria-label="FuChase on Instagram"
+									className="inline-flex items-center justify-center transition duration-200 hover:opacity-80"
+								>
+									<Image src={InstagramIcon} width={24} height={24} alt="instagram icon" />
 								</a>
 							</div>
 						</RevealOnView>
@@ -128,6 +191,48 @@ export default function AboutUsPage() {
 								className="object-cover object-center"
 							/>
 						</RevealOnView>
+					</div>
+				</section>
+				<section className="mx-auto mt-16 max-w-6xl sm:mt-20">
+					<RevealOnView from="up">
+						<div className="text-center">
+							<h2 className="text-heading-4 text-heading">Leadership & Core Team</h2>
+							<p className="mx-auto mt-3 max-w-[620px] text-display-r leading-[1.7] text-content/80">
+								The FUCHASE leadership structure combines ecosystem architecture,
+								institutional alliance, and financial market execution.
+							</p>
+						</div>
+					</RevealOnView>
+					<div className="mt-9 grid gap-7 lg:grid-cols-2">
+						{teamMembers.map(({ bio, image, name, title }, index) => (
+							<RevealOnView key={name} from="up" delayMs={index * 90}>
+								<article className="grid gap-5 border-t border-[rgba(44,49,25,0.24)] pt-5 sm:grid-cols-[160px_minmax(0,1fr)]">
+									<div className="relative aspect-[4/5] overflow-hidden bg-accent/35 sm:aspect-auto sm:min-h-[220px]">
+										<Image
+											src={image}
+											alt={name}
+											fill
+											sizes="(min-width: 1024px) 160px, (min-width: 640px) 160px, 100vw"
+											className="object-cover object-center"
+										/>
+									</div>
+									<div>
+										<h3 className="text-heading-6 text-heading">{name}</h3>
+										<p className="mt-1 text-display-r leading-[1.55] text-primary">{title}</p>
+										<div className="mt-4 space-y-3">
+											{bio.map((paragraph) => (
+												<p
+													key={paragraph}
+													className="text-display-r leading-[1.65] text-content/82"
+												>
+													{paragraph}
+												</p>
+											))}
+										</div>
+									</div>
+								</article>
+							</RevealOnView>
+						))}
 					</div>
 				</section>
 			</div>

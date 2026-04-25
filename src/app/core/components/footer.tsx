@@ -27,21 +27,21 @@ const footerLinks = {
 export default function Footer() {
 	return (
 		<footer className="mt-8">
-			<div className="bg-accent px-6 py-6 sm:px-10 lg:px-16">
-				<div className="mx-auto flex max-w-1440 flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
-					<span className="text-heading-5 text-primary sm:text-heading-4">Get in touch</span>
-					<div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-start sm:gap-8 lg:ml-auto lg:justify-end lg:gap-10">
-						<div className="flex flex-row items-center gap-4">
-							<Image src={MailDarkIcon} width={25} height={20} alt="mail icon" />
+			<div className="bg-accent px-6 py-5 sm:px-10 lg:px-16">
+				<div className="mx-auto flex max-w-1440 flex-col gap-4 sm:flex-row sm:items-center">
+					<span className="text-heading-6 text-primary sm:text-heading-5">Get in touch</span>
+					<div className="flex flex-col gap-3 sm:ml-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-7">
+						<div className="flex flex-row items-center gap-3">
+							<Image src={MailDarkIcon} width={18} height={15} alt="mail icon" />
 							<a
 								href="mailto:hello@fuchase.com"
-								className="text-primary underline text-subtitle-r"
+								className="text-primary underline text-subtitle-r break-all"
 							>
 								hello@fuchase.com
 							</a>
 						</div>
-						<div className="flex flex-row items-center gap-4">
-							<Image src={PhoneDarkIcon} width={23} height={23} alt="phone icon" />
+						<div className="flex flex-row items-center gap-3">
+							<Image src={PhoneDarkIcon} width={17} height={17} alt="phone icon" />
 							<a href="tel:+15550000000" className="text-primary underline text-subtitle-r">
 								+1 (555) 000-0000
 							</a>

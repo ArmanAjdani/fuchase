@@ -1,10 +1,10 @@
+import CeoVisionFaq from './components/ceo-vision-faq';
 import Hero from './components/hero';
+import NewsSection from './components/news-section';
 import Partners from './components/partners';
-import Solution from './components/solution';
+import SolutionsCarousel from './components/solutions-carousel';
 import WhoWeAreSection from './components/who-we-are-section';
 import WhoWeServeSection from './components/who-we-serve-section';
-
-import { solutionPosts } from '@core/data/solutions';
 
 export default function HomePage() {
 	return (
@@ -13,35 +13,10 @@ export default function HomePage() {
 			<Partners />
 			<div className="mx-auto max-w-1440">
 				<WhoWeAreSection />
-				<div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
-					<h2 className="text-center text-heading-3 text-heading">Solutions</h2>
-					<div className="mt-12 grid auto-rows-fr gap-8 md:grid-cols-2 xl:grid-cols-4 lg:mt-16 lg:gap-12">
-						{solutionPosts.map(
-							(
-								{ id, description, location, logo, logoClassName, logoSurfaceClassName, name },
-								i,
-							) => (
-								<Solution
-									key={name}
-									id={id}
-									description={description}
-									name={name}
-									location={location}
-									logo={logo}
-									logoClassName={logoClassName}
-									logoSurfaceClassName={logoSurfaceClassName}
-									index={i}
-									className={
-										solutionPosts.length % 4 === 2 && i === solutionPosts.length - 2
-											? 'xl:col-start-2'
-											: ''
-									}
-								/>
-							),
-						)}
-					</div>
-				</div>
+				<SolutionsCarousel />
 				<WhoWeServeSection />
+				<CeoVisionFaq />
+				<NewsSection />
 			</div>
 		</>
 	);

@@ -18,7 +18,7 @@ export default function Post({ post, selectCategory }: PostPropsType) {
 					width={635}
 					height={300}
 					alt={`${post.name} banner`}
-					className="h-[220px] w-full rounded-[10px] object-cover sm:h-[300px]"
+					className="h-[220px] w-full rounded-[10px] bg-accent/35 object-cover object-center sm:h-[300px]"
 				/>
 			</Link>
 			<div className="px-4 pt-6 sm:px-10 sm:pt-8 lg:px-16 lg:pt-10">
