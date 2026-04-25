@@ -6,7 +6,7 @@ import LinkedinIcon from '@icons/linkedin.svg';
 import AboutUsImage from '@assets/imgs/about-us-office.jpg';
 import FounderImage from '@assets/imgs/about-us-footage.jpg';
 import Ornament from '@assets/imgs/ornament.png';
-import NikiImage from '@assets/imgs/ceo/5972092188063632481.jpg';
+import NikiImage from '@assets/imgs/ceo/5972092188063632479.jpg';
 import DanielImage from '@assets/imgs/team/Daniel.jpg';
 import HamedImage from '@assets/imgs/team/Hamed.jpg';
 import ManuelImage from '@assets/imgs/team/Manuel.jpg';
@@ -63,7 +63,7 @@ const teamMembers = [
 		image: ManuelImage,
 		bio: [
 			'With a strong background in investment and financial structuring, Manuel plays a key role in capital strategy, partnership development, and institutional expansion.',
-			'Through the strategic alliance between Play Global Capital and FUCHASE, he supports the ecosystem’s growth and global positioning.',
+			"Through the strategic alliance between Play Global Capital and FUCHASE, he supports the ecosystem's growth and global positioning.",
 		],
 	},
 	{
@@ -72,7 +72,7 @@ const teamMembers = [
 		image: SamImage,
 		bio: [
 			'Sam is responsible for the conceptual design and structural architecture of the FUCHASE ecosystem.',
-			'He leads the development of the system’s long-term vision, ensuring alignment, integration, and synergy across all sub-companies and financial structures within the ecosystem.',
+			"He leads the development of the system's long-term vision, ensuring alignment, integration, and synergy across all sub-companies and financial structures within the ecosystem.",
 		],
 	},
 	{
@@ -150,7 +150,7 @@ export default function AboutUsPage() {
 						<h2 className="text-center text-heading-4 text-heading">Founder Perspective</h2>
 					</RevealOnView>
 					<div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-stretch lg:gap-10">
-						<RevealOnView from="left">
+						<RevealOnView from="left" className="order-2 lg:order-1">
 							<div className="space-y-5 pt-2">
 								{founderStory.map((paragraph) => (
 									<p key={paragraph} className="text-display-r leading-[1.75] text-content">
@@ -181,7 +181,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 						<RevealOnView
 							from="right"
-							className="relative h-full min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:min-h-[520px]"
+							className="relative order-1 h-full min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:order-2 lg:min-h-[520px]"
 						>
 							<Image
 								src={FounderImage}
@@ -203,20 +203,20 @@ export default function AboutUsPage() {
 							</p>
 						</div>
 					</RevealOnView>
-					<div className="mt-9 grid gap-7 lg:grid-cols-2">
+					<div className="mt-9 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 						{teamMembers.map(({ bio, image, name, title }, index) => (
 							<RevealOnView key={name} from="up" delayMs={index * 90}>
-								<article className="grid gap-5 border-t border-[rgba(44,49,25,0.24)] pt-5 sm:grid-cols-[160px_minmax(0,1fr)]">
-									<div className="relative aspect-[4/5] overflow-hidden bg-accent/35 sm:aspect-auto sm:min-h-[220px]">
+								<article className="border-t border-[rgba(44,49,25,0.24)] pt-5">
+									<div className="relative aspect-[4/5] overflow-hidden bg-accent/35">
 										<Image
 											src={image}
 											alt={name}
 											fill
-											sizes="(min-width: 1024px) 160px, (min-width: 640px) 160px, 100vw"
+											sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 100vw"
 											className="object-cover object-center"
 										/>
 									</div>
-									<div>
+									<div className="pt-5">
 										<h3 className="text-heading-6 text-heading">{name}</h3>
 										<p className="mt-1 text-display-r leading-[1.55] text-primary">{title}</p>
 										<div className="mt-4 space-y-3">
@@ -239,3 +239,4 @@ export default function AboutUsPage() {
 		</>
 	);
 }
+

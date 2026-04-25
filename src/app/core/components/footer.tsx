@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import MailDarkIcon from '@icons/mail-dark.svg';
-import PhoneDarkIcon from '@icons/phone-dark.svg';
 import Linkedin from '@icons/linkedin.svg';
 import Logo2 from '@assets/imgs/logo2.svg';
 
@@ -27,29 +25,6 @@ const footerLinks = {
 export default function Footer() {
 	return (
 		<footer className="mt-8">
-			<div className="bg-accent px-6 py-5 sm:px-10 lg:px-16">
-				<div className="mx-auto flex max-w-1440 flex-col gap-4 sm:flex-row sm:items-center">
-					<span className="text-heading-6 text-primary sm:text-heading-5">Get in touch</span>
-					<div className="flex flex-col gap-3 sm:ml-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-7">
-						<div className="flex flex-row items-center gap-3">
-							<Image src={MailDarkIcon} width={18} height={15} alt="mail icon" />
-							<a
-								href="mailto:hello@fuchase.com"
-								className="text-primary underline text-subtitle-r break-all"
-							>
-								hello@fuchase.com
-							</a>
-						</div>
-						<div className="flex flex-row items-center gap-3">
-							<Image src={PhoneDarkIcon} width={17} height={17} alt="phone icon" />
-							<a href="tel:+15550000000" className="text-primary underline text-subtitle-r">
-								+1 (555) 000-0000
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div className="bg-secondary px-6 pb-4 sm:px-10 lg:px-16">
 				<div className="mx-auto grid max-w-1440 gap-12 py-14 lg:grid-cols-[minmax(240px,0.78fr)_minmax(0,1.22fr)]">
 					<div className="flex h-full flex-col items-center gap-7 self-stretch text-center">

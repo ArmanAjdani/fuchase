@@ -1,5 +1,6 @@
 import CeoVisionFaq from './components/ceo-vision-faq';
 import Hero from './components/hero';
+import LandingFaq from './components/landing-faq';
 import NewsSection from './components/news-section';
 import Partners from './components/partners';
 import SolutionsCarousel from './components/solutions-carousel';
@@ -17,6 +18,7 @@ export default function HomePage() {
 				<WhoWeServeSection />
 				<CeoVisionFaq />
 				<NewsSection />
+				<LandingFaq />
 			</div>
 		</>
 	);

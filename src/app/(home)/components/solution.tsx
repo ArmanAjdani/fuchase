@@ -54,23 +54,23 @@ export default function Solution({
 		<div
 			ref={ref}
 			style={{ transitionDelay: `${index * 100}ms` }}
-			className={`mx-auto flex h-full min-h-[520px] w-full max-w-[320px] rounded-[18px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-6 shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out
+			className={`mx-auto flex h-full min-h-[410px] w-full max-w-[280px] rounded-[14px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-5 shadow-[0px_24px_46px_rgba(0,0,0,0.12)] transition-all duration-700 ease-out
 				${className}
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
-			<Link href={`/blog/${id}`} className="group flex h-full flex-col gap-6">
-				<div className="flex h-[200px] items-center justify-center p-2">
+			<Link href={`/blog/${id}`} className="group flex h-full flex-col gap-4">
+				<div className="flex h-[145px] items-center justify-center p-2">
 					<Image
 						src={logo}
 						alt={`${name} logo`}
 						width={240}
 						height={180}
-						className={`h-auto max-h-[156px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${logoClassName}`}
+						className={`h-auto max-h-[118px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${logoClassName}`}
 					/>
 				</div>
-				<div className="flex flex-1 flex-col space-y-3">
+				<div className="flex flex-1 flex-col justify-start space-y-3">
 					<h3 className="text-heading-6 text-heading text-center">{name}</h3>
-					<p className="flex-1 text-center text-display-r leading-[1.7] text-content opacity-80">
+					<p className="text-center text-display-r leading-[1.6] text-content opacity-80">
 						{description}
 					</p>
 				</div>
