@@ -216,10 +216,10 @@ export default function AboutUsPage() {
 											className="object-cover object-center"
 										/>
 									</div>
-									<div className="pt-5">
+									<div className="pt-5 text-center">
 										<h3 className="text-heading-6 text-heading">{name}</h3>
 										<p className="mt-1 text-display-r leading-[1.55] text-primary">{title}</p>
-										<div className="mt-4 space-y-3">
+										<div className="mt-4 space-y-3 text-left">
 											{bio.map((paragraph) => (
 												<p
 													key={paragraph}

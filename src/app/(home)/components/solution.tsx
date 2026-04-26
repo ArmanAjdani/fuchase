@@ -58,7 +58,7 @@ export default function Solution({
 				${className}
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
-			<Link href={`/blog/${id}`} className="group flex h-full flex-col gap-4">
+			<Link href={`/blog/${id}`} className="group grid h-full w-full grid-rows-[145px_minmax(128px,1fr)_auto] gap-4">
 				<div className="flex h-[145px] items-center justify-center p-2">
 					<Image
 						src={logo}
@@ -68,13 +68,15 @@ export default function Solution({
 						className={`h-auto max-h-[118px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${logoClassName}`}
 					/>
 				</div>
-				<div className="flex flex-1 flex-col justify-start space-y-3">
-					<h3 className="text-heading-6 text-heading text-center">{name}</h3>
+				<div className="flex flex-col items-center justify-center space-y-3">
+					<h3 className="min-h-[62px] content-center text-center text-heading-6 text-heading">
+						{name}
+					</h3>
 					<p className="text-center text-display-r leading-[1.6] text-content opacity-80">
 						{description}
 					</p>
 				</div>
-				<div className="mt-auto flex flex-row flex-wrap items-center justify-center gap-3">
+				<div className="flex min-h-[42px] flex-row flex-wrap items-center justify-center gap-3">
 					<Image src={Location} alt="location logo" width={16} height={20} />
 					<span className="capitalize text-subtitle text-badge-t">{location}</span>
 				</div>

@@ -3,6 +3,10 @@ import Link from 'next/link';
 
 import Logo from '@public/logo.svg';
 import CloseLightIcon from '@icons/close-light.svg';
+import MailIcon from '@icons/mail.svg';
+import PhoneIcon from '@icons/phone.svg';
+import LinkedinIcon from '@icons/linkedin.svg';
+import InstagramIcon from '@icons/instagram.svg';
 
 export type NavbarPropsType = {
 	open: boolean;
@@ -37,6 +41,29 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 		},
 	];
 
+	const quickLinks = [
+		{
+			name: 'info@fuchase.com',
+			url: 'mailto:info@fuchase.com',
+			icon: MailIcon,
+		},
+		{
+			name: '+971 50 612 5001',
+			url: 'tel:+971506125001',
+			icon: PhoneIcon,
+		},
+		{
+			name: 'LinkedIn',
+			url: 'https://www.linkedin.com/company/fuchase/',
+			icon: LinkedinIcon,
+		},
+		{
+			name: 'Instagram',
+			url: 'https://www.instagram.com/fuchase/',
+			icon: InstagramIcon,
+		},
+	];
+
 	return (
 		<nav
 			className={`fixed inset-0 z-40 bg-base-shadow px-6 pt-5 pb-8 backdrop-blur-md transition-all duration-500 ease-in-out md:bottom-auto md:left-0 md:right-0 md:top-0 md:h-auto md:px-10 md:pt-0 md:pb-0
@@ -46,7 +73,7 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 				: 'max-md:-translate-y-4 md:-translate-y-full opacity-0 pointer-events-none'
 		}`}
 		>
-			<div className="mx-auto flex h-full max-w-1440 flex-col max-md:h-full md:h-auto md:flex-row md:items-center md:justify-between">
+			<div className="mx-auto flex h-full max-w-1440 flex-col max-md:h-full md:h-auto md:flex-row md:items-center">
 				<div className="flex items-center justify-between">
 					<Link href="/" onClick={() => setIsOpen(false)}>
 						<Image
@@ -61,8 +88,8 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 						<Image src={CloseLightIcon} width={16} height={16} alt="close icon" />
 					</div>
 				</div>
-				<div className="mt-8 flex flex-1 flex-col md:mt-0 md:flex-row md:items-center md:justify-end">
-					<ul className="flex flex-col gap-5 md:flex-row md:flex-wrap md:items-center md:justify-end md:gap-x-9 md:gap-y-3 md:pl-8 md:pr-10 md:flex-1 md:max-w-[1120px] lg:gap-x-14">
+				<div className="mt-8 flex min-h-0 flex-1 flex-col md:mt-0 md:min-h-0 md:flex-row md:items-center">
+					<ul className="flex flex-col gap-5 md:flex-1 md:flex-row md:flex-wrap md:items-center md:justify-evenly md:gap-x-8 md:gap-y-3 md:px-12 lg:px-20">
 						{links.map(({ name, url }) => (
 							<li key={name}>
 								<Link
@@ -75,6 +102,24 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 							</li>
 						))}
 					</ul>
+					<div className="mt-auto border-t border-[rgba(196,201,179,0.28)] pt-6 md:hidden">
+						<p className="mb-4 text-link-t uppercase text-accent/80">Quick Links</p>
+						<div className="grid grid-cols-2 gap-x-5 gap-y-4">
+							{quickLinks.map(({ icon, name, url }) => (
+								<a
+									key={name}
+									href={url}
+									target={url.startsWith('http') ? '_blank' : undefined}
+									rel={url.startsWith('http') ? 'noreferrer' : undefined}
+									className="flex min-w-0 items-center gap-3 text-display-r text-accent"
+									onClick={() => setIsOpen(false)}
+								>
+									<Image src={icon} width={17} height={17} alt="" className="shrink-0" />
+									<span className="min-w-0 truncate">{name}</span>
+								</a>
+							))}
+						</div>
+					</div>
 					<div className="hidden cursor-pointer shrink-0 p-4 md:block" onClick={() => setIsOpen(false)}>
 						<Image src={CloseLightIcon} width={13} height={13} alt="close icon" />
 					</div>
