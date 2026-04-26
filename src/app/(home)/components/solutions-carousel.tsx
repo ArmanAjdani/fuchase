@@ -1,6 +1,6 @@
 'use client';
 
-import { type TouchEvent, useMemo, useState } from 'react';
+import { type TouchEvent, useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 
 import ChevronIcon from '@icons/chevron.svg';
@@ -8,27 +8,51 @@ import { solutionPosts } from '@core/data/solutions';
 
 import Solution from './solution';
 
-export default function SolutionsCarousel() {
-	const [activeIndex, setActiveIndex] = useState(() => {
-		const xChaseIndex = solutionPosts.findIndex(({ id }) => id === 'x-chase');
+const xChaseIndex = solutionPosts.findIndex(({ id }) => id === 'x-chase');
+const orderedSolutionPosts =
+	xChaseIndex >= 0
+		? [...solutionPosts.slice(xChaseIndex), ...solutionPosts.slice(0, xChaseIndex)]
+		: solutionPosts;
 
-		return xChaseIndex >= 0 ? xChaseIndex : 0;
-	});
+export default function SolutionsCarousel() {
+	const [activeIndex, setActiveIndex] = useState(0);
+	const [itemsPerPage, setItemsPerPage] = useState(1);
 	const [touchStart, setTouchStart] = useState<number | null>(null);
-	const visibleCount = 4;
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia('(min-width: 768px)');
+		const updateItemsPerPage = () => {
+			setItemsPerPage(mediaQuery.matches ? 4 : 1);
+			setActiveIndex(0);
+		};
+
+		updateItemsPerPage();
+		mediaQuery.addEventListener('change', updateItemsPerPage);
+
+		return () => mediaQuery.removeEventListener('change', updateItemsPerPage);
+	}, []);
 
 	const visibleSolutions = useMemo(() => {
-		return Array.from({ length: visibleCount }, (_, offset) => {
-			return solutionPosts[(activeIndex + offset) % solutionPosts.length];
-		});
-	}, [activeIndex]);
+		return orderedSolutionPosts.slice(activeIndex, activeIndex + itemsPerPage);
+	}, [activeIndex, itemsPerPage]);
+
+	const pageCount = Math.ceil(orderedSolutionPosts.length / itemsPerPage);
+	const pageStarts = Array.from({ length: pageCount }, (_, index) => index * itemsPerPage);
 
 	const goPrevious = () => {
-		setActiveIndex((current) => (current - 1 + solutionPosts.length) % solutionPosts.length);
+		setActiveIndex((current) => {
+			const currentPage = Math.max(0, pageStarts.indexOf(current));
+
+			return pageStarts[(currentPage - 1 + pageStarts.length) % pageStarts.length];
+		});
 	};
 
 	const goNext = () => {
-		setActiveIndex((current) => (current + 1) % solutionPosts.length);
+		setActiveIndex((current) => {
+			const currentPage = Math.max(0, pageStarts.indexOf(current));
+
+			return pageStarts[(currentPage + 1) % pageStarts.length];
+		});
 	};
 
 	const handleTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
@@ -50,10 +74,10 @@ export default function SolutionsCarousel() {
 	};
 
 	return (
-		<section id="solutions" className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
-			<div className="mx-auto flex max-w-1440 items-center justify-between gap-5">
-				<h2 className="text-heading-3 text-heading">Solutions</h2>
-				<div className="hidden items-center gap-3 md:flex">
+		<section id="solutions" className="px-6 pb-10 pt-14 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
+			<div className="relative mx-auto flex max-w-1440 items-center justify-center gap-5">
+				<h2 className="text-center text-heading-3 text-heading">Solutions</h2>
+				<div className="absolute right-0 hidden items-center gap-3 md:flex">
 					<button
 						type="button"
 						aria-label="Previous solutions"
@@ -79,7 +103,7 @@ export default function SolutionsCarousel() {
 					</button>
 				</div>
 			</div>
-			<div className="mt-12 lg:mt-16">
+			<div className="mt-8 sm:mt-12 lg:mt-16">
 				<div className="hidden auto-rows-fr gap-8 md:grid md:grid-cols-2 xl:grid-cols-4 lg:gap-12">
 					{visibleSolutions.map(
 						({ id, description, location, logo, logoClassName, logoSurfaceClassName, name }, i) => (
@@ -120,15 +144,17 @@ export default function SolutionsCarousel() {
 				</div>
 			</div>
 			<div className="mt-8 flex justify-center gap-2">
-				{solutionPosts.map(({ id }, index) => (
+				{pageStarts.map((startIndex, index) => (
 					<button
-						key={id}
+						key={orderedSolutionPosts[startIndex].id}
 						type="button"
-						aria-label={`Show solution ${index + 1}`}
+						aria-label={`Show solution page ${index + 1}`}
 						className={`h-1.5 cursor-pointer rounded-full transition-all duration-200 ${
-							index === activeIndex ? 'w-8 bg-primary' : 'w-2 bg-primary/35 hover:bg-primary/60'
+							startIndex === activeIndex
+								? 'w-8 bg-primary'
+								: 'w-2 bg-primary/35 hover:bg-primary/60'
 						}`}
-						onClick={() => setActiveIndex(index)}
+						onClick={() => setActiveIndex(startIndex)}
 					/>
 				))}
 			</div>

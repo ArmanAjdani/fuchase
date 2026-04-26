@@ -107,11 +107,15 @@ export default function AboutUsPage() {
 				/>
 			</RevealOnView>
 			<div className="mx-auto flex max-w-1440 flex-col px-6 pb-16 sm:px-10 lg:px-16 lg:pb-24">
-				<section className="order-4 mx-auto mt-16 max-w-6xl sm:mt-20">
+				<section className="order-[70] mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<div className="text-center">
 							<p className="text-link-t uppercase text-primary">Exclusive Strategic Alliance</p>
-							<h2 className="mt-2 text-heading-4 text-heading">PLAYGLOBAL Capital X FUCHASE</h2>
+							<h2 className="mt-2 flex flex-col items-center justify-center gap-1 text-heading-4 text-heading sm:flex-row sm:gap-3">
+								<span>PLAYGLOBAL Capital</span>
+								<span>X</span>
+								<span>FUCHASE</span>
+							</h2>
 						</div>
 					</RevealOnView>
 					<div className="mt-9 grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center">
@@ -203,7 +207,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 					</div>
 				</section>
-				<section className="order-1 mx-auto max-w-6xl">
+				<section className="order-[10] mx-auto max-w-6xl">
 					<RevealOnView from="up">
 						<div className="text-center">
 							<p className="text-link-t uppercase text-primary">Legal Foundation</p>
@@ -211,7 +215,7 @@ export default function AboutUsPage() {
 						</div>
 					</RevealOnView>
 					<div className="mt-9 grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center">
-						<RevealOnView from="left">
+						<RevealOnView from="left" className="order-2 lg:order-1">
 							<div className="space-y-5">
 								<p className="text-display-r leading-[1.75] text-content">
 									Fuchase LLC is a U.S.-registered entity, incorporated in the State of
@@ -245,7 +249,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 						<RevealOnView
 							from="right"
-							className="relative min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:min-h-[540px]"
+							className="relative order-1 min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:order-2 lg:min-h-[540px]"
 						>
 							<Image
 								src={WallStreetImage}
@@ -257,7 +261,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 					</div>
 				</section>
-				<section className="order-2 mx-auto mt-16 max-w-6xl sm:mt-20">
+				<section className="order-[30] mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<h2 className="text-center text-heading-4 text-heading">Founder Perspective</h2>
 					</RevealOnView>
@@ -305,7 +309,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 					</div>
 				</section>
-				<section className="order-3 mx-auto mt-16 max-w-6xl sm:mt-20">
+				<section className="order-[50] mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<div className="text-center">
 							<h2 className="text-heading-4 text-heading">Leadership & Core Team</h2>

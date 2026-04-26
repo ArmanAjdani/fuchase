@@ -11,7 +11,7 @@ export default function CeoVisionFaq() {
 			<div className="grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center">
 				<RevealOnView
 					from="left"
-					className="relative min-h-[420px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:min-h-[540px]"
+					className="relative order-2 hidden min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] sm:min-h-[420px] lg:order-1 lg:block lg:min-h-[540px]"
 				>
 					<Image
 						src={CeoImage}
@@ -21,7 +21,10 @@ export default function CeoVisionFaq() {
 						className="object-cover object-center"
 					/>
 				</RevealOnView>
-				<RevealOnView from="right" className="relative flex flex-col justify-center py-8 sm:px-6 lg:py-10">
+				<RevealOnView
+					from="right"
+					className="relative order-1 flex flex-col justify-center py-8 sm:px-6 lg:order-2 lg:py-10"
+				>
 					<Image
 						src={Ornament}
 						width={50}
@@ -37,10 +40,19 @@ export default function CeoVisionFaq() {
 						className="pointer-events-none absolute top-0 right-0 hidden rotate-90 sm:block"
 					/>
 					<div className="mx-auto w-full max-w-[760px] sm:pt-8">
-						<p className="text-center text-link-t uppercase text-primary">CEO Vision</p>
+						<p className="text-center text-link-t uppercase text-primary">From the Founder & Chair</p>
 						<h2 className="mt-2 text-heading-3 text-heading max-md:text-[38px]">
 							Building a disciplined financial ecosystem.
 						</h2>
+						<div className="relative mt-8 min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:hidden">
+							<Image
+								src={CeoImage}
+								alt="CEO vision"
+								fill
+								sizes="100vw"
+								className="object-cover object-center"
+							/>
+						</div>
 						<p className="mt-5 text-display-r leading-[1.75] text-content">
 							FuChase is shaped around a long-term view: specialized financial entities
 							should be strong independently, but more powerful when they operate

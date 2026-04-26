@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Linkedin from '@icons/linkedin.svg';
-import FooterLogo from '@assets/imgs/logo_footer/footer-logo.jpg';
+import FooterLogo from '@assets/imgs/logo_footer/footer-logo-removebg-preview.png';
 
 const footerLinks = {
 	company: [
@@ -33,7 +33,7 @@ export default function Footer() {
 							width={196}
 							height={196}
 							alt="Fuchase logo mark"
-							className="h-auto w-[168px] object-contain mix-blend-multiply sm:w-[196px]"
+							className="h-auto w-[168px] object-contain sm:w-[196px]"
 						/>
 						<p className="max-w-[320px] text-center text-display-r text-accent">
 							Fuchase connects financial infrastructure, strategic capital, and market

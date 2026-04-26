@@ -73,8 +73,8 @@ export default function NewsSection() {
 
 	return (
 		<section className="px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
-			<div className="mb-8 flex items-center justify-between gap-5">
-				<h2 className="text-heading-3 text-heading">News</h2>
+			<div className="mb-8 flex items-center justify-center gap-5 md:justify-between">
+				<h2 className="text-center text-heading-3 text-heading md:text-left">News</h2>
 				<div className="hidden items-center gap-3 md:flex">
 					<button
 						type="button"
@@ -108,7 +108,7 @@ export default function NewsSection() {
 						className="object-cover object-center"
 					/>
 				</div>
-				<div className="flex flex-col justify-center px-1 py-8 sm:px-8 lg:px-12">
+				<div className="flex flex-col items-center justify-center px-1 py-8 text-center sm:px-8 lg:items-start lg:px-12 lg:text-left">
 					<p className="text-link-t uppercase text-primary">External News</p>
 					<h3 className="mt-2 text-heading-3 text-heading max-md:text-[38px]">
 						{activeItem.title}

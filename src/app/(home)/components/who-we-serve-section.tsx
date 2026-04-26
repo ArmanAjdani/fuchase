@@ -45,7 +45,7 @@ export default function WhoWeServe() {
 	}, []);
 
 	return (
-		<section className="pb-20 pt-20 sm:pb-24 sm:pt-24 lg:pb-28">
+		<section className="pb-14 pt-10 sm:pb-24 sm:pt-24 lg:pb-28">
 			<div className="px-6 sm:px-10 lg:px-16">
 				<h2 className="mb-8 text-center text-heading-3 text-heading">Who We Serve</h2>
 			</div>
@@ -54,7 +54,7 @@ export default function WhoWeServe() {
 				ref={ref}
 			>
 				<div
-					className={`relative flex min-h-[360px] items-center transition-all duration-700 ease-out lg:min-h-[540px]
+					className={`relative order-2 flex min-h-[360px] items-center transition-all duration-700 ease-out lg:order-1 lg:min-h-[540px]
         				${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-x-10'}`}
 				>
 					<div className="relative flex h-full w-full flex-col justify-center py-8 sm:py-10 lg:py-0">
@@ -98,7 +98,7 @@ export default function WhoWeServe() {
 					</div>
 				</div>
 				<div
-					className={`relative min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out lg:min-h-[540px]
+					className={`relative order-1 min-h-[300px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out sm:min-h-[360px] lg:order-2 lg:min-h-[540px]
             			${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-10'}`}
 				>
 					<Image

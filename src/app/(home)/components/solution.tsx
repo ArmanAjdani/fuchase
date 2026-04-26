@@ -25,7 +25,6 @@ export default function Solution({
 	logo,
 	location,
 	index = 0,
-	logoSurfaceClassName,
 	logoClassName = '',
 	className = '',
 }: SolutionPropsType) {
@@ -60,9 +59,7 @@ export default function Solution({
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
 			<Link href={`/blog/${id}`} className="group grid h-full w-full grid-rows-[145px_minmax(128px,1fr)_auto] gap-4">
-				<div
-					className={`flex h-[145px] items-center justify-center rounded-md p-2 ${logoSurfaceClassName}`}
-				>
+				<div className="flex h-[145px] items-center justify-center p-2">
 					<Image
 						src={logo}
 						alt={`${name} logo`}

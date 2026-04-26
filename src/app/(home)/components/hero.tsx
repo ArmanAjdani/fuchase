@@ -73,8 +73,9 @@ export default function Hero() {
 							className={`mt-6 max-w-[360px] text-left text-display-l text-accent transition-all duration-700 ease-out sm:max-w-[430px]
 							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-10'}`}
 						>
-							Fuchase is a next-generation financial ecosystem designed to connect and
-							empower key players across global markets.
+							Fuchase — The central core of a financial ecosystem composed of specialized
+							entities, where capital, technology, and infrastructure converge at a Tier-1
+							institutional level.
 						</p>
 					</div>
 					<div className="relative hidden h-full lg:block">
@@ -88,8 +89,9 @@ export default function Hero() {
 							className={`absolute right-0 bottom-20 max-w-[430px] text-right text-display-l text-accent transition-all duration-700 ease-out xl:max-w-[470px]
 							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-10'}`}
 						>
-							Fuchase is a next-generation financial ecosystem designed to connect and
-							empower key players across global markets.
+							Fuchase — The central core of a financial ecosystem composed of specialized
+							entities, where capital, technology, and infrastructure converge at a Tier-1
+							institutional level.
 						</p>
 					</div>
 				</div>

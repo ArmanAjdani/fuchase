@@ -45,7 +45,8 @@ const partners = [
 	{
 		name: 'PLAYGLOBAL Capital',
 		logo: '/partners/pg.jpg',
-		frameClassName: 'w-[82px] sm:w-[96px] lg:w-[110px]',
+		frameClassName: 'w-[112px] sm:w-[132px] lg:w-[154px]',
+		logoClassName: 'scale-[1.5]',
 	},
 ];
 
