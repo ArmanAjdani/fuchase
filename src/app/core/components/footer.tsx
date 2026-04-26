@@ -33,7 +33,7 @@ export default function Footer() {
 							width={196}
 							height={196}
 							alt="Fuchase logo mark"
-							className="h-auto w-[168px] object-contain sm:w-[196px]"
+							className="h-auto w-[154px] object-contain sm:w-[180px]"
 						/>
 						<p className="max-w-[320px] text-center text-display-r text-accent">
 							Fuchase connects financial infrastructure, strategic capital, and market
