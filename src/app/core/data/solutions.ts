@@ -13,8 +13,8 @@ import XChaseLogo from '@assets/imgs/solutions/logos/x-chase.png';
 
 import BlogImage3939 from '@assets/imgs/blog/IMG_3939.jpg';
 import BlogImage3940 from '@assets/imgs/blog/IMG_3940.jpg';
-import BlogImage3944 from '@assets/imgs/blog/IMG_3944.jpg';
-import BlogImage3945 from '@assets/imgs/blog/IMG_3945.jpg';
+import BlogImage6012400928582995400 from '@assets/imgs/blog/6012400928582995400.jpg';
+import BlogImage6012400928582995401 from '@assets/imgs/blog/6012400928582995401.jpg';
 import BlogImage3947 from '@assets/imgs/blog/IMG_3947.jpg';
 import BlogImage6010149128769310171 from '@assets/imgs/blog/6010149128769310171.jpg';
 import BlogImage6010149128769310172 from '@assets/imgs/blog/6010149128769310172.jpg';
@@ -253,7 +253,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'Seychelles - UAE',
 		logo: PrivateChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage3944,
+		banner: BlogImage6012400928582995400,
 		publishedAt: '2026-04-16',
 		tags: ['Private Brokerage', 'Forex', 'Asset Management', 'HNWIs'],
 		intro:
@@ -320,7 +320,7 @@ export const solutionPosts: SolutionPost[] = [
 		logo: ChasePriveLogo,
 		logoSurfaceClassName: 'bg-[#ddd7ca]',
 		logoClassName: 'max-h-[194px]',
-		banner: BlogImage3945,
+		banner: BlogImage6012400928582995401,
 		publishedAt: '2026-04-20',
 		tags: ['Super App', 'UHNWIs', 'Private Services', 'Lifestyle Finance'],
 		intro:

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import WhoWeAreImage from '@assets/imgs/blog/6010149128769310175.jpg';
+import WhoWeAreImage from '@assets/imgs/who_we_are_page.jpg';
 import Ornament from '@assets/imgs/ornament.png';
 
 import Heading from '@core/components/heading';
@@ -19,11 +19,11 @@ export default function WhoWeArePage() {
 				title="Who We Are"
 				mobileTitleClassName="max-md:!text-[18px] max-md:!leading-[1.35]"
 			/>
-			<div className="relative h-[30vh] min-h-[220px] w-full overflow-hidden sm:h-[36vh] lg:h-[44vh]">
+			<div className="w-full overflow-hidden lg:mx-auto lg:max-w-5xl">
 				<Image
 					src={WhoWeAreImage}
 					alt="who we are image"
-					className="h-full w-full object-cover object-center"
+					className="h-auto w-full object-contain"
 					priority
 				/>
 			</div>
