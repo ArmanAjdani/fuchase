@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import Ornament from '@assets/imgs/ornament.png';
-import WhoWeAreImage from '@assets/imgs/who-we-are.jpg';
+import WhoWeAreImage from '@assets/imgs/blog/6010149128769310175.jpg';
 
 const whoWeAreParagraphs = [
 	'Fuchase is a financial core and an expanding ecosystem designed to structure, connect, and orchestrate a new generation of financial systems.',

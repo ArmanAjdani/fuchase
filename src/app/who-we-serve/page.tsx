@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import WhoWeServeImage from '@assets/imgs/who-we-serve.jpg';
+import WhoWeServeImage from '@assets/imgs/blog/6010149128769310169.jpg';
 import Ornament from '@assets/imgs/ornament.png';
 
 import Heading from '@core/components/heading';
