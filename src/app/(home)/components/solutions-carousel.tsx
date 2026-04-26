@@ -115,6 +115,19 @@ export default function SolutionsCarousel() {
 					)}
 				</div>
 			</div>
+			<div className="mt-8 flex justify-center gap-2">
+				{solutionPosts.map(({ id }, index) => (
+					<button
+						key={id}
+						type="button"
+						aria-label={`Show solution ${index + 1}`}
+						className={`h-1.5 cursor-pointer rounded-full transition-all duration-200 ${
+							index === activeIndex ? 'w-8 bg-primary' : 'w-2 bg-primary/35 hover:bg-primary/60'
+						}`}
+						onClick={() => setActiveIndex(index)}
+					/>
+				))}
+			</div>
 		</section>
 	);
 }

@@ -14,13 +14,13 @@ import XChaseLogo from '@assets/imgs/solutions/x-chase.png';
 import BlogImage3939 from '@assets/imgs/blog/IMG_3939.jpg';
 import BlogImage3940 from '@assets/imgs/blog/IMG_3940.jpg';
 import BlogImage3941 from '@assets/imgs/blog/IMG_3941.jpg';
-import BlogImage3943 from '@assets/imgs/blog/IMG_3943.jpg';
-import BlogImage3944 from '@assets/imgs/blog/IMG_3944.jpg';
-import BlogImage3945 from '@assets/imgs/blog/IMG_3945.jpg';
-import BlogImage3946 from '@assets/imgs/blog/IMG_3946.jpg';
+import BlogImage3942 from '@assets/imgs/blog/IMG_3942.jpg';
 import BlogImage3947 from '@assets/imgs/blog/IMG_3947.jpg';
-import BlogImage6010149128769310173 from '@assets/imgs/blog/6010149128769310173.jpg';
-import BlogImage6010149128769310174 from '@assets/imgs/blog/6010149128769310174.jpg';
+import BlogImage6010149128769310171 from '@assets/imgs/blog/6010149128769310171.jpg';
+import BlogImage6010149128769310172 from '@assets/imgs/blog/6010149128769310172.jpg';
+import BlogImage6010149128769310178 from '@assets/imgs/blog/6010149128769310178.jpg';
+import BlogImage6010149128769310180 from '@assets/imgs/blog/6010149128769310180.jpg';
+import BlogImage6010149128769310181 from '@assets/imgs/blog/6010149128769310181.jpg';
 
 export type SolutionArticleSection = {
 	heading: string;
@@ -55,7 +55,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'USA',
 		logo: VentureChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage3946,
+		banner: BlogImage6010149128769310171,
 		publishedAt: '2026-04-04',
 		tags: ['Venture Capital', 'Startup Pipeline', 'Investor Network', 'USA'],
 		intro:
@@ -88,7 +88,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'UAE',
 		logo: ChasePrimeLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage3941,
+		banner: BlogImage6010149128769310172,
 		publishedAt: '2026-04-06',
 		tags: ['Financial Education', 'Institutional Design', 'Risk Management', 'UAE'],
 		intro:
@@ -121,7 +121,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'UAE',
 		logo: FlowChaseLogo,
 		logoSurfaceClassName: 'bg-[#a1b2a1]',
-		banner: BlogImage3944,
+		banner: BlogImage6010149128769310178,
 		publishedAt: '2026-04-08',
 		tags: ['HNWIs', 'Cross-Border Capital', 'GCC', 'UAE'],
 		intro:
@@ -154,7 +154,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'Cyprus (CySEC) - Cayman Islands (CIMA) - Abu Dhabi (ADGM)',
 		logo: CCXLogo,
 		logoSurfaceClassName: 'bg-[#dddddd]',
-		banner: BlogImage3947,
+		banner: BlogImage6010149128769310180,
 		publishedAt: '2026-04-10',
 		tags: ['Clearing Infrastructure', 'Liquidity', 'Counterparty Risk', 'Prime Services'],
 		intro:
@@ -187,7 +187,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'USA',
 		logo: MarketChaseLogo,
 		logoSurfaceClassName: 'bg-[#e2e2e2]',
-		banner: BlogImage3945,
+		banner: BlogImage6010149128769310181,
 		publishedAt: '2026-04-12',
 		tags: ['Financial Marketplace', 'Partnerships', 'Media Intelligence', 'USA'],
 		intro:
@@ -253,7 +253,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'Seychelles - UAE',
 		logo: PrivateChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage6010149128769310173,
+		banner: BlogImage3941,
 		publishedAt: '2026-04-16',
 		tags: ['Private Brokerage', 'Forex', 'Asset Management', 'HNWIs'],
 		intro:
@@ -320,7 +320,7 @@ export const solutionPosts: SolutionPost[] = [
 		logo: ChasePriveLogo,
 		logoSurfaceClassName: 'bg-[#ddd7ca]',
 		logoClassName: 'max-h-[194px]',
-		banner: BlogImage3943,
+		banner: BlogImage3942,
 		publishedAt: '2026-04-20',
 		tags: ['Super App', 'UHNWIs', 'Private Services', 'Lifestyle Finance'],
 		intro:
@@ -353,7 +353,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'New York - USA',
 		logo: XChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage6010149128769310174,
+		banner: BlogImage3947,
 		publishedAt: '2026-04-22',
 		tags: ['System Architecture', 'Financial Infrastructure', 'Operations', 'USA'],
 		intro:

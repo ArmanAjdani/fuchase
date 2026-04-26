@@ -4,9 +4,7 @@ import Image from 'next/image';
 import InstagramIcon from '@icons/instagram.svg';
 import LinkedinIcon from '@icons/linkedin.svg';
 import FuChaseLogo from '@public/logo.svg';
-import AboutUsImage from '@assets/imgs/about-us-office.jpg';
 import FounderImage from '@assets/imgs/about-us-footage.jpg';
-import Ornament from '@assets/imgs/ornament.png';
 import NikiImage from '@assets/imgs/ceo/5972092188063632479.jpg';
 import WallStreetImage from '@assets/imgs/blog/6010149128769310179.jpg';
 import DanielImage from '@assets/imgs/team/Daniel.jpg';
@@ -23,13 +21,6 @@ export const metadata: Metadata = {
 		'FuChase is a family-led financial ecosystem designed for long-term institutional value creation.',
 	keywords: ['fuchase', 'about', 'family office mindset', 'financial ecosystem'],
 };
-
-const operatingPrinciples = [
-	'Build for generational continuity, not short cycles.',
-	'Keep governance disciplined while staying execution-focused.',
-	'Treat trust, confidentiality, and accountability as core assets.',
-	'Scale through systems that remain modular and interoperable.',
-];
 
 const founderStory = [
 	'Niki Saki is a financial systems architect, entrepreneur, and Founder and CEO of FuChase, with over a decade of experience operating at the intersection of financial markets, infrastructure, and institutional strategy.',
@@ -115,56 +106,8 @@ export default function AboutUsPage() {
 					subtitle="FuChase combines long-term family-office thinking with institutional-grade financial infrastructure, creating a disciplined ecosystem for sustainable growth."
 				/>
 			</RevealOnView>
-			<div className="mx-auto max-w-1440 px-6 pb-16 sm:px-10 lg:px-16 lg:pb-24">
-				<section className="grid gap-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-center">
-					<RevealOnView from="left" className="relative overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)]">
-						<Image
-							src={AboutUsImage}
-							alt="About FuChase image"
-							className="h-auto w-full object-cover"
-							priority
-						/>
-					</RevealOnView>
-					<RevealOnView from="right" className="relative overflow-hidden rounded-[10px] px-4 py-8 sm:px-8 sm:py-10">
-						<Image
-							src={Ornament}
-							width={50}
-							height={50}
-							alt="ornament icon"
-							className="pointer-events-none absolute top-2 left-2 hidden rotate-0 sm:block"
-						/>
-						<Image
-							src={Ornament}
-							width={50}
-							height={50}
-							alt="ornament icon"
-							className="pointer-events-none absolute top-2 right-2 hidden rotate-90 sm:block"
-						/>
-						<div className="space-y-5 pt-2 sm:pt-6">
-							<p className="text-display-r leading-[1.75] text-content">
-								FuChase was structured to unify specialized financial entities under one
-								governance logic while preserving each entity&apos;s strategic autonomy.
-							</p>
-							<p className="text-display-r leading-[1.75] text-content">
-								The ecosystem serves institutional participants, capital allocators, and
-								private principals through a controlled model built for clarity,
-								interoperability, and resilience.
-							</p>
-							<ul className="space-y-3 pt-1">
-								{operatingPrinciples.map((principle) => (
-									<li
-										key={principle}
-										className="flex items-start gap-3 text-display-r leading-[1.75] text-content"
-									>
-										<span className="mt-2 h-2 w-2 rounded-full bg-primary" />
-										<span>{principle}</span>
-									</li>
-								))}
-							</ul>
-						</div>
-					</RevealOnView>
-				</section>
-				<section className="mx-auto mt-16 max-w-6xl sm:mt-20">
+			<div className="mx-auto flex max-w-1440 flex-col px-6 pb-16 sm:px-10 lg:px-16 lg:pb-24">
+				<section className="order-4 mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<div className="text-center">
 							<p className="text-link-t uppercase text-primary">Exclusive Strategic Alliance</p>
@@ -260,7 +203,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 					</div>
 				</section>
-				<section className="mx-auto mt-16 max-w-6xl sm:mt-20">
+				<section className="order-1 mx-auto max-w-6xl">
 					<RevealOnView from="up">
 						<div className="text-center">
 							<p className="text-link-t uppercase text-primary">Legal Foundation</p>
@@ -314,7 +257,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 					</div>
 				</section>
-				<section className="mx-auto mt-16 max-w-6xl sm:mt-20">
+				<section className="order-2 mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<h2 className="text-center text-heading-4 text-heading">Founder Perspective</h2>
 					</RevealOnView>
@@ -362,7 +305,7 @@ export default function AboutUsPage() {
 						</RevealOnView>
 					</div>
 				</section>
-				<section className="mx-auto mt-16 max-w-6xl sm:mt-20">
+				<section className="order-3 mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<div className="text-center">
 							<h2 className="text-heading-4 text-heading">Leadership & Core Team</h2>
@@ -393,9 +336,10 @@ export default function AboutUsPage() {
 												href={linkedin}
 												target="_blank"
 												rel="noreferrer"
-												className="mt-3 inline-flex text-link-t uppercase text-primary underline"
+												aria-label={`${name} on LinkedIn`}
+												className="mt-3 inline-flex items-center justify-center transition duration-200 hover:opacity-80"
 											>
-												LinkedIn
+												<Image src={LinkedinIcon} width={24} height={24} alt="linkedin icon" />
 											</a>
 										)}
 										<div className="mt-4 space-y-3 text-left">

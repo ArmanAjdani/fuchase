@@ -127,6 +127,19 @@ export default function NewsSection() {
 					</a>
 				</div>
 			</div>
+			<div className="mt-8 flex justify-center gap-2">
+				{newsItems.map(({ title }, index) => (
+					<button
+						key={title}
+						type="button"
+						aria-label={`Show news item ${index + 1}`}
+						className={`h-1.5 cursor-pointer rounded-full transition-all duration-200 ${
+							index === activeIndex ? 'w-8 bg-primary' : 'w-2 bg-primary/35 hover:bg-primary/60'
+						}`}
+						onClick={() => setActiveIndex(index)}
+					/>
+				))}
+			</div>
 		</section>
 	);
 }

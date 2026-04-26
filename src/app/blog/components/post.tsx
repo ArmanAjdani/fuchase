@@ -16,9 +16,9 @@ export default function Post({ post, selectCategory }: PostPropsType) {
 				<Image
 					src={post.banner}
 					width={635}
-					height={300}
+					height={423}
 					alt={`${post.name} banner`}
-					className="h-[220px] w-full rounded-[10px] bg-accent/35 object-fill sm:h-[300px]"
+					className="aspect-[3/2] w-full rounded-[10px] bg-accent/35 object-contain"
 				/>
 			</Link>
 			<div className="px-4 pt-6 sm:px-10 sm:pt-8 lg:px-16 lg:pt-10">
