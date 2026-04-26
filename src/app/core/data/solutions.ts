@@ -19,8 +19,8 @@ import BlogImage3944 from '@assets/imgs/blog/IMG_3944.jpg';
 import BlogImage3945 from '@assets/imgs/blog/IMG_3945.jpg';
 import BlogImage3946 from '@assets/imgs/blog/IMG_3946.jpg';
 import BlogImage3947 from '@assets/imgs/blog/IMG_3947.jpg';
-import BlogImage3949 from '@assets/imgs/blog/IMG_3949.jpg';
-import BlogImage3950 from '@assets/imgs/blog/IMG_3950.jpg';
+import BlogImage6010149128769310173 from '@assets/imgs/blog/6010149128769310173.jpg';
+import BlogImage6010149128769310174 from '@assets/imgs/blog/6010149128769310174.jpg';
 
 export type SolutionArticleSection = {
 	heading: string;
@@ -253,7 +253,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'Seychelles - UAE',
 		logo: PrivateChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage3949,
+		banner: BlogImage6010149128769310173,
 		publishedAt: '2026-04-16',
 		tags: ['Private Brokerage', 'Forex', 'Asset Management', 'HNWIs'],
 		intro:
@@ -353,7 +353,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'New York - USA',
 		logo: XChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage3950,
+		banner: BlogImage6010149128769310174,
 		publishedAt: '2026-04-22',
 		tags: ['System Architecture', 'Financial Infrastructure', 'Operations', 'USA'],
 		intro:

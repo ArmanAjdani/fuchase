@@ -53,7 +53,7 @@ export default function RootLayout({
 		name: 'FuChase',
 		url: 'https://yourwebsite.com',
 		logo: 'https://yourwebsite.com/logo.png',
-		sameAs: ['https://linkedin.com/company/yourcompany'],
+		sameAs: ['https://www.linkedin.com/in/niki-saki-584743254'],
 	};
 
 	return (

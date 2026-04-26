@@ -34,7 +34,7 @@ export default function Footer() {
 							access through a single integrated ecosystem.
 						</p>
 						<div className="mt-auto flex w-full max-w-[320px] justify-center">
-							<a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+							<a href="https://www.linkedin.com/in/niki-saki-584743254" target="_blank" rel="noreferrer">
 								<Image
 									src={Linkedin}
 									width={30}
@@ -91,7 +91,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<a
-									href="https://www.linkedin.com"
+									href="https://www.linkedin.com/in/niki-saki-584743254"
 									target="_blank"
 									rel="noreferrer"
 									className="text-display-r text-accent"

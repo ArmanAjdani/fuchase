@@ -42,6 +42,11 @@ const partners = [
 		logo: '/partners/clean/two-sigma-investments-logo-vector.webp',
 		frameClassName: 'w-[90px] sm:w-[110px] lg:w-[135px]',
 	},
+	{
+		name: 'Playglobal Capital',
+		logo: '/partners/clean/Playglobal_UK_transp.png',
+		frameClassName: 'w-[92px] sm:w-[112px] lg:w-[132px]',
+	},
 ];
 
 export default function Partners() {

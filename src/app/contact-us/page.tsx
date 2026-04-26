@@ -4,6 +4,7 @@ import Image from 'next/image';
 import PhoneIcon from '@icons/phone.svg';
 import MailIcon from '@icons/mail.svg';
 import LocationIcon from '@icons/location.svg';
+import LinkedinIcon from '@icons/linkedin.svg';
 
 import Heading from '@core/components/heading';
 import JsonLd from '@core/components/json-ld';
@@ -76,6 +77,20 @@ export default function ContactUs() {
 									<p className="text-display-l text-heading">
 										Palm Jumeirah, P.O. Box 213208, Dubai, UAE
 									</p>
+								</div>
+							</div>
+							<div className="flex items-start gap-4 rounded-[8px] border border-[rgba(44,49,25,0.18)] bg-white px-4 py-3">
+								<Image src={LinkedinIcon} alt="linkedin icon" width={18} height={18} className="mt-1 shrink-0 brightness-0" />
+								<div>
+									<p className="text-display-r text-content/75">LinkedIn</p>
+									<a
+										href="https://www.linkedin.com/in/niki-saki-584743254"
+										target="_blank"
+										rel="noreferrer"
+										className="text-display-l text-heading underline"
+									>
+										Niki Saki
+									</a>
 								</div>
 							</div>
 						</div>
