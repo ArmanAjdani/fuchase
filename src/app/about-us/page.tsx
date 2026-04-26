@@ -58,22 +58,22 @@ const teamMembers = [
 	},
 	{
 		name: 'Daniel Baumgartner',
-		title: 'Chairman - Play Global Capital | Institutional Strategic Alliance',
+		title: 'Chairman - PLAYGLOBAL Capital | Institutional Strategic Alliance',
 		image: DanielImage,
 		linkedin: 'https://www.linkedin.com/in/daniel-baumgartner-pg',
 		bio: [
-			'Daniel is a serial entrepreneur and Chairman of Play Global Capital, with extensive experience in launching, scaling, and structuring global businesses.',
+			'Daniel is a serial entrepreneur and Chairman of PLAYGLOBAL Capital, with extensive experience in launching, scaling, and structuring global businesses.',
 			'Through a strategic alliance with FUCHASE, he contributes to high-level leadership, investment alignment, and global expansion strategy.',
 		],
 	},
 	{
 		name: 'Manuel Neuwirth',
-		title: 'Vice Chairman - Play Global Capital | Institutional Strategic Alliance',
+		title: 'Vice Chairman - PLAYGLOBAL Capital | Institutional Strategic Alliance',
 		image: ManuelImage,
 		linkedin: 'https://www.linkedin.com/in/manuelneuwirth',
 		bio: [
 			'With a strong background in investment and financial structuring, Manuel plays a key role in capital strategy, partnership development, and institutional expansion.',
-			"Through the strategic alliance between Play Global Capital and FUCHASE, he supports the ecosystem's growth and global positioning.",
+			"Through the strategic alliance between PLAYGLOBAL Capital and FUCHASE, he supports the ecosystem's growth and global positioning.",
 		],
 	},
 	{
@@ -111,26 +111,26 @@ export default function AboutUsPage() {
 					<RevealOnView from="up">
 						<div className="text-center">
 							<p className="text-link-t uppercase text-primary">Exclusive Strategic Alliance</p>
-							<h2 className="mt-2 text-heading-4 text-heading">PLAYGLOBAL Capital x FUCHASE</h2>
+							<h2 className="mt-2 text-heading-4 text-heading">PLAYGLOBAL Capital X FUCHASE</h2>
 						</div>
 					</RevealOnView>
 					<div className="mt-9 grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center">
 						<RevealOnView from="left">
-							<div className="flex items-center justify-center gap-8 border-y border-[rgba(44,49,25,0.2)] py-8">
+							<div className="flex flex-col items-center justify-center gap-5 border-y border-[rgba(44,49,25,0.2)] py-8 sm:flex-row sm:gap-8">
 								<Image
-									src="/partners/clean/Playglobal_UK_transp.png"
+									src="/partners/pg.jpg"
 									width={210}
 									height={120}
 									alt="PLAYGLOBAL Capital logo"
-									className="h-auto max-h-[92px] w-auto max-w-[42%] object-contain"
+									className="h-auto max-h-[92px] w-auto max-w-[72%] object-contain sm:max-w-[42%]"
 								/>
-								<div className="h-16 w-px bg-[rgba(44,49,25,0.25)]" />
+								<span className="text-heading-6 text-primary sm:text-heading-5">X</span>
 								<Image
 									src={FuChaseLogo}
 									width={190}
 									height={110}
 									alt="FUCHASE logo"
-									className="h-auto max-h-[92px] w-auto max-w-[42%] object-contain brightness-0"
+									className="h-auto max-h-[92px] w-auto max-w-[72%] object-contain brightness-0 sm:max-w-[42%]"
 								/>
 							</div>
 						</RevealOnView>

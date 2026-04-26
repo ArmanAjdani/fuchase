@@ -1,15 +1,15 @@
 import { StaticImageData } from 'next/image';
 
-import VentureChaseLogo from '@assets/imgs/solutions/venture-chase.png';
-import ChasePrimeLogo from '@assets/imgs/solutions/chase-prime.png';
-import FlowChaseLogo from '@assets/imgs/solutions/flow-chase.png';
-import MarketChaseLogo from '@assets/imgs/solutions/market-chase.png';
-import CCXLogo from '@assets/imgs/solutions/ccx.png';
-import CIOLogo from '@assets/imgs/solutions/cio.png';
-import PrivateChaseLogo from '@assets/imgs/solutions/private-chase.png';
-import ChaseEstateLogo from '@assets/imgs/solutions/chase-estate.png';
-import ChasePriveLogo from '@assets/imgs/solutions/chase-prive.png';
-import XChaseLogo from '@assets/imgs/solutions/x-chase.png';
+import VentureChaseLogo from '@assets/imgs/solutions/logos/venture-chase.png';
+import ChasePrimeLogo from '@assets/imgs/solutions/logos/chase-prime.png';
+import FlowChaseLogo from '@assets/imgs/solutions/logos/flow-chase.png';
+import MarketChaseLogo from '@assets/imgs/solutions/logos/market-chase.png';
+import CCXLogo from '@assets/imgs/solutions/logos/ccx.png';
+import CIOLogo from '@assets/imgs/solutions/logos/chase-investment-office.png';
+import PrivateChaseLogo from '@assets/imgs/solutions/logos/private-chase.png';
+import ChaseEstateLogo from '@assets/imgs/solutions/logos/chase-estate.png';
+import ChasePriveLogo from '@assets/imgs/solutions/logos/chase-prive.png';
+import XChaseLogo from '@assets/imgs/solutions/logos/x-chase.png';
 
 import BlogImage3939 from '@assets/imgs/blog/IMG_3939.jpg';
 import BlogImage3940 from '@assets/imgs/blog/IMG_3940.jpg';

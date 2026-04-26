@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Linkedin from '@icons/linkedin.svg';
-import Logo2 from '@assets/imgs/logo2.svg';
+import FooterLogo from '@assets/imgs/logo_footer/footer-logo.jpg';
 
 const footerLinks = {
 	company: [
@@ -28,7 +28,13 @@ export default function Footer() {
 			<div className="bg-secondary px-6 pb-4 sm:px-10 lg:px-16">
 				<div className="mx-auto grid max-w-1440 gap-12 py-14 lg:grid-cols-[minmax(240px,0.78fr)_minmax(0,1.22fr)]">
 					<div className="flex h-full flex-col items-center gap-7 self-stretch text-center">
-						<Image src={Logo2} width={196} height={123} alt="Fuchase logo mark" />
+						<Image
+							src={FooterLogo}
+							width={196}
+							height={196}
+							alt="Fuchase logo mark"
+							className="h-auto w-[168px] object-contain mix-blend-multiply sm:w-[196px]"
+						/>
 						<p className="max-w-[320px] text-center text-display-r text-accent">
 							Fuchase connects financial infrastructure, strategic capital, and market
 							access through a single integrated ecosystem.

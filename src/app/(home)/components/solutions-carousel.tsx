@@ -9,7 +9,11 @@ import { solutionPosts } from '@core/data/solutions';
 import Solution from './solution';
 
 export default function SolutionsCarousel() {
-	const [activeIndex, setActiveIndex] = useState(0);
+	const [activeIndex, setActiveIndex] = useState(() => {
+		const xChaseIndex = solutionPosts.findIndex(({ id }) => id === 'x-chase');
+
+		return xChaseIndex >= 0 ? xChaseIndex : 0;
+	});
 	const [touchStart, setTouchStart] = useState<number | null>(null);
 	const visibleCount = 4;
 

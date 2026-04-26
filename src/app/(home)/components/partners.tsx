@@ -43,9 +43,9 @@ const partners = [
 		frameClassName: 'w-[90px] sm:w-[110px] lg:w-[135px]',
 	},
 	{
-		name: 'Playglobal Capital',
-		logo: '/partners/clean/Playglobal_UK_transp.png',
-		frameClassName: 'w-[92px] sm:w-[112px] lg:w-[132px]',
+		name: 'PLAYGLOBAL Capital',
+		logo: '/partners/pg.jpg',
+		frameClassName: 'w-[82px] sm:w-[96px] lg:w-[110px]',
 	},
 ];
 
