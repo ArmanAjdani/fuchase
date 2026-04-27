@@ -40,7 +40,7 @@ export default function Footer() {
 							access through a single integrated ecosystem.
 						</p>
 						<div className="mt-auto flex w-full max-w-[320px] justify-center">
-							<a href="https://www.linkedin.com/in/niki-saki-584743254" target="_blank" rel="noreferrer">
+							<a href="https://www.linkedin.com/company/fuchase/" target="_blank" rel="noreferrer">
 								<Image
 									src={Linkedin}
 									width={30}
@@ -86,13 +86,23 @@ export default function Footer() {
 						<ul className="space-y-3">
 							<li className="pb-1 text-display-l text-accent">Connect</li>
 							<li>
-								<a href="mailto:hello@fuchase.com" className="text-display-r text-accent">
-									hello@fuchase.com
+								<a href="mailto:ceo@fuchase.com" className="text-display-r text-accent">
+									ceo@fuchase.com
 								</a>
 							</li>
 							<li>
-								<a href="tel:+15550000000" className="text-display-r text-accent">
-									+1 (555) 000-0000
+								<a href="tel:+971506125001" className="text-display-r text-accent">
+									+971 50 612 5001
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/company/fuchase/"
+									target="_blank"
+									rel="noreferrer"
+									className="text-display-r text-accent"
+								>
+									Company LinkedIn
 								</a>
 							</li>
 							<li>
@@ -102,7 +112,7 @@ export default function Footer() {
 									rel="noreferrer"
 									className="text-display-r text-accent"
 								>
-									LinkedIn
+									Founder LinkedIn
 								</a>
 							</li>
 						</ul>

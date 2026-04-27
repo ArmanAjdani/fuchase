@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 import InstagramIcon from '@icons/instagram.svg';
 import LinkedinIcon from '@icons/linkedin.svg';
-import FuChaseLogo from '@public/logo.svg';
 import FounderImage from '@assets/imgs/about-us-footage.jpg';
+import LegalImage from '@assets/imgs/legal.jpg';
+import FooterLogo from '@assets/imgs/logo_footer/footer-logo-removebg-preview.png';
 import NikiImage from '@assets/imgs/ceo/5972092188063632479.jpg';
-import WallStreetImage from '@assets/imgs/blog/6010149128769310179.jpg';
 import DanielImage from '@assets/imgs/team/Daniel.jpg';
 import HamedImage from '@assets/imgs/team/Hamed.jpg';
 import ManuelImage from '@assets/imgs/team/Manuel.jpg';
@@ -110,7 +110,7 @@ export default function AboutUsPage() {
 				<section className="order-[70] mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<div className="text-center">
-							<p className="text-link-t uppercase text-primary">Exclusive Strategic Alliance</p>
+							<p className="text-display-r uppercase text-primary">Exclusive Strategic Alliance</p>
 							<h2 className="mt-2 flex flex-col items-center justify-center gap-1 text-heading-4 text-heading sm:flex-row sm:gap-3">
 								<span>PLAYGLOBAL Capital</span>
 								<span>X</span>
@@ -130,11 +130,11 @@ export default function AboutUsPage() {
 								/>
 								<span className="text-heading-6 text-primary sm:text-heading-5">X</span>
 								<Image
-									src={FuChaseLogo}
+									src={FooterLogo}
 									width={190}
 									height={110}
 									alt="FUCHASE logo"
-									className="h-auto max-h-[92px] w-auto max-w-[72%] object-contain brightness-0 sm:max-w-[42%]"
+									className="h-auto max-h-[92px] w-auto max-w-[72%] object-contain sm:max-w-[42%]"
 								/>
 							</div>
 						</RevealOnView>
@@ -252,8 +252,8 @@ export default function AboutUsPage() {
 							className="relative order-1 min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:order-2 lg:min-h-[540px]"
 						>
 							<Image
-								src={WallStreetImage}
-								alt="Wall Street financial district"
+								src={LegalImage}
+								alt="Legal foundation"
 								fill
 								sizes="(min-width: 1024px) 38vw, 100vw"
 								className="object-cover object-center"

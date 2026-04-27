@@ -1,4 +1,5 @@
 import RevealOnView from '@core/components/reveal-on-view';
+import Link from 'next/link';
 
 const faqs = [
 	{
@@ -36,6 +37,14 @@ export default function LandingFaq() {
 								<p className="mt-3 text-display-r leading-[1.65] text-content/80">{answer}</p>
 							</div>
 						))}
+					</div>
+					<div className="mt-10 flex justify-center">
+						<Link
+							href="/contact-us"
+							className="inline-flex border border-primary px-7 py-3 text-button-m text-primary transition duration-200 hover:bg-primary hover:text-accent"
+						>
+							Private Inquiry
+						</Link>
 					</div>
 				</div>
 			</RevealOnView>

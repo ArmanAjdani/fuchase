@@ -4,48 +4,48 @@ const partners = [
 	{
 		name: 'McKinsey & Company',
 		logo: '/partners/clean/mckinsey.webp',
-		frameClassName: 'w-[110px] sm:w-[130px] lg:w-[145px]',
+		frameClassName: 'w-[88px] sm:w-[104px] lg:w-[116px]',
 	},
 	{
 		name: 'Boston Consulting Group',
 		logo: '/partners/clean/bcg.webp',
-		frameClassName: 'w-[65px] sm:w-[75px] lg:w-[84px]',
+		frameClassName: 'w-[52px] sm:w-[60px] lg:w-[67px]',
 	},
 	{
 		name: 'Bain & Company',
 		logo: '/partners/clean/bain-logo-square.webp',
-		frameClassName: 'w-[90px] sm:w-[110px] lg:w-[125px]',
+		frameClassName: 'w-[72px] sm:w-[88px] lg:w-[100px]',
 	},
 	{
 		name: 'Deloitte',
 		logo: '/partners/clean/deloitte.webp',
-		frameClassName: 'w-[92px] sm:w-[110px] lg:w-[120px]',
+		frameClassName: 'w-[74px] sm:w-[88px] lg:w-[96px]',
 	},
 	{
 		name: 'PwC',
 		logo: '/partners/clean/pwc.webp',
-		frameClassName: 'w-[62px] sm:w-[72px] lg:w-[82px]',
+		frameClassName: 'w-[50px] sm:w-[58px] lg:w-[66px]',
 		logoClassName: 'scale-[1.22]',
 	},
 	{
 		name: 'KPMG',
 		logo: '/partners/clean/kpmg-blue-logo-svg.webp',
-		frameClassName: 'w-[85px] sm:w-[105px] lg:w-[125px]',
+		frameClassName: 'w-[68px] sm:w-[84px] lg:w-[100px]',
 	},
 	{
 		name: 'D. E. Shaw',
 		logo: '/partners/clean/d-e-shaw-and-co-lp-logo-vector.webp',
-		frameClassName: 'w-[108px] sm:w-[130px] lg:w-[150px]',
+		frameClassName: 'w-[86px] sm:w-[104px] lg:w-[120px]',
 	},
 	{
 		name: 'Two Sigma',
 		logo: '/partners/clean/two-sigma-investments-logo-vector.webp',
-		frameClassName: 'w-[90px] sm:w-[110px] lg:w-[135px]',
+		frameClassName: 'w-[72px] sm:w-[88px] lg:w-[108px]',
 	},
 	{
 		name: 'PLAYGLOBAL Capital',
 		logo: '/partners/pg.jpg',
-		frameClassName: 'w-[112px] sm:w-[132px] lg:w-[154px]',
+		frameClassName: 'w-[90px] sm:w-[106px] lg:w-[123px]',
 		logoClassName: 'scale-[1.5]',
 	},
 ];
@@ -55,7 +55,7 @@ export default function Partners() {
 
 	return (
 		<section className="w-full overflow-hidden border-y border-[rgba(15,31,21,0.12)] bg-accent py-4 sm:py-5">
-			<div className="animate-marquee flex w-max items-center gap-8 px-8 sm:gap-10 lg:gap-12 lg:px-10">
+			<div className="animate-marquee flex w-max items-center gap-6 px-8 sm:gap-8 lg:gap-10 lg:px-10">
 				{marqueePartners.map(({ frameClassName, logo, logoClassName = '', name }, i) => (
 					<div key={`${name}-${i}`} className={`flex h-[34px] items-center ${frameClassName}`}>
 						<Image
@@ -63,7 +63,7 @@ export default function Partners() {
 							alt={`${name} logo`}
 							width={420}
 							height={140}
-							className={`h-auto max-h-[34px] w-full object-contain opacity-95 ${logoClassName}`}
+							className={`h-auto max-h-[27px] w-full object-contain opacity-95 ${logoClassName}`}
 						/>
 					</div>
 				))}

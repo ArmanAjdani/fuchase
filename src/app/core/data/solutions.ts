@@ -12,10 +12,10 @@ import ChasePriveLogo from '@assets/imgs/solutions/logos/chase-prive.png';
 import XChaseLogo from '@assets/imgs/solutions/logos/x-chase.png';
 
 import BlogImage3939 from '@assets/imgs/blog/IMG_3939.jpg';
-import BlogImage3940 from '@assets/imgs/blog/IMG_3940.jpg';
 import BlogImage6012400928582995400 from '@assets/imgs/blog/6012400928582995400.jpg';
-import BlogImage6012400928582995401 from '@assets/imgs/blog/6012400928582995401.jpg';
-import BlogImage3947 from '@assets/imgs/blog/IMG_3947.jpg';
+import ChaseEstateBanner from '@assets/imgs/blog/solution-banners/chase-estate.jpg';
+import ChasePriveBanner from '@assets/imgs/blog/solution-banners/chase-prive.jpg';
+import XChaseBanner from '@assets/imgs/blog/solution-banners/x-chase.jpg';
 import BlogImage6010149128769310171 from '@assets/imgs/blog/6010149128769310171.jpg';
 import BlogImage6010149128769310172 from '@assets/imgs/blog/6010149128769310172.jpg';
 import BlogImage6010149128769310178 from '@assets/imgs/blog/6010149128769310178.jpg';
@@ -286,7 +286,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'UAE - USA',
 		logo: ChaseEstateLogo,
 		logoSurfaceClassName: 'bg-[#111c74]',
-		banner: BlogImage3940,
+		banner: ChaseEstateBanner,
 		publishedAt: '2026-04-18',
 		tags: ['Real Estate', 'AI Analytics', 'Portfolio Strategy', 'Institutional'],
 		intro:
@@ -319,8 +319,8 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'Monaco - UAE',
 		logo: ChasePriveLogo,
 		logoSurfaceClassName: 'bg-[#ddd7ca]',
-		logoClassName: 'max-h-[194px]',
-		banner: BlogImage6012400928582995401,
+		logoClassName: 'max-h-[86px] md:max-h-[194px]',
+		banner: ChasePriveBanner,
 		publishedAt: '2026-04-20',
 		tags: ['Super App', 'UHNWIs', 'Private Services', 'Lifestyle Finance'],
 		intro:
@@ -353,7 +353,7 @@ export const solutionPosts: SolutionPost[] = [
 		location: 'New York - USA',
 		logo: XChaseLogo,
 		logoSurfaceClassName: 'bg-[#050505]',
-		banner: BlogImage3947,
+		banner: XChaseBanner,
 		publishedAt: '2026-04-22',
 		tags: ['System Architecture', 'Financial Infrastructure', 'Operations', 'USA'],
 		intro:

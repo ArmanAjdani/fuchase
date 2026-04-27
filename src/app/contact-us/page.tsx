@@ -29,7 +29,7 @@ export default function ContactUs() {
 				'@type': 'ContactPoint',
 				telephone: '+971506125001',
 				contactType: 'institutional support',
-				email: 'info@fuchase.com',
+				email: 'ceo@fuchase.com',
 			},
 		},
 	};
@@ -67,7 +67,7 @@ export default function ContactUs() {
 								<Image src={MailIcon} alt="mail icon" width={20} height={18} className="mt-1 shrink-0" />
 								<div>
 									<p className="text-display-r text-content/75">Email</p>
-									<p className="text-display-l text-heading break-all">info@fuchase.com</p>
+									<p className="text-display-l text-heading break-all">ceo@fuchase.com</p>
 								</div>
 							</div>
 							<div className="flex items-start gap-4 rounded-[8px] border border-[rgba(44,49,25,0.18)] bg-white px-4 py-3">
@@ -75,14 +75,30 @@ export default function ContactUs() {
 								<div>
 									<p className="text-display-r text-content/75">Address</p>
 									<p className="text-display-l text-heading">
-										Palm Jumeirah, P.O. Box 213208, Dubai, UAE
+										Dubai International Financial Centre
+										<br />
+										Sheikh Zayed Road, Dubai, United Arab Emirates
 									</p>
 								</div>
 							</div>
 							<div className="flex items-start gap-4 rounded-[8px] border border-[rgba(44,49,25,0.18)] bg-white px-4 py-3">
 								<Image src={LinkedinIcon} alt="linkedin icon" width={18} height={18} className="mt-1 shrink-0 brightness-0" />
 								<div>
-									<p className="text-display-r text-content/75">LinkedIn</p>
+									<p className="text-display-r text-content/75">Company LinkedIn</p>
+									<a
+										href="https://www.linkedin.com/company/fuchase/"
+										target="_blank"
+										rel="noreferrer"
+										className="text-display-l text-heading underline"
+									>
+										FuChase
+									</a>
+								</div>
+							</div>
+							<div className="flex items-start gap-4 rounded-[8px] border border-[rgba(44,49,25,0.18)] bg-white px-4 py-3">
+								<Image src={LinkedinIcon} alt="linkedin icon" width={18} height={18} className="mt-1 shrink-0 brightness-0" />
+								<div>
+									<p className="text-display-r text-content/75">Founder LinkedIn</p>
 									<a
 										href="https://www.linkedin.com/in/niki-saki-584743254"
 										target="_blank"

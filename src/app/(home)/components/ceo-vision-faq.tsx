@@ -40,7 +40,7 @@ export default function CeoVisionFaq() {
 						className="pointer-events-none absolute top-0 right-0 hidden rotate-90 sm:block"
 					/>
 					<div className="mx-auto w-full max-w-[760px] sm:pt-8">
-						<p className="text-center text-link-t uppercase text-primary">From the Founder & Chair</p>
+						<p className="text-center text-display-r uppercase text-primary">From the Founder & Chair</p>
 						<h2 className="mt-2 text-heading-3 text-heading max-md:text-[38px]">
 							Building a disciplined financial ecosystem.
 						</h2>

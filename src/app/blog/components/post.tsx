@@ -18,7 +18,9 @@ export default function Post({ post, selectCategory }: PostPropsType) {
 					width={635}
 					height={423}
 					alt={`${post.name} banner`}
-					className="aspect-[3/2] w-full rounded-[10px] bg-accent/35 object-contain"
+					sizes="(min-width: 1280px) 635px, (min-width: 768px) 45vw, 100vw"
+					quality={90}
+					className="aspect-[3/2] w-full rounded-[10px] bg-accent/35 object-cover object-center"
 				/>
 			</Link>
 			<div className="px-4 pt-6 sm:px-10 sm:pt-8 lg:px-16 lg:pt-10">

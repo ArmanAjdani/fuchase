@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import Ornament from '@assets/imgs/ornament.png';
-import WhoWeServeImage from '@assets/imgs/who-we-serve_new.jpg';
+import WhoWeServeImage from '@assets/imgs/who-we-serve-crop.jpg';
 
 const whoWeServeParagraphs = [
 	'Fuchase serves financial markets across institutional and strategic segments, from infrastructure providers and capital allocators to structured private and selective retail participation.',

@@ -43,8 +43,8 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 
 	const quickLinks = [
 		{
-			name: 'info@fuchase.com',
-			url: 'mailto:info@fuchase.com',
+			name: 'ceo@fuchase.com',
+			url: 'mailto:ceo@fuchase.com',
 			icon: MailIcon,
 		},
 		{

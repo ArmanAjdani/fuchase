@@ -109,7 +109,7 @@ export default function NewsSection() {
 					/>
 				</div>
 				<div className="flex flex-col items-center justify-center px-1 py-8 text-center sm:px-8 lg:items-start lg:px-12 lg:text-left">
-					<p className="text-link-t uppercase text-primary">External News</p>
+					<p className="text-display-r uppercase text-primary">External News</p>
 					<h3 className="mt-2 text-heading-3 text-heading max-md:text-[38px]">
 						{activeItem.title}
 					</h3>

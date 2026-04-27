@@ -54,25 +54,28 @@ export default function Solution({
 		<div
 			ref={ref}
 			style={{ transitionDelay: `${index * 100}ms` }}
-			className={`mx-auto flex h-full min-h-[410px] w-full max-w-[280px] rounded-[14px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-5 shadow-[0px_24px_46px_rgba(0,0,0,0.12)] transition-all duration-700 ease-out
+			className={`mx-auto flex aspect-square w-full max-w-[320px] rounded-[14px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-5 shadow-[0px_24px_46px_rgba(0,0,0,0.12)] transition-all duration-700 ease-out md:h-full md:min-h-[410px] md:max-w-[280px]
 				${className}
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
-			<Link href={`/blog/${id}`} className="group grid h-full w-full grid-rows-[145px_minmax(128px,1fr)_auto] gap-4">
-				<div className="flex h-[145px] items-center justify-center p-2">
+			<Link
+				href={`/blog/${id}`}
+				className="group grid h-full w-full grid-rows-[108px_1fr_auto] gap-0 md:grid-rows-[145px_minmax(128px,1fr)_auto] md:gap-4"
+			>
+				<div className="flex h-[108px] items-center justify-center p-0 md:h-[145px] md:p-2">
 					<Image
 						src={logo}
 						alt={`${name} logo`}
 						width={240}
 						height={180}
-						className={`h-auto max-h-[118px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${logoClassName}`}
+						className={`h-auto max-h-[96px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] md:max-h-[118px] ${logoClassName}`}
 					/>
 				</div>
-				<div className="flex flex-col items-center justify-center space-y-3">
-					<h3 className="min-h-[62px] content-center text-center text-heading-6 text-heading">
+				<div className="flex flex-col items-center justify-center space-y-2 md:space-y-3">
+					<h3 className="min-h-0 content-center text-center text-heading-6 text-heading md:min-h-[62px]">
 						{name}
 					</h3>
-					<p className="text-center text-display-r leading-[1.6] text-content opacity-80">
+					<p className="text-center text-display-r leading-[1.45] text-content opacity-80 md:leading-[1.6]">
 						{description}
 					</p>
 				</div>
