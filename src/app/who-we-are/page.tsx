@@ -19,7 +19,7 @@ export default function WhoWeArePage() {
 		<>
 			<Heading
 				title="Who We Are"
-				mobileTitleClassName="max-md:!text-[18px] max-md:!leading-[1.35]"
+				mobileTitleClassName="max-md:!text-[36px] max-md:!leading-[1.18]"
 			/>
 			<div className="w-full overflow-hidden xl:mx-auto xl:max-w-5xl">
 				<Image
