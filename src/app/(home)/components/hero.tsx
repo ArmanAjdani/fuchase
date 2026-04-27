@@ -70,12 +70,12 @@ export default function Hero() {
 							financial ecosystem
 						</h1>
 						<p
-							className={`mt-6 max-w-[360px] text-left text-display-l text-accent transition-all duration-700 ease-out max-md:text-[20px] max-md:leading-[1.55] sm:max-w-[430px] md:max-xl:max-w-[560px] md:max-xl:text-center md:max-xl:text-[18px] md:max-xl:leading-[1.6]
+							className={`mt-6 max-w-[380px] text-left text-display-l text-accent transition-all duration-700 ease-out max-md:text-[19px] max-md:leading-[1.52] sm:max-w-[430px] md:max-xl:max-w-[560px] md:max-xl:text-center md:max-xl:text-[18px] md:max-xl:leading-[1.6]
 							${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-10'}`}
 						>
 							Fuchase — The central core of a financial ecosystem composed of specialized
 							entities, where capital, technology, and infrastructure converge at a Tier-1
-							institutional level.
+							institutional&nbsp;level.
 						</p>
 					</div>
 					<div className="relative hidden h-full xl:block">
