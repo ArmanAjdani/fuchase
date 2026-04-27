@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 
 import './globals.css';
 
@@ -59,6 +60,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
+				<Script
+					src="https://mcp.figma.com/mcp/html-to-design/capture.js"
+					strategy="afterInteractive"
+				/>
 				<Header />
 				<main className="min-h-[calc(100vh-70px-468px)]">{children}</main>
 				<Footer />
