@@ -51,7 +51,7 @@ export default function Posts() {
 					</div>
 				)}
 			</div>
-			<div className="flex flex-row flex-wrap justify-center gap-12 max-w-1440 mx-auto mb-28">
+			<div className="flex flex-row flex-wrap justify-center gap-12 max-w-1440 mx-auto mb-28 px-6 sm:px-10 xl:px-0">
 				{filteredPosts.map((post, index) => (
 					<RevealOnView key={post.id} from="up" delayMs={index * 90}>
 						<Post post={post} selectCategory={setCategory} />

@@ -42,53 +42,53 @@ export default function WhoWeAre() {
 	}, []);
 
 	return (
-		<section className="pt-20 sm:pt-24 lg:pt-28">
-			<div className="px-6 sm:px-10 lg:px-16">
+		<section className="pt-20 sm:pt-24 xl:pt-28">
+			<div className="px-6 sm:px-10 xl:px-16">
 				<h2 className="mb-8 text-center text-heading-3 text-heading">Who We Are</h2>
 			</div>
 			<div
-				className="grid gap-10 px-6 sm:px-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:px-16"
+				className="grid gap-10 px-6 sm:px-10 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] xl:items-center xl:px-16"
 				ref={ref}
 			>
 				<div
-					className={`relative min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out lg:min-h-[540px]
+					className={`relative min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] transition-all duration-700 ease-out md:max-xl:min-h-0 md:max-xl:aspect-[16/10] xl:min-h-[540px]
             			${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-x-10'}`}
 				>
 					<Image
 						src={WhoWeAreImage}
 						alt="who we are image"
 						fill
-						sizes="(min-width: 1024px) 42vw, 100vw"
+						sizes="(min-width: 1280px) 42vw, 100vw"
 						quality={82}
-						className="object-cover object-center"
+						className="object-cover object-center md:max-xl:object-[center_35%]"
 					/>
 				</div>
 				<div
-					className={`relative flex min-h-[360px] items-center transition-all duration-700 ease-out lg:min-h-[540px]
+					className={`relative flex min-h-[360px] items-center transition-all duration-700 ease-out xl:min-h-[540px]
         				${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-10'}`}
 				>
-					<div className="relative flex h-full w-full flex-col justify-center py-8 sm:py-10 lg:py-0">
+					<div className="relative flex h-full w-full flex-col justify-center py-8 sm:py-10 xl:py-0">
 						<Image
 							src={Ornament}
 							width={50}
 							height={50}
 							alt="ornament icon"
-							className="pointer-events-none absolute -top-2 left-0 hidden rotate-0 sm:block"
+							className="pointer-events-none absolute -top-2 left-0 hidden rotate-0 xl:block"
 						/>
 						<Image
 							src={Ornament}
 							width={50}
 							height={50}
 							alt="ornament icon"
-							className="pointer-events-none absolute -top-2 right-0 hidden rotate-90 sm:block"
+							className="pointer-events-none absolute -top-2 right-0 hidden rotate-90 xl:block"
 						/>
-						<div className="mx-auto flex min-h-[360px] h-full max-w-[720px] flex-col justify-center gap-5 px-2 sm:px-4 lg:min-h-[540px] lg:px-6">
+						<div className="mx-auto flex min-h-[360px] h-full max-w-[720px] flex-col justify-center gap-5 px-2 sm:px-4 xl:min-h-[540px] xl:px-6">
 							{whoWeAreParagraphs.map((paragraph) => (
 								<p key={paragraph} className="text-display-r leading-[1.75] text-content">
 									{paragraph}
 								</p>
 							))}
-							<ul className="space-y-3 pt-1">
+							<ul className="space-y-4 pt-1 sm:space-y-3">
 								{whoWeArePoints.map((point) => (
 									<li
 										key={point}

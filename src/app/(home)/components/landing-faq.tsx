@@ -21,7 +21,7 @@ const faqs = [
 
 export default function LandingFaq() {
 	return (
-		<section className="px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
+		<section className="px-6 pb-20 sm:px-10 sm:pb-24 xl:px-16 xl:pb-28">
 			<RevealOnView from="up">
 				<div className="mx-auto max-w-5xl">
 					<div className="text-center">
@@ -30,7 +30,7 @@ export default function LandingFaq() {
 							Essential questions about the Fuchase ecosystem and how collaboration begins.
 						</p>
 					</div>
-					<div className="mt-9 grid gap-4 md:grid-cols-3">
+					<div className="mt-9 grid gap-4 xl:grid-cols-3">
 						{faqs.map(({ question, answer }) => (
 							<div key={question} className="border-t border-[rgba(44,49,25,0.24)] pt-5">
 								<h3 className="text-heading-6 text-heading">{question}</h3>

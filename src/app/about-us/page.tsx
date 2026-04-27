@@ -58,7 +58,7 @@ const teamMembers = [
 	},
 	{
 		name: 'Daniel Baumgartner',
-		title: 'Chairman - PLAYGLOBAL Capital | Institutional Strategic Alliance',
+		title: ['Chairman - PLAYGLOBAL Capital', 'Institutional Strategic Alliance'],
 		image: DanielImage,
 		linkedin: 'https://www.linkedin.com/in/daniel-baumgartner-pg',
 		bio: [
@@ -68,7 +68,7 @@ const teamMembers = [
 	},
 	{
 		name: 'Manuel Neuwirth',
-		title: 'Vice Chairman - PLAYGLOBAL Capital | Institutional Strategic Alliance',
+		title: ['Vice Chairman - PLAYGLOBAL Capital', 'Institutional Strategic Alliance'],
 		image: ManuelImage,
 		linkedin: 'https://www.linkedin.com/in/manuelneuwirth',
 		bio: [
@@ -87,7 +87,10 @@ const teamMembers = [
 	},
 	{
 		name: 'Hamed Hayali',
-		title: 'Director of Forex Brokerage Division - X-Chase | Forex Brokerage Division - Private Chase',
+		title: [
+			'Director of Forex Brokerage Division - X-Chase',
+			'Forex Brokerage Division - Private Chase',
+		],
 		image: HamedImage,
 		bio: [
 			'Hamed leads the Forex brokerage vertical across both X-Chase and Private Chase.',
@@ -106,7 +109,7 @@ export default function AboutUsPage() {
 					subtitle="FuChase combines long-term family-office thinking with institutional-grade financial infrastructure, creating a disciplined ecosystem for sustainable growth."
 				/>
 			</RevealOnView>
-			<div className="mx-auto flex max-w-1440 flex-col px-6 pb-16 sm:px-10 lg:px-16 lg:pb-24">
+			<div className="mx-auto flex max-w-1440 flex-col px-6 pb-16 sm:px-10 xl:px-16 xl:pb-24">
 				<section className="order-[70] mx-auto mt-16 max-w-6xl sm:mt-20">
 					<RevealOnView from="up">
 						<div className="text-center">
@@ -118,7 +121,7 @@ export default function AboutUsPage() {
 							</h2>
 						</div>
 					</RevealOnView>
-					<div className="mt-9 grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center">
+					<div className="mt-9 grid gap-10 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:items-center">
 						<RevealOnView from="left">
 							<div className="flex flex-col items-center justify-center gap-5 border-y border-[rgba(44,49,25,0.2)] py-8 sm:flex-row sm:gap-8">
 								<Image
@@ -157,7 +160,7 @@ export default function AboutUsPage() {
 							</div>
 						</RevealOnView>
 					</div>
-					<div className="mt-9 grid gap-8 lg:grid-cols-2">
+					<div className="mt-9 grid gap-8 xl:grid-cols-2">
 						<RevealOnView from="left">
 							<div className="border-t border-[rgba(44,49,25,0.24)] pt-5">
 								<h3 className="text-heading-6 text-heading">This alliance enables</h3>
@@ -214,8 +217,8 @@ export default function AboutUsPage() {
 							<h2 className="mt-2 text-heading-4 text-heading">FUCHASE - Legal Foundation</h2>
 						</div>
 					</RevealOnView>
-					<div className="mt-9 grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center">
-						<RevealOnView from="left" className="order-2 lg:order-1">
+					<div className="mt-9 grid gap-10 xl:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] xl:items-center">
+						<RevealOnView from="left" className="order-2 xl:order-1">
 							<div className="space-y-5">
 								<p className="text-display-r leading-[1.75] text-content">
 									Fuchase LLC is a U.S.-registered entity, incorporated in the State of
@@ -249,14 +252,14 @@ export default function AboutUsPage() {
 						</RevealOnView>
 						<RevealOnView
 							from="right"
-							className="relative order-1 min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:order-2 lg:min-h-[540px]"
+							className="relative order-1 min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] md:max-xl:min-h-0 md:max-xl:aspect-[16/10] xl:order-2 xl:min-h-[540px]"
 						>
 							<Image
 								src={LegalImage}
 								alt="Legal foundation"
 								fill
-								sizes="(min-width: 1024px) 38vw, 100vw"
-								className="object-cover object-center"
+								sizes="(min-width: 1280px) 38vw, 100vw"
+								className="object-cover object-center md:max-xl:object-[center_35%]"
 							/>
 						</RevealOnView>
 					</div>
@@ -265,8 +268,8 @@ export default function AboutUsPage() {
 					<RevealOnView from="up">
 						<h2 className="text-center text-heading-4 text-heading">Founder Perspective</h2>
 					</RevealOnView>
-					<div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-stretch lg:gap-10">
-						<RevealOnView from="left" className="order-2 lg:order-1">
+					<div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] xl:items-stretch xl:gap-10">
+						<RevealOnView from="left" className="order-2 xl:order-1">
 							<div className="space-y-5 pt-2">
 								{founderStory.map((paragraph) => (
 									<p key={paragraph} className="text-display-r leading-[1.75] text-content">
@@ -285,7 +288,7 @@ export default function AboutUsPage() {
 									<Image src={LinkedinIcon} width={24} height={24} alt="linkedin icon" />
 								</a>
 								<a
-									href="https://www.instagram.com/fuchase/"
+									href="https://www.instagram.com/sadafsakii"
 									target="_blank"
 									rel="noreferrer"
 									aria-label="FuChase on Instagram"
@@ -297,14 +300,14 @@ export default function AboutUsPage() {
 						</RevealOnView>
 						<RevealOnView
 							from="right"
-							className="relative order-1 h-full min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] lg:order-2 lg:min-h-[520px]"
+							className="relative order-1 h-full min-h-[360px] overflow-hidden shadow-[0px_32px_64px_rgba(0,0,0,0.14)] md:max-xl:min-h-0 md:max-xl:aspect-[16/10] xl:order-2 xl:min-h-[520px]"
 						>
 							<Image
 								src={FounderImage}
 								alt="Founder portrait"
 								fill
-								sizes="(min-width: 1024px) 38vw, 100vw"
-								className="object-cover object-center"
+								sizes="(min-width: 1280px) 38vw, 100vw"
+								className="object-cover object-center md:max-xl:object-[center_35%]"
 							/>
 						</RevealOnView>
 					</div>
@@ -319,7 +322,7 @@ export default function AboutUsPage() {
 							</p>
 						</div>
 					</RevealOnView>
-					<div className="mt-9 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+					<div className="mt-9 grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
 						{teamMembers.map(({ bio, image, linkedin, name, title }, index) => (
 							<RevealOnView key={name} from="up" delayMs={index * 90}>
 								<article className="border-t border-[rgba(44,49,25,0.24)] pt-5">
@@ -328,13 +331,21 @@ export default function AboutUsPage() {
 											src={image}
 											alt={name}
 											fill
-											sizes="(min-width: 1024px) 28vw, (min-width: 640px) 45vw, 100vw"
+											sizes="(min-width: 1280px) 28vw, (min-width: 640px) 45vw, 100vw"
 											className="object-cover object-center"
 										/>
 									</div>
 									<div className="pt-5 text-center">
 										<h3 className="text-heading-6 text-heading">{name}</h3>
-										<p className="mt-1 text-display-r leading-[1.55] text-primary">{title}</p>
+										<p className="mt-1 text-display-r leading-[1.55] text-primary">
+											{Array.isArray(title)
+												? title.map((line) => (
+														<span key={line} className="block">
+															{line}
+														</span>
+													))
+												: title}
+										</p>
 										{linkedin && (
 											<a
 												href={linkedin}

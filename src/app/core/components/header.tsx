@@ -36,7 +36,7 @@ export default function Header() {
 				<div className="flex flex-row flex-wrap items-center">
 					<Link
 						href="/contact-us"
-						className={`mr-3 hidden cursor-pointer border p-2 text-display-s sm:mr-6 sm:block ${isDark ? 'text-base border-dark-button' : 'text-accent border-dark-white'}`}
+						className={`mr-3 hidden cursor-pointer border p-2 text-display-s sm:mr-6 xl:block ${isDark ? 'text-base border-dark-button' : 'text-accent border-dark-white'}`}
 					>
 						Private Inquiry
 					</Link>

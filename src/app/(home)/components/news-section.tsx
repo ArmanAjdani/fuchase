@@ -72,7 +72,7 @@ export default function NewsSection() {
 	};
 
 	return (
-		<section className="px-6 pb-20 sm:px-10 sm:pb-24 lg:px-16 lg:pb-28">
+		<section className="px-6 pb-20 sm:px-10 sm:pb-24 xl:px-16 xl:pb-28">
 			<div className="mb-8 flex items-center justify-center gap-5 md:justify-between">
 				<h2 className="text-center text-heading-3 text-heading md:text-left">News</h2>
 				<div className="hidden items-center gap-3 md:flex">
@@ -95,20 +95,20 @@ export default function NewsSection() {
 				</div>
 			</div>
 			<div
-				className="touch-pan-y grid overflow-hidden border-y border-[rgba(44,49,25,0.22)] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]"
+				className="touch-pan-y grid overflow-hidden border-y border-[rgba(44,49,25,0.22)] xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]"
 				onTouchStart={(event) => setTouchStart(event.touches[0].clientX)}
 				onTouchEnd={handleTouchEnd}
 			>
-				<div className="relative min-h-[260px] sm:min-h-[360px]">
+				<div className="relative min-h-[260px] sm:min-h-[360px] md:max-xl:min-h-0 md:max-xl:aspect-[16/9]">
 					<Image
 						src={activeItem.image}
 						alt={activeItem.title}
 						fill
-						sizes="(min-width: 1024px) 38vw, 100vw"
+						sizes="(min-width: 1280px) 38vw, 100vw"
 						className="object-cover object-center"
 					/>
 				</div>
-				<div className="flex flex-col items-center justify-center px-1 py-8 text-center sm:px-8 lg:items-start lg:px-12 lg:text-left">
+				<div className="flex flex-col items-center justify-center px-1 py-8 text-center sm:px-8 xl:items-start xl:px-12 xl:text-left">
 					<p className="text-display-r uppercase text-primary">External News</p>
 					<h3 className="mt-2 text-heading-3 text-heading max-md:text-[38px]">
 						{activeItem.title}

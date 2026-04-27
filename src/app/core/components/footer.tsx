@@ -25,8 +25,8 @@ const footerLinks = {
 export default function Footer() {
 	return (
 		<footer className="mt-8">
-			<div className="bg-secondary px-6 pb-4 sm:px-10 lg:px-16">
-				<div className="mx-auto grid max-w-1440 gap-12 py-14 lg:grid-cols-[minmax(240px,0.78fr)_minmax(0,1.22fr)]">
+			<div className="bg-secondary px-6 pb-4 sm:px-10 xl:px-16">
+				<div className="mx-auto grid max-w-1440 gap-12 py-14 xl:grid-cols-[minmax(240px,0.78fr)_minmax(0,1.22fr)]">
 					<div className="flex h-full flex-col items-center gap-7 self-stretch text-center">
 						<Image
 							src={FooterLogo}
@@ -52,7 +52,7 @@ export default function Footer() {
 						</div>
 					</div>
 
-					<div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+					<div className="grid gap-10 sm:grid-cols-2 xl:grid-cols-4">
 						<ul className="space-y-3">
 							<li className="pb-1 text-display-l text-accent">Company</li>
 							{footerLinks.company.map(({ href, label }) => (
@@ -121,7 +121,7 @@ export default function Footer() {
 
 				<hr className="border border-dark-white" />
 
-				<div className="mx-auto flex max-w-1440 flex-col gap-4 py-6 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
+				<div className="mx-auto flex max-w-1440 flex-col gap-4 py-6 xl:flex-row xl:items-start xl:justify-between xl:gap-10">
 					<span className="block text-display-r text-accent">@2026 Fuchase</span>
 					<p className="max-w-[760px] text-display-r text-accent">
 						We connect elite financial institutions and visionary investors with

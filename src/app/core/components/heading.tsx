@@ -26,14 +26,14 @@ export default function Heading({
 				width={50}
 				height={50}
 				alt="ornament"
-				className="absolute top-6 left-20 rotate-0 max-md:hidden"
+				className="absolute top-6 left-20 hidden rotate-0 xl:block"
 			/>
 			<Image
 				src={Ornament}
 				width={50}
 				height={50}
 				alt="ornament"
-				className="absolute top-6 right-20 rotate-90 max-md:hidden"
+				className="absolute top-6 right-20 hidden rotate-90 xl:block"
 			/>
 			{name && (
 				<span className="my-4 block text-heading-6 text-primary max-md:text-[18px]">
@@ -41,14 +41,14 @@ export default function Heading({
 				</span>
 			)}
 			<h1
-				className={`mx-auto max-w-[1200px] text-heading text-heading-1 ${
+				className={`mx-auto max-w-[1200px] text-heading text-heading-1 md:max-xl:!text-[50px] md:max-xl:!leading-[1.15] ${
 					mobileTitleClassName ?? 'max-md:!text-[32px] max-md:!leading-[1.14]'
 				} ${titleClassName ?? ''}`}
 			>
 				{title}
 			</h1>
 			{subtitle && (
-				<p className="mx-10 mt-10 text-center text-base text-display-xl max-md:mx-0 max-md:mt-6 max-md:text-[18px] max-md:leading-[1.55]">
+				<p className="mx-10 mt-10 text-center text-base text-display-xl md:max-xl:text-display-l max-md:mx-0 max-md:mt-6 max-md:text-[18px] max-md:leading-[1.55]">
 					{subtitle}
 				</p>
 			)}

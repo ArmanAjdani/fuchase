@@ -23,8 +23,8 @@ export default function Post({ post, selectCategory }: PostPropsType) {
 					className="aspect-[3/2] w-full rounded-[10px] bg-accent/35 object-cover object-center"
 				/>
 			</Link>
-			<div className="px-4 pt-6 sm:px-10 sm:pt-8 lg:px-16 lg:pt-10">
-				<h2 className="text-base text-heading-2 max-md:text-[34px] max-md:leading-[1.08]">
+			<div className="px-4 pt-6 sm:px-10 sm:pt-8 xl:px-16 xl:pt-10">
+				<h2 className="text-base text-heading-2 md:max-xl:text-heading-3 max-md:text-[34px] max-md:leading-[1.08]">
 					{post.title}
 				</h2>
 				<p className="text-left text-display-r text-base my-6">{post.summary}</p>

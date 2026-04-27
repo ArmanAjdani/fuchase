@@ -74,7 +74,7 @@ export default function SolutionsCarousel() {
 	};
 
 	return (
-		<section id="solutions" className="px-6 pb-10 pt-14 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
+		<section id="solutions" className="px-6 pb-10 pt-14 sm:px-10 sm:py-24 xl:px-16 xl:py-28">
 			<div className="relative mx-auto flex max-w-1440 items-center justify-center gap-5">
 				<h2 className="text-center text-heading-3 text-heading">Solutions</h2>
 				<div className="absolute right-0 hidden items-center gap-3 md:flex">
@@ -103,8 +103,8 @@ export default function SolutionsCarousel() {
 					</button>
 				</div>
 			</div>
-			<div className="mt-8 sm:mt-12 lg:mt-16">
-				<div className="hidden auto-rows-fr gap-8 md:grid md:grid-cols-2 xl:grid-cols-4 lg:gap-12">
+			<div className="mt-8 sm:mt-12 xl:mt-16">
+				<div className="hidden auto-rows-fr gap-8 md:grid md:grid-cols-2 xl:grid-cols-4 xl:gap-12">
 					{visibleSolutions.map(
 						({ id, description, location, logo, logoClassName, logoSurfaceClassName, name }, i) => (
 							<Solution

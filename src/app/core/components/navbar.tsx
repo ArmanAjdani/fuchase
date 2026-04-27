@@ -59,21 +59,21 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 		},
 		{
 			name: 'Instagram',
-			url: 'https://www.instagram.com/fuchase/',
+			url: 'https://www.instagram.com/sadafsakii',
 			icon: InstagramIcon,
 		},
 	];
 
 	return (
 		<nav
-			className={`fixed inset-0 z-40 bg-base-shadow px-6 pt-5 pb-8 backdrop-blur-md transition-all duration-500 ease-in-out md:bottom-auto md:left-0 md:right-0 md:top-0 md:h-auto md:px-10 md:pt-0 md:pb-0
+			className={`fixed inset-0 z-40 bg-base-shadow px-6 pt-5 pb-8 backdrop-blur-md transition-all duration-500 ease-in-out xl:bottom-auto xl:left-0 xl:right-0 xl:top-0 xl:h-auto xl:px-10 xl:pt-0 xl:pb-0
         ${
 			open
 				? 'translate-y-0 opacity-100 pointer-events-auto'
-				: 'max-md:-translate-y-4 md:-translate-y-full opacity-0 pointer-events-none'
+				: 'max-xl:-translate-y-4 xl:-translate-y-full opacity-0 pointer-events-none'
 		}`}
 		>
-			<div className="mx-auto flex h-full max-w-1440 flex-col max-md:h-full md:h-auto md:flex-row md:items-center">
+			<div className="mx-auto flex h-full max-w-1440 flex-col max-xl:h-full xl:h-auto xl:flex-row xl:items-center">
 				<div className="flex items-center justify-between">
 					<Link href="/" onClick={() => setIsOpen(false)}>
 						<Image
@@ -84,17 +84,17 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 							className="h-auto w-[100px] cursor-pointer shrink-0 sm:w-[120px]"
 						/>
 					</Link>
-					<div className="cursor-pointer p-2 md:hidden" onClick={() => setIsOpen(false)}>
+					<div className="cursor-pointer p-2 xl:hidden" onClick={() => setIsOpen(false)}>
 						<Image src={CloseLightIcon} width={16} height={16} alt="close icon" />
 					</div>
 				</div>
-				<div className="mt-8 flex min-h-0 flex-1 flex-col md:mt-0 md:min-h-0 md:flex-row md:items-center">
-					<ul className="flex flex-col gap-5 md:flex-1 md:flex-row md:flex-wrap md:items-center md:justify-evenly md:gap-x-8 md:gap-y-3 md:px-12 lg:px-20">
+				<div className="mt-8 flex min-h-0 flex-1 flex-col xl:mt-0 xl:min-h-0 xl:flex-row xl:items-center">
+					<ul className="flex flex-col gap-5 xl:flex-1 xl:flex-row xl:flex-wrap xl:items-center xl:justify-evenly xl:gap-x-8 xl:gap-y-3 xl:px-20">
 						{links.map(({ name, url }) => (
 							<li key={name}>
 								<Link
 									href={url}
-									className="text-display-r text-accent transition duration-200 hover:text-white max-md:text-[30px] max-md:leading-[1.08] md:whitespace-nowrap md:text-[15px] lg:text-[16px]"
+									className="text-display-r text-accent transition duration-200 hover:text-white max-xl:text-[30px] max-xl:leading-[1.08] xl:whitespace-nowrap xl:text-[16px]"
 									onClick={() => setIsOpen(false)}
 								>
 									{name}
@@ -102,7 +102,7 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 							</li>
 						))}
 					</ul>
-					<div className="mt-auto border-t border-[rgba(196,201,179,0.28)] pt-6 md:hidden">
+					<div className="mt-auto border-t border-[rgba(196,201,179,0.28)] pt-6 xl:hidden">
 						<p className="mb-4 text-link-t uppercase text-accent/80">Quick Links</p>
 						<div className="grid grid-cols-2 gap-x-5 gap-y-4">
 							{quickLinks.map(({ icon, name, url }) => (
@@ -120,7 +120,7 @@ export default function Navbar({ open, setIsOpen }: NavbarPropsType) {
 							))}
 						</div>
 					</div>
-					<div className="hidden cursor-pointer shrink-0 p-4 md:block" onClick={() => setIsOpen(false)}>
+					<div className="hidden cursor-pointer shrink-0 p-4 xl:block" onClick={() => setIsOpen(false)}>
 						<Image src={CloseLightIcon} width={13} height={13} alt="close icon" />
 					</div>
 				</div>

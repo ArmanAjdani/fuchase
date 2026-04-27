@@ -24,7 +24,7 @@ export default function ContactForm() {
 
 	return (
 		<form
-			className="flex max-w-[680px] flex-1 flex-col gap-5 rounded-[10px] border border-[rgba(44,49,25,0.22)] bg-white/94 px-8 py-8 shadow-[0px_24px_54px_rgba(0,0,0,0.12)] max-md:w-full max-md:gap-4 max-md:px-5 max-md:py-6"
+			className="flex max-w-[680px] flex-1 flex-col gap-5 rounded-[10px] border border-[rgba(44,49,25,0.22)] bg-white/94 px-8 py-8 shadow-[0px_24px_54px_rgba(0,0,0,0.12)] md:max-xl:w-full md:max-xl:max-w-none max-md:w-full max-md:gap-4 max-md:px-5 max-md:py-6"
 			onSubmit={submit}
 		>
 			<input type="text" name="honeypot" style={{ display: 'none' }} autoComplete="off" />

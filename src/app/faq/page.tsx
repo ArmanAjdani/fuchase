@@ -131,7 +131,7 @@ export default function Faq() {
 	return (
 		<>
 			<Heading title="We Have Answers" />
-			<div className="mx-auto max-w-1440 px-6 pb-16 sm:px-10 lg:px-24">
+			<div className="mx-auto max-w-1440 px-6 pb-16 sm:px-10 xl:px-24">
 				{faqs.map(({ question, answer }) => (
 					<Qa key={question} question={question} answer={answer} />
 				))}

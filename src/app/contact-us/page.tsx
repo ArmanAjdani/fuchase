@@ -42,10 +42,10 @@ export default function ContactUs() {
 					subtitle="Reach our team for strategic collaborations, onboarding inquiries, and institutional support. Share your objective and we will route your request to the relevant team."
 				/>
 			</RevealOnView>
-			<div className="relative mx-auto overflow-hidden px-6 py-10 sm:px-10 lg:py-14">
+			<div className="relative mx-auto overflow-hidden px-6 py-10 sm:px-10 xl:py-14">
 				<div className="absolute inset-0 bg-contact-us bg-cover bg-center opacity-78" />
 				<div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(231,232,232,0.82)_0%,rgba(231,232,232,0.74)_40%,rgba(231,232,232,0.82)_100%)]" />
-				<div className="relative mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10">
+				<div className="relative mx-auto grid max-w-6xl gap-8 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:gap-10">
 					<RevealOnView
 						from="left"
 						className="flex flex-col rounded-[10px] border border-[rgba(44,49,25,0.22)] bg-white/94 px-6 py-7 shadow-[0px_24px_54px_rgba(0,0,0,0.12)] sm:px-8"

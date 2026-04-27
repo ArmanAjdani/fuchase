@@ -26,23 +26,23 @@ export default function LegalPage({
 	return (
 		<>
 			<Heading name="Legal" title={title} subtitle={subtitle} />
-			<section className="mx-auto mb-24 max-w-1440 px-6 sm:px-10 lg:px-16">
+			<section className="mx-auto mb-24 max-w-1440 px-6 sm:px-10 xl:px-16">
 				<div className="relative mx-auto max-w-5xl py-8 sm:py-10">
 					<Image
 						src={Ornament}
 						width={50}
 						height={50}
 						alt="ornament"
-						className="absolute top-0 left-0"
+						className="absolute top-0 left-0 hidden xl:block"
 					/>
 					<Image
 						src={Ornament}
 						width={50}
 						height={50}
 						alt="ornament"
-						className="absolute top-0 right-0 rotate-90"
+						className="absolute top-0 right-0 hidden rotate-90 xl:block"
 					/>
-					<div className="space-y-10 px-2 pt-8 sm:px-8 lg:px-14">
+					<div className="space-y-10 px-2 pt-8 sm:px-8 xl:px-14">
 						<p className="text-link-t uppercase tracking-[0.22em] text-primary">
 							Last updated {updatedOn}
 						</p>

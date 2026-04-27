@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 import ChevronIcon from '@icons/chevron.svg';
-import InstagramIcon from '@icons/instagram.svg';
 import XIcon from '@icons/x.svg';
 import LinkedinIcon from '@icons/linkedin.svg';
 
@@ -96,7 +95,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 				/>
 			</RevealOnView>
 			<RevealOnView from="up">
-				<div className="relative mb-10 h-[30vh] min-h-[220px] w-full overflow-hidden sm:mb-16 sm:h-[36vh] lg:mb-24 lg:h-[44vh]">
+				<div className="relative mb-10 h-[30vh] min-h-[220px] w-full overflow-hidden sm:mb-16 sm:h-[36vh] xl:mb-24 xl:h-[44vh]">
 					<Image
 						src={post.banner}
 						alt={`${post.name} article banner`}
@@ -106,10 +105,10 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 					/>
 				</div>
 			</RevealOnView>
-			<div className="mx-auto flex max-w-1440 flex-row flex-wrap justify-between gap-8 px-4 pb-12 sm:gap-10 sm:px-10 lg:gap-12 lg:px-20 lg:pb-14">
+			<div className="mx-auto flex max-w-1440 flex-row flex-wrap justify-between gap-8 px-4 pb-12 sm:gap-10 sm:px-10 xl:gap-12 xl:px-20 xl:pb-14">
 				<RevealOnView
 					from="left"
-					className="order-2 flex-1 max-md:w-full md:order-1"
+					className="order-2 flex-1 max-md:w-full xl:order-1"
 				>
 					<div className="mb-8 text-sm text-content opacity-75">
 						<span>{post.location}</span>
@@ -126,7 +125,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 				</RevealOnView>
 				<RevealOnView
 					from="right"
-					className="order-1 w-full shrink-0 pl-0 pr-0 md:order-2 md:w-[400px] md:pl-12 md:pr-3"
+					className="order-1 w-full shrink-0 pl-0 pr-0 xl:order-2 xl:w-[400px] xl:pl-12 xl:pr-3"
 				>
 					<h3 className="mb-10 text-base text-heading-5">In this article</h3>
 					<div className="mb-10">
@@ -161,13 +160,6 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 					</div>
 					<div className="flex flex-row flex-wrap justify-center items-center gap-8">
 						<span className="text-base text-heading-6">Share</span>
-						<a
-							href={`https://www.instagram.com/?url=${encodedPostUrl}`}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<Image src={InstagramIcon} width={18} height={18} alt="instagram icon" />
-						</a>
 						<a
 							href={`https://x.com/intent/tweet?url=${encodedPostUrl}&text=${encodedTitle}`}
 							target="_blank"

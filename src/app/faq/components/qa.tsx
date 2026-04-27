@@ -34,7 +34,7 @@ export default function Qa({ question, answer }: QaPropsType) {
 				</p>
 			</div>
 			<div
-				className={`overflow-hidden transition-all duration-300 ease-in-out mx-0 sm:mx-12 lg:mx-24 ${isOpen ? 'max-h-96 opacity-100 mt-5' : 'max-h-0 opacity-0'}`}
+				className={`overflow-hidden transition-all duration-300 ease-in-out mx-0 sm:mx-12 xl:mx-24 ${isOpen ? 'max-h-96 opacity-100 mt-5' : 'max-h-0 opacity-0'}`}
 			>
 				<p className="text-display-r text-base">{answer}</p>
 			</div>
