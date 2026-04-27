@@ -54,21 +54,21 @@ export default function Solution({
 		<div
 			ref={ref}
 			style={{ transitionDelay: `${index * 100}ms` }}
-			className={`mx-auto flex aspect-square w-full max-w-[320px] rounded-[14px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-5 shadow-[0px_24px_46px_rgba(0,0,0,0.12)] transition-all duration-700 ease-out md:h-full md:min-h-[410px] md:max-w-[280px]
+			className={`mx-auto flex aspect-square w-full max-w-[320px] rounded-[14px] border border-[rgba(15,31,21,0.1)] bg-[#f7f7f2] p-5 shadow-[0px_24px_46px_rgba(0,0,0,0.12)] transition-all duration-700 ease-out max-md:aspect-auto max-md:min-h-[350px] md:h-full md:min-h-[410px] md:max-w-[280px]
 				${className}
         		${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 		>
 			<Link
 				href={`/blog/${id}`}
-				className="group grid h-full w-full grid-rows-[108px_1fr_auto] gap-0 md:grid-rows-[145px_minmax(128px,1fr)_auto] md:gap-4"
+				className="group grid h-full w-full grid-rows-[96px_minmax(0,1fr)_42px] gap-0 md:grid-rows-[145px_minmax(128px,1fr)_auto] md:gap-4"
 			>
-				<div className="flex h-[108px] items-center justify-center p-0 md:h-[145px] md:p-2">
+				<div className="flex h-[96px] items-center justify-center p-0 md:h-[145px] md:p-2">
 					<Image
 						src={logo}
 						alt={`${name} logo`}
 						width={240}
 						height={180}
-						className={`h-auto max-h-[96px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] md:max-h-[118px] ${logoClassName}`}
+						className={`h-auto max-h-[88px] w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] md:max-h-[118px] ${logoClassName}`}
 					/>
 				</div>
 				<div className="flex flex-col items-center justify-center space-y-2 md:space-y-3">
@@ -79,7 +79,7 @@ export default function Solution({
 						{description}
 					</p>
 				</div>
-				<div className="flex min-h-[42px] flex-row flex-wrap items-center justify-center gap-3">
+				<div className="flex min-h-[42px] flex-row flex-wrap items-center justify-center gap-3 self-end">
 					<Image src={Location} alt="location logo" width={16} height={20} />
 					<span className="capitalize text-subtitle text-badge-t">{location}</span>
 				</div>
