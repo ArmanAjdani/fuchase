@@ -15,6 +15,10 @@ const hiddenClassByDirection = {
 	right: 'opacity-0 translate-x-10',
 } as const;
 
+function isFigmaCapture() {
+	return typeof window !== 'undefined' && window.location.hash.includes('figmacapture=');
+}
+
 export default function RevealOnView({
 	children,
 	className = '',
@@ -22,9 +26,13 @@ export default function RevealOnView({
 	from = 'up',
 }: RevealOnViewProps) {
 	const ref = useRef<HTMLDivElement | null>(null);
-	const [isVisible, setIsVisible] = useState(false);
+	const [isVisible, setIsVisible] = useState(isFigmaCapture);
 
 	useEffect(() => {
+		if (isFigmaCapture()) {
+			return;
+		}
+
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				if (entry.isIntersecting) {
@@ -53,4 +61,3 @@ export default function RevealOnView({
 		</div>
 	);
 }
-

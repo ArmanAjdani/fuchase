@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { absoluteUrl } from '@core/seo';
 
 export default function robots(): MetadataRoute.Robots {
 	return {
@@ -9,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
 				disallow: ['/admin', '/private'],
 			},
 		],
-		sitemap: 'https://yourdomain.com/sitemap.xml',
+		sitemap: absoluteUrl('/sitemap.xml'),
 	};
 }

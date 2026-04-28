@@ -11,6 +11,7 @@ import Heading from '@core/components/heading';
 import JsonLd from '@core/components/json-ld';
 import RevealOnView from '@core/components/reveal-on-view';
 import { solutionPosts } from '@core/data/solutions';
+import { absoluteUrl, createPageMetadata, seoConfig } from '@core/seo';
 
 type BlogDetailPageProps = {
 	params: Promise<{ id: string }>;
@@ -36,12 +37,16 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
 	}
 
 	return {
-		title: post.title,
-		description: post.summary,
-		keywords: post.tags,
-		authors: [{ name: 'FuChase Editorial Team', url: 'https://yourdomain.com' }],
-		creator: 'FuChase',
-		publisher: 'FuChase',
+		...createPageMetadata({
+			title: post.title,
+			description: post.summary,
+			path: `/blog/${post.id}`,
+			keywords: post.tags,
+			type: 'article',
+			publishedTime: post.publishedAt,
+			modifiedTime: post.publishedAt,
+		}),
+		authors: [{ name: 'FuChase Editorial Team', url: seoConfig.siteUrl }],
 		category: 'finance',
 	};
 }
@@ -54,7 +59,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 		notFound();
 	}
 
-	const postUrl = `https://yourdomain.com/blog/${post.id}`;
+	const postUrl = absoluteUrl(`/blog/${post.id}`);
 	const encodedPostUrl = encodeURIComponent(postUrl);
 	const encodedTitle = encodeURIComponent(post.title);
 	const sectionLinks = post.sections.map(({ heading }, index) => ({
@@ -65,22 +70,31 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
 	const schema = {
 		'@context': 'https://schema.org',
 		'@type': 'Article',
+		'@id': `${postUrl}#article`,
+		url: postUrl,
 		headline: post.title,
 		description: post.summary,
-		image: `https://yourdomain.com${post.banner.src}`,
+		image: absoluteUrl(post.banner.src),
 		author: {
 			'@type': 'Organization',
+			'@id': `${seoConfig.siteUrl}/#organization`,
 			name: 'FuChase Editorial Team',
 		},
 		publisher: {
 			'@type': 'Organization',
+			'@id': `${seoConfig.siteUrl}/#organization`,
 			name: 'FuChase',
 			logo: {
 				'@type': 'ImageObject',
-				url: 'https://yourdomain.com/logo.png',
+				url: `${seoConfig.siteUrl}/logo.svg`,
+				width: 120,
+				height: 70,
 			},
 		},
-		mainEntityOfPage: postUrl,
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': postUrl,
+		},
 		datePublished: post.publishedAt,
 		dateModified: post.publishedAt,
 		keywords: post.tags.join(', '),

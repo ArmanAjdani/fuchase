@@ -14,13 +14,15 @@ import SamImage from '@assets/imgs/team/Sam.jpg';
 
 import Heading from '@core/components/heading';
 import RevealOnView from '@core/components/reveal-on-view';
+import { createPageMetadata } from '@core/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
 	title: 'About Us',
 	description:
 		'FuChase is a family-led financial ecosystem designed for long-term institutional value creation.',
+	path: '/about-us',
 	keywords: ['fuchase', 'about', 'family office mindset', 'financial ecosystem'],
-};
+});
 
 const founderStory = [
 	'Niki Saki is a financial systems architect, entrepreneur, and Founder and CEO of FuChase, with over a decade of experience operating at the intersection of financial markets, infrastructure, and institutional strategy.',

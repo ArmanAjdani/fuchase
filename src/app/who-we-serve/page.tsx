@@ -5,14 +5,17 @@ import WhoWeServeImage from '@assets/imgs/who_we_serve_page.jpg';
 import Ornament from '@assets/imgs/ornament.png';
 
 import Heading from '@core/components/heading';
+import { createPageMetadata } from '@core/seo';
 
 const bodyTextClassName = 'text-display-xl max-md:text-display-r max-md:leading-[1.75]';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
 	title: 'Who We Serve',
-	description: 'bla bla bla',
-	keywords: ['first', 'second', 'third'],
-};
+	description:
+		'FuChase serves institutions, financial firms, family offices, HNWIs, UHNWIs, and strategic partners across interconnected markets.',
+	path: '/who-we-serve',
+	keywords: ['institutional finance', 'family offices', 'HNWIs', 'UHNWIs', 'financial market operators'],
+});
 
 export default function WhoWeServePage() {
 	return (

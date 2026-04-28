@@ -1,64 +1,65 @@
 import type { MetadataRoute } from 'next';
 import { solutionPosts } from '@core/data/solutions';
+import { absoluteUrl } from '@core/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	const staticRoutes: MetadataRoute.Sitemap = [
 		{
-			url: 'https://yourdomain.com',
+			url: absoluteUrl('/'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 1,
 		},
 		{
-			url: 'https://yourdomain.com/about-us',
+			url: absoluteUrl('/about-us'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 1,
 		},
 		{
-			url: 'https://yourdomain.com/blog',
+			url: absoluteUrl('/blog'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 1,
 		},
 		{
-			url: 'https://yourdomain.com/contact-us',
+			url: absoluteUrl('/contact-us'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 1,
 		},
 		{
-			url: 'https://yourdomain.com/faq',
+			url: absoluteUrl('/faq'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 1,
 		},
 		{
-			url: 'https://yourdomain.com/who-we-are',
+			url: absoluteUrl('/who-we-are'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 1,
 		},
 		{
-			url: 'https://yourdomain.com/who-we-serve',
+			url: absoluteUrl('/who-we-serve'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 1,
 		},
 		{
-			url: 'https://yourdomain.com/privacy',
+			url: absoluteUrl('/privacy'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 0.7,
 		},
 		{
-			url: 'https://yourdomain.com/cookies',
+			url: absoluteUrl('/cookies'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 0.7,
 		},
 		{
-			url: 'https://yourdomain.com/terms',
+			url: absoluteUrl('/terms'),
 			lastModified: new Date(),
 			changeFrequency: 'monthly',
 			priority: 0.7,
@@ -66,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	];
 
 	const blogRoutes: MetadataRoute.Sitemap = solutionPosts.map(({ id, publishedAt }) => ({
-		url: `https://yourdomain.com/blog/${id}`,
+		url: absoluteUrl(`/blog/${id}`),
 		lastModified: new Date(publishedAt),
 		changeFrequency: 'monthly',
 		priority: 0.8,

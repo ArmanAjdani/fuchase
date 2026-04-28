@@ -5,14 +5,17 @@ import WhoWeAreImage from '@assets/imgs/who_we_are_page.jpg';
 import Ornament from '@assets/imgs/ornament.png';
 
 import Heading from '@core/components/heading';
+import { createPageMetadata } from '@core/seo';
 
 const bodyTextClassName = 'text-display-xl max-md:text-display-r max-md:leading-[1.75]';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
 	title: 'Who We Are',
-	description: 'bla bla bla',
-	keywords: ['first', 'second', 'third'],
-};
+	description:
+		'FuChase is a financial core and expanding ecosystem that structures, connects, and orchestrates specialized financial entities.',
+	path: '/who-we-are',
+	keywords: ['FuChase structure', 'financial systems', 'financial ecosystem architecture'],
+});
 
 export default function WhoWeArePage() {
 	return (

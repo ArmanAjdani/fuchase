@@ -1,11 +1,14 @@
 import { Metadata } from 'next';
 
 import LegalPage, { LegalSection } from '@core/components/legal-page';
+import { createPageMetadata } from '@core/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
 	title: 'Terms of Use',
-	description: 'Terms of Use for the Fuchase website.',
-};
+	description: 'Terms of Use for the FuChase website, including acceptable use, intellectual property, third-party links, and disclaimers.',
+	path: '/terms',
+	keywords: ['FuChase terms of use', 'website terms', 'legal'],
+});
 
 const sections: LegalSection[] = [
 	{

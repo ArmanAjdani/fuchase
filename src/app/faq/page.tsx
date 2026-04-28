@@ -2,14 +2,16 @@ import { Metadata } from 'next';
 
 import Heading from '@core/components/heading';
 import JsonLd from '@core/components/json-ld';
+import { absoluteUrl, createPageMetadata } from '@core/seo';
 
 import Qa from './components/qa';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
 	title: 'FAQ',
 	description: 'Frequently asked questions about FuChase solutions, onboarding, and collaboration.',
+	path: '/faq',
 	keywords: ['fuchase faq', 'financial ecosystem', 'investment platforms', 'institutional solutions'],
-};
+});
 
 export default function Faq() {
 	const faqs = [
@@ -118,6 +120,10 @@ export default function Faq() {
 	const schema = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
+		'@id': absoluteUrl('/faq#webpage'),
+		url: absoluteUrl('/faq'),
+		name: 'FAQ',
+		mainEntityOfPage: absoluteUrl('/faq'),
 		mainEntity: faqs.map(({ question, answer }) => ({
 			'@type': 'Question',
 			name: question,

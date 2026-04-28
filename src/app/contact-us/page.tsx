@@ -9,22 +9,30 @@ import LinkedinIcon from '@icons/linkedin.svg';
 import Heading from '@core/components/heading';
 import JsonLd from '@core/components/json-ld';
 import RevealOnView from '@core/components/reveal-on-view';
+import { absoluteUrl, createPageMetadata, seoConfig } from '@core/seo';
 
 import ContactForm from './components/contact-form';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
 	title: 'Contact Us',
 	description: 'Connect with FuChase to discuss institutional partnerships, capital strategy, and ecosystem collaboration.',
+	path: '/contact-us',
 	keywords: ['contact fuchase', 'financial ecosystem inquiry', 'institutional partnerships'],
-};
+});
 
 export default function ContactUs() {
 	const schema = {
 		'@context': 'https://schema.org',
 		'@type': 'ContactPage',
+		'@id': absoluteUrl('/contact-us#webpage'),
+		url: absoluteUrl('/contact-us'),
+		name: 'Contact Us',
+		mainEntityOfPage: absoluteUrl('/contact-us'),
 		mainEntity: {
 			'@type': 'Organization',
+			'@id': `${seoConfig.siteUrl}/#organization`,
 			name: 'FuChase',
+			url: seoConfig.siteUrl,
 			contactPoint: {
 				'@type': 'ContactPoint',
 				telephone: '+971506125001',
